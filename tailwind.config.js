@@ -18,6 +18,7 @@ module.exports = {
       backgroundImage: {
         'HomepageBanner': 'url("/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg")',
         'apprenantsBanner': 'url("/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg")',
+        'partenairesBanner': 'url("/assets/creatopy-b6Fo9loWZUk-unsplash.jpg")',
       }
     },
   },
