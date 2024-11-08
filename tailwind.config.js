@@ -15,6 +15,9 @@ module.exports = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      backgroundImage: {
+        'bannerHomeImg': 'url("/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg")',
+      }
     },
   },
   plugins: [],
