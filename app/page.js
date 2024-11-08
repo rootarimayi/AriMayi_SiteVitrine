@@ -1,10 +1,11 @@
 import Banner from "./components/Banner";
 import Button from "./components/Button";
+import Collapse from "./components/Collapse";
 
 export default function Home() {
   return (
     <>
-    <Banner className="bg-bannerHomeImg ">
+    <Banner className="bg-HomepageBanner">
         <h3 className="text-[22px] font-semibold text-center text-white"> 
           Trouvez votre opportunité dans l&apos;IT
         </h3>
@@ -18,6 +19,7 @@ export default function Home() {
           hello tout le monde
         </span>
         <Button text="Click" src="#" classes="inline " />
+        <Collapse title="hello" content="hello"/>
       </div>
     </>
   );

@@ -16,7 +16,8 @@ module.exports = {
         foreground: "var(--foreground)",
       },
       backgroundImage: {
-        'bannerHomeImg': 'url("/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg")',
+        'HomepageBanner': 'url("/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg")',
+        'apprenantsBanner': 'url("/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg")',
       }
     },
   },
