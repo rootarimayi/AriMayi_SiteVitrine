@@ -6,6 +6,10 @@ module.exports = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      'Opensans': ["var(--font-open-sans)"],
+      'monserrat': ["var(--font-monserrat)"]
+    },
     extend: {
       colors: {
         background: "var(--background)",
