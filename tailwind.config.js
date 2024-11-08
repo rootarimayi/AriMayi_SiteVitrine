@@ -20,6 +20,7 @@ module.exports = {
         'apprenantsBanner': 'url("/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg")',
         'partenairesBanner': 'url("/assets/creatopy-b6Fo9loWZUk-unsplash.jpg")',
         'identiteBanner': 'url("/assets/jud-mackrill-Of_m3hMsoAA-unsplash.jpg")',
+        'contactBanner': 'url("/assets/nathan-anderson-FHiJWoBodrs-unsplash.jpg")',
       }
     },
   },
