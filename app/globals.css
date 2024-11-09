@@ -2,20 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin:0;
+  padding: 0;
+}
+.readMoreClicked{
+  display: block; 
+  overflow: hidden;
+}
+
+.readMore{
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  line-clamp:5;
+  -webkit-box-orient: vertical; 
+  text-overflow: ellipsis;
+  overflow: hidden;
 }

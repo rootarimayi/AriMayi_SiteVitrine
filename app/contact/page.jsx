@@ -16,9 +16,7 @@ export default function Contact(){
       <div className='text-[24px] text-center py-[220px] font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text'>
         Page Contact
       </div>
-      <div className='text-[24px] text-center py-[220px] font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text'>
-        Page Contact
-      </div>
+      
       <div className="faq flex flex-col gap-3 items-center py-4">
         <Collapse title="Comment puis-je postuler pour un stage ou un contrat d'apprentissage?" content="Pour postuler à nos offres de stage ou de contrat d'apprentissage, veuillez remplir le formulaire de demande sur notre site. Nous vous contacterons dans les plus brefs délais pour la suite du processus de sélection."/>
 

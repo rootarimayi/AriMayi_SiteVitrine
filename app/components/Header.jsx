@@ -9,9 +9,9 @@ import Button from "./Button";
 
 export default function Header() {
 
-  const [isOpen, sertisOpen] = useState(false);
+  const [isOpen, setisOpen] = useState(false);
   const toggleNavebar= ()=>{
-    sertisOpen(!isOpen)
+    setisOpen(!isOpen)
   }
 
   return (
