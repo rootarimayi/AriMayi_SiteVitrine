@@ -80,7 +80,7 @@ export default function Header() {
           </div>
         </div>
         {isOpen && (
-            <nav className="menu-mobile w-[330px] lg:hidden bg-white top-[100%] left-0  h-screen">
+            <nav className="menu-mobile w-[330px] lg:hidden bg-white top-[100%] left-0  h-screen overflow-y-auto">
               <div className=" flex flex-col">
                 <Link href="/" className="pl-[50px] font-Opensans font-normal text-[16px] py-[20px] text-[#353535] border-b border-orange active:bg-orange  active:text-white" onClick={toggleNavebar}> 
                   Accueil 
