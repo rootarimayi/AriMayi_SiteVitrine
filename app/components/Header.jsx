@@ -18,9 +18,9 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed w-screen z-10">
-        <div className=" bg-gray mx-auto relative py-[10px] ">
-          <div className="container mx-auto max-w-[1850px] w-[97%] flex items-center justify-between gap-3">
+      <header className="fixed z-10">
+        <div className=" bg-gray mx-auto relative w-w-full py-[10px] ">
+          <div className="container mx-auto max-w-[1850px]  w-[97%] flex items-center justify-between gap-2">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
                 <Image
@@ -104,7 +104,7 @@ export default function Header() {
           )
         }
       </header>
-      {isOpen && (<div className="bg-black w-screen h-screen  fixed overscroll-none"></div>)}
+      {isOpen && (<div className="bg-black w-full h-full  fixed overscroll-none"></div>)}
     </>
   );
 }
