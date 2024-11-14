@@ -18,9 +18,9 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed z-10">
-        <div className=" bg-gray mx-auto relative w-w-full py-[10px] ">
-          <div className="container mx-auto max-w-[1850px]  w-[97%] flex items-center justify-between gap-2">
+      <header className="fixed z-10 w-full">
+        <div className=" bg-gray mx-auto relative py-[10px] ">
+          <div className="container mx-auto max-w-[1850px]  w-[95%] flex items-center justify-between gap-2">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
                 <Image
@@ -62,12 +62,13 @@ export default function Header() {
               </nav>
               <CostumButton text="Accés à la Plateforme" classes="text-white font-Opensans font-bold text-[16px] bg-[#F68A67] tracking-[.5px] " src="#"/>
             </div>
-            <CostumButton text="Accés à la Plateforme" classes="text-white font-Opensans font-bold text-[12px] md:text-[16px] bg-[#F68A67] tracking-[.5px] lg:hidden" src="#" />
+            <CostumButton text="Accés à la Plateforme" classes="text-white font-Opensans  text-[17px] md:text-[16px] bg-[#F68A67] tracking-[.5px] lg:hidden" src="#" />
             <button className="inline-flex items-center justify-center p-2 rounded-lg text-white lg:hidden" onClick={toggleNavebar}>
               {isOpen ?(
                 <Image
                 src={closeIcon}
                 alt='close-icon'
+                
                 />
               ):(
                 <Image
