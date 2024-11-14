@@ -12,8 +12,8 @@ module.exports = {
     },
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        'orange': "#F68A67",
+        'gray': '#353535'
       },
       backgroundImage: {
         'HomepageBanner': 'url("/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg")',
@@ -21,6 +21,9 @@ module.exports = {
         'partenairesBanner': 'url("/assets/creatopy-b6Fo9loWZUk-unsplash.jpg")',
         'identiteBanner': 'url("/assets/jud-mackrill-Of_m3hMsoAA-unsplash.jpg")',
         'contactBanner': 'url("/assets/nathan-anderson-FHiJWoBodrs-unsplash.jpg")',
+      },
+      screens: {
+        "lg": "1180px"
       }
     },
   },

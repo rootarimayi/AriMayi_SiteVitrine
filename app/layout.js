@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import "./globals.css";
 
 const Opensans = localFont({
-  src: "./fonts/OpenSans-Regular.ttf",
+  src: "./fonts/OpenSans-Regular-webfont.woff",
   variable: "--font-open-sans",
   weight: "400",
 });

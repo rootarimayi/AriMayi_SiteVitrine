@@ -1,5 +1,5 @@
 import Banner from "./components/Banner";
-import Button from "./components/Button";
+import CostumButton from "./components/CostumButton";
 import Card from "./components/Card";
 
 import cardImg from "../public/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg";
@@ -17,13 +17,13 @@ export default function Home() {
         <p className="text-center text-white">
           Vous êtes étudiant ou en reconversion professionnelle, AriMayi vous accompagne depuis votre formation jusqu&apos;à votre intégration en entreprise pour une transition réussie vers l&apos;emploi
         </p>
-        <Button text="Contactez nous" classes="bg-red text-black hover:bg-[#F68A67] hover:text-white" src="/contact" />
+        <CostumButton text="Contactez nous" classes="bg-red text-black hover:bg-[#F68A67] hover:text-white" src="/contact" />
       </Banner>
       <div className=' py-[220px]  flex flex-col items-center'>
         <span className="text-[24px] text-center font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
           hello tout le monde
         </span>
-        <Button text="Click" src="#" classes="inline " />
+        <CostumButton text="Click" src="#" classes="inline " />
         <div className="cards flex py-4">
           <Card image={cardImg} titre="Je cherche à gagner de l'expérience" content="Jeune diplômé sans emploi ?
           Rejoignez notre organisme pour une formation ciblée qui vous démarque. Développez des compétences recherchées par les recruteurs grâce à nos projets concrets et décrochez enfin le poste que vous méritez" className="" />
