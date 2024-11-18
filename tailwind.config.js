@@ -13,10 +13,11 @@ module.exports = {
     extend: {
       colors: {
         'orange': "#F68A67",
-        'gray': '#353535'
+        'gray': '#353535',
+
       },
       backgroundImage: {
-        'HomepageBanner': 'url("/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg")',
+        'HomepageBanner': 'url("/assets/banniere-acceuil.png")',
         'apprenantsBanner': 'url("/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg")',
         'partenairesBanner': 'url("/assets/creatopy-b6Fo9loWZUk-unsplash.jpg")',
         'identiteBanner': 'url("/assets/jud-mackrill-Of_m3hMsoAA-unsplash.jpg")',
