@@ -25,13 +25,28 @@ export default function Home() {
         <span className="text-[24px] text-center font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
           hello tout le monde
         </span>
-        <CostumButton text="Click" src="#" classes="inline " />
-        <div className="cards flex flex-col md:flex-row py-4">
-          <Card image={cardImg} titre="Je cherche à gagner de l'expérience" content="Jeune diplômé sans emploi ?
-          Rejoignez notre organisme pour une formation ciblée qui vous démarque. Développez des compétences recherchées par les recruteurs grâce à nos projets concrets et décrochez enfin le poste que vous méritez" className="" />
-          <Card image={cardImg2} titre="Je recherche un nouveau métier dans l'IT" content="Rejoignez notre organisme et transformez votre carrière dans l’IT ! Profitez d’une formation complète et de notre accompagnement vers des projets concrets pour réussir votre reconversion dans un secteur en plein essor" className="" />
+      </div>
+      <section className="section-cards flex flex-col md:flex-row bg-black py-[50px]">
+        <div className="container max-w-[1850px] w-[95%] mx-auto flex flex-col gap-[20px]">
+          <h3 className="text-[48px] text-start font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-10px">
+            Nos missions
+          </h3>
+          <p className="text-left font-Opensans text-[24px] leading-[40px] text-white my-[10px]">
+            Expert de la formation en situation de travail, AriMayi vous propose un apprentissage pratique et immersif sur des projets concrets confiés par nos partenaires (startups, TPE, PME) pour une adaptation réussie aux exigences de votre métier.
+          </p>
+          <div className="cards flex items-center justify-center gap-3">
+            <Card image={cardImg} titre="Je cherche à gagner de l'expérience" content="Jeune diplômé sans emploi ?
+          Rejoignez notre organisme pour une formation ciblée qui vous démarque. Développez des compétences recherchées par les recruteurs grâce à nos projets concrets et décrochez enfin le poste que vous méritez" className="bg-[#FEF9F5]" />
+            <Card image={cardImg2} titre="Je recherche un nouveau métier dans l'IT" content="Rejoignez notre organisme et transformez votre carrière dans l’IT ! Profitez d’une formation complète et de notre accompagnement vers des projets concrets pour réussir votre reconversion dans un secteur en plein essor" className="bg-[#FEF9F5]" />
+            <Card image={cardImg2} titre="Je recherche un nouveau métier dans l'IT" content="Rejoignez notre organisme et transformez votre carrière dans l’IT ! Profitez d’une formation complète et de notre accompagnement vers des projets concrets pour réussir votre reconversion dans un secteur en plein essor" className="bg-[#FEF9F5]" />
+
+          </div>
 
         </div>
+
+      </section>
+      <div className=' py-[220px]  flex flex-col items-center bg-white'>
+        <CostumButton text="Click" src="#" classes="inline " />
       </div>
     </>
   );

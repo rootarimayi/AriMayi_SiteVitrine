@@ -11,7 +11,7 @@ export default function Card ({image, titre, content, className}){
 
 
   return(
-    <figure className={`card w-[300px] p-2 m-2 rounded-md bg-opacity-20 hover:scale-105 hover:m-2 bg-[#FFECDF] flex flex-col justify-between border-2 border-red-600 hover:bg-[#F68A67] ${className}`} >
+    <figure className={`card w-[300px] p-2 m-2 rounded-md  hover:scale-105 hover:m-2 bg-[#FFECDF] flex flex-col justify-between border-2 hover:bg-[#FEF9F5] ${className}`} >
       <div>
         <Image src={image} alt="carte-image" className="rounded-md mb-4 "/>
         <figcaption className=" flex flex-col justify-between gap-3 min-h-[40%]">
