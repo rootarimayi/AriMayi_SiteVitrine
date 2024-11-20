@@ -4,19 +4,28 @@
 
 body {
   box-sizing: border-box;
-  margin:0;
+  margin: 0;
   padding: 0;
 }
-.readMoreClicked{
-  display: block; 
+.readMoreClicked {
+  display: block;
   overflow: hidden;
 }
 
-.readMore{
+.readMore {
   display: -webkit-box;
   -webkit-line-clamp: 5;
-  line-clamp:5;
-  -webkit-box-orient: vertical; 
+  line-clamp: 5;
+  -webkit-box-orient: vertical;
   text-overflow: ellipsis;
   overflow: hidden;
+}
+
+.slides-container {
+  height: 400px;
+}
+.container {
+  max-width: 1850px;
+  margin: auto;
+  width: 95%;
 }

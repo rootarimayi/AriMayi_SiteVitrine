@@ -18,7 +18,7 @@ export default function Header() {
     <>
       <header className="fixed z-10 w-full">
         <div className=" bg-gray  relative py-[10px] ">
-          <div className="container mx-auto max-w-[1850px]  w-[95%] flex items-center justify-between gap-2">
+          <div className="container flex items-center justify-between gap-2">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
                 <Image
