@@ -41,7 +41,7 @@ export default function Home() {
           </h3>
           <div>
             <div className="flex flex-col md:flex-row justify-start pt-[50px] pr-[10px]">
-              <div className="bg-bgAri w-[100%]">
+              <div className="bg-bgAri w-[100%] md:50%">
                 <Image src={happyness} alt="happyness" />
               </div>
               <div className="w-[70%] md:w-[30%] ">
