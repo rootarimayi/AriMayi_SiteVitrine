@@ -22,6 +22,7 @@ module.exports = {
         'partenairesBanner': 'url("/assets/creatopy-b6Fo9loWZUk-unsplash.jpg")',
         'identiteBanner': 'url("/assets/jud-mackrill-Of_m3hMsoAA-unsplash.jpg")',
         'contactBanner': 'url("/assets/nathan-anderson-FHiJWoBodrs-unsplash.jpg")',
+        'bgAri': 'url("/assets/bgAri.svg")'
       },
       screens: {
         "lg": "1180px"
