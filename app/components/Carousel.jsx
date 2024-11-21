@@ -19,7 +19,7 @@ export default function Carousel({slider}) {
       >
         {slider.map((s,i)=>{
           return<>
-            <Image src={s} key={"image" + i} alt={`image-${i+1}`}  className="object-fill"/>
+            <Image src={s} key={`image ${i+1}`} alt={`image-${i+1}`}  className="object-fill"/>
           </> 
         })}
       </div>
