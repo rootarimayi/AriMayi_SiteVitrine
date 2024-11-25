@@ -1,4 +1,4 @@
-"use client"; // Ensure this component is client-side only
+"use client";
 
 import { useState } from "react";
 
@@ -10,7 +10,6 @@ export default function Form() {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Handle form input change
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -18,15 +17,11 @@ export default function Form() {
       [name]: value,
     }));
   };
-
-  // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
-    // Here you would typically send the form data to your server or API.
-    // Simulate a delay for demonstration purposes.
     setTimeout(() => {
-      alert("Form submitted successfully!");
+      alert("demande envoyée!");
       setIsSubmitting(false);
       setFormData({
         name: "",
