@@ -11,6 +11,7 @@ import slide1 from "@/public/assets/jud-mackrill-Of_m3hMsoAA-unsplash.jpg";
 import slide2 from "@/public/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg";
 import slide3 from "@/public/assets/christina-wocintechchat-com-OW5KP_Pj85Q-unsplash.jpg";
 import Form from "./form/page";
+import Carte from "./components/Carte";
 
 export default function Home() {
   let slider = [
@@ -130,6 +131,12 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Carte
+        image={cardImg}
+        titre="Je cherche à gagner de l'expérience"
+        content="Jeune diplômé sans emploi ? Rejoignez notre organisme pour une formation ciblée qui vous démarque. Développez des compétences recherchées par les recruteurs grâce à nos projets concrets et décrochez enfin le poste que vous méritez."
+        className="bg-[#FEF9F5]"
+      />
       <Form />
     </>
   );
