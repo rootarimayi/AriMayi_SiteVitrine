@@ -12,6 +12,7 @@ import slide2 from "@/public/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg";
 import slide3 from "@/public/assets/christina-wocintechchat-com-OW5KP_Pj85Q-unsplash.jpg";
 import Form from "./form/page";
 import Carte from "./components/Carte";
+import Equipe from "./equipe/page";
 
 export default function Home() {
   let slider = [
@@ -130,6 +131,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+      <Equipe />
       <Form />
     </>
   );
