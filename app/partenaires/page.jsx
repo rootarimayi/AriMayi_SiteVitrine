@@ -1,21 +1,120 @@
 import Banner from "../components/Banner";
+import Image from "next/image";
+import cardImg3 from "@/public/assets/zachary-nelson-98Elr-LIvD8-unsplash.jpg";
 
 export default function Partenaires(){
   return (
     <>
       <Banner className="bg-partenairesBanner">
-        <h3 className="text-[22px] font-semibold text-center text-white"> 
+        <h3 className="text-[22px] font-semibold text-center text-white">
           Nos services pour les partenaires
         </h3>
         <p className="text-center text-white">
-          Chez AriMayi, nous nous engageons à soutenir les entreprises partenaires dans le développement de leurs projets digitaux tout en favorisant l&apos;apprentissage concret de nos apprenants.
-          <br/>
-          Ensemble, construisons l&apos;avenir !          
+          Chez AriMayi, nous nous engageons à soutenir les entreprises
+          partenaires dans le développement de leurs projets digitaux tout en
+          favorisant l&apos;apprentissage concret de nos apprenants.
+          <br />
+          Ensemble, construisons l&apos;avenir !
         </p>
       </Banner>
-      <div className='text-[24px] text-center py-[220px] font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text'>
-        Page Partenaires
+      <div className="text-[24px] text-center py-[220px] font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
+        Nos services pour les partenaires
       </div>
+      <header className="text-center mb-12">
+        <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
+          Nos services pour les partenaires
+        </h1>
+       <br /><br /> <p className="text-gray-600 leading-relaxed">
+          Chez AriMayi, nous nous engageons à soutenir les entreprises
+          partenaires dans le développement de leurs projets digitaux tout en
+          favorisant lapprentissage concret de nos apprenants.
+          <br />
+          <strong>Ensemble, construisons lavenir !</strong>
+        </p>
+      </header>
+      {/* card 1 */}
+      <section className="max-w-5xl mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+        {/* Image */}
+        <div className="w-full md:w-1/2">
+          <Image
+            src={cardImg3}
+            alt="Team working on a project"
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+
+        {}
+        <div className="w-full md:w-1/2">
+          <h2 className="text-xl font-semibold mb-4">
+            Confiez votre projet digital à notre organisme de formation
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            AriMayi vise à mettre en place des partenariats gagnants-gagnants.
+            En nous confiant vos projets, vous offrez à nos apprenants
+            lopportunité dévoluer en situation de travail. Vous y gagnez la
+            réalisation de vos objectifs à des tarifs compétitifs.
+          </p>
+          <p className="text-gray-600 mt-4">
+            Pour nous confier votre projet, accédez à notre plateforme.
+          </p>
+        </div>
+      </section>
+      <br /> <br /> <br />
+      <section className="max-w-5xl mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+        {/* Image */}
+        <div className="w-full md:w-1/2">
+          <Image
+            src={cardImg3}
+            alt="Team working on a project"
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+
+        {}
+        <div className="w-full md:w-1/2">
+          <h2 className="text-xl font-semibold mb-4">
+            Formez vos futures ressources selon vos besoins et vos méthodes
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Grâce à notre méthode de formation ETIC <br />E : Entreprise
+            (ancrage dans la réalité de lentreprise) <br />T : Terrain
+            (formation en situation réelle) <br />I : Intégration (intégration
+            des acteurs) <br />C : Compétence (acquisition de compétences
+            ciblées) <br />
+            Nos tuteurs prennent en charge vos nouveaux embauchés pour les
+            former efficacement à vos méthodes et techniques.
+          </p>
+        </div>
+      </section>
+      <br />
+      <br /> <br />
+      <section className="max-w-5xl mx-auto flex flex-col md:flex-row items-center space-y-8 md:space-y-0 md:space-x-8">
+        {/* Image */}
+        <div className="w-full md:w-1/2">
+          <Image
+            src={cardImg3}
+            alt="Team working on a project"
+            className="rounded-lg shadow-lg"
+          />
+        </div>
+
+        {}
+        <div className="w-full md:w-1/2">
+          <h2 className="text-xl font-semibold mb-4">
+            Déposez des annonces sur notre plateforme pour embaucher des
+            ressources formées
+          </h2>
+          <p className="text-gray-600 leading-relaxed">
+            Grâce à notre approche AFEST (Action de Formation En Situation de
+            Travail), vous avez la possibilité de recruter des apprenants formés
+            par nos soins. Trouvez des talents prêts à intégrer vos équipes,
+            déjà familiarisés avec vos besoins spécifiques.
+          </p>
+        </div>
+      </section>
+      <br />
+      <br />
+      <br />
     </>
   );
 };
