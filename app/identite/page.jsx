@@ -2,6 +2,7 @@ import Banner from "../components/Banner";
 import Image from "next/image";
 import happyness from "@/public/assets/happiness.png";
 import CostumButton from "../components/CostumButton";
+import Equipe from "../equipe/page";
 export default function Identite(){
   return (
     <>
@@ -52,6 +53,20 @@ export default function Identite(){
           </div>
         </section>
       </div>
+
+      <header className="text-center mb-12">
+        <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
+          Notre équipe
+        </h1>
+        <br />
+        <br />{" "}
+        <p className="text-gray-600 leading-relaxed">
+          Une équipe dédiée au service de votre réussite
+          <br />
+        </p>
+      </header>
+      <br />
+      <Equipe />
     </>
   );
 };
