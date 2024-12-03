@@ -22,7 +22,7 @@ export default function Apprenants(){
             pour s’insérer durablement dans le monde du travail.
           </p>
 
-          {/* Section for Young Graduates */}
+          {}
           <div className="flex flex-col md:flex-row items-center mb-12">
             <div className="w-full md:w-1/3 h-48 relative mb-4 md:mb-0 md:mr-6">
               <Image
@@ -45,7 +45,7 @@ export default function Apprenants(){
             </div>
           </div>
 
-          {/* Section for People in Career Transition */}
+          {}
           <div className="flex flex-col md:flex-row-reverse items-center mb-12">
             <div className="w-full md:w-1/3 h-48 relative mb-4 md:mb-0 md:ml-6">
               <Image
@@ -69,7 +69,7 @@ export default function Apprenants(){
             </div>
           </div>
 
-          {/* Section for Future Apprentices */}
+          {}
           <div className="flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/3 h-48 relative mb-4 md:mb-0 md:mr-6">
               <Image
