@@ -25,7 +25,7 @@ export default function Header() {
                   src={logo}
                   alt="logo AriMayi"
                   priority
-                  className="hidden pb-[10px] md:block"
+                  className="hidden pb-[10px] md:block md:w-[200px] lg:w-[300px] xl:w-[400px] ml-0"
                 />
                 <Image
                   src={logoMobile}
@@ -91,9 +91,29 @@ export default function Header() {
               onClick={toggleNavebar}
             >
               {isOpen ? (
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M6.4 19L5 17.6l5.6-5.6L5 6.4L6.4 5l5.6 5.6L17.6 5L19 6.4L13.4 12l5.6 5.6l-1.4 1.4l-5.6-5.6z"
+                  />
+                </svg>
               ) : (
-                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"><path fill="currentColor" d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"/></svg>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="1em"
+                  height="1em"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M3 18h18v-2H3zm0-5h18v-2H3zm0-7v2h18V6z"
+                  />
+                </svg>
               )}
             </button>
           </div>
