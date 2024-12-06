@@ -13,6 +13,7 @@ import slide3 from "@/public/assets/christina-wocintechchat-com-OW5KP_Pj85Q-unsp
 import Form from "./form/page";
 import Carte from "./components/Carte";
 import Equipe from "./equipe/page";
+import Opportunite from "./opportunite/page";
 
 export default function Home() {
   let slider = [
@@ -46,7 +47,6 @@ export default function Home() {
         </div>
       </Banner>
       {/**************** arimayi Section  ***********/}
-     
       {/**************** slider section ***********/}
       <section className="section-cards flex flex-col md:flex-row bg-black py-[50px]">
         <div className="container">

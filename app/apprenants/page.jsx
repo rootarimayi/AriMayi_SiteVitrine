@@ -1,6 +1,7 @@
 
 import cardImg from "@/public/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg";
 import Image from "next/image";
+import Opportunite from "../opportunite/page";
 
 export default function Apprenants(){
   return (
@@ -14,12 +15,13 @@ export default function Apprenants(){
             progressif, pertinent et immédiatement applicable.
           </h2>
           <p className="text-gray-700 mb-12">
-            À chaque étape, le cadre de l’<strong>AFEST </strong >allie formation, autonomie et
-            suivi personnalisé, permettant ainsi un apprentissage progressif,
-            pertinent et immédiatement applicable. Notre approche à la fois
-            humaine et performante assure à chaque apprenant, quel que soit son
-            parcours, une montée en compétences concrète, et lui donne les clés
-            pour s’insérer durablement dans le monde du travail.
+            À chaque étape, le cadre de l’<strong>AFEST </strong>allie
+            formation, autonomie et suivi personnalisé, permettant ainsi un
+            apprentissage progressif, pertinent et immédiatement applicable.
+            Notre approche à la fois humaine et performante assure à chaque
+            apprenant, quel que soit son parcours, une montée en compétences
+            concrète, et lui donne les clés pour s’insérer durablement dans le
+            monde du travail.
           </p>
 
           {}
@@ -93,6 +95,7 @@ export default function Apprenants(){
           </div>
         </div>
       </div>
+      <Opportunite />
     </>
   );
 };
