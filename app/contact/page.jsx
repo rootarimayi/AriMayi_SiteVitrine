@@ -1,5 +1,6 @@
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
+import Coordonnees from "../components/Coordonnees";
 
 
 export default function Contact(){
@@ -23,6 +24,7 @@ export default function Contact(){
         <Collapse title="Quels types de projets digitaux les start-up proposent-elles?" content="Nos start-up partenaires proposent une variété de projets digitaux allant du développement d'applications mobiles à la conception de sites web. Chaque projet offre une opportunité unique d'acquérir des compétences en situation de travail."/>
 
         <Collapse title="Comment les start-up et les apprenants bénéficient-ils de ce partenariat?" content="Ce partenariat crée une relation gagnant-gagnant où les apprenants acquièrent des compétences en situation de travail tout en aidant les start-up à concrétiser leurs projets digitaux. Cela favorise l'insertion professionnelle des apprenants et la réussite des start-up."/>
+        <Coordonnees/>
 
       </div>
 
