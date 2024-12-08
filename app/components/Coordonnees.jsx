@@ -23,13 +23,22 @@ export default function Coordonnees() {
   return (
     <div className="bg-gray-600 p-8 rounded-lg shadow-md mx-4 my-6">
       <div className="flex flex-col items-center text-center">
-        <h2 className="text-4xl font-extrabold mb-6 text-gray-800">
-          Coordonnées
-        </h2>
+        <br />
+        <br />
+        <br />
+        <br />
+
+        <h3 className="text-[48px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
+          Contactez-nous
+        </h3>
+        <br />
+        <br />
         <p className="text-gray-800 mb-8">
-          Nous sommes là pour répondre à vos questions et vous accompagner dans
-          votre parcours professionnel.
+          Votre point de départ vers de nouvelles opportunités professionnelles
+          et la réussite de votre projet
         </p>
+        <br />
+        <br />
       </div>
 
       <div className="flex flex-col lg:flex-row gap-8">
