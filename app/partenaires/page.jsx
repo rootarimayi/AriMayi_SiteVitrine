@@ -1,7 +1,6 @@
 import Banner from "../components/Banner";
 import Image from "next/image";
 import cardImg3 from "@/public/assets/zachary-nelson-98Elr-LIvD8-unsplash.jpg";
-import Temoignage from "../Temoignage/page";
 
 export default function Partenaires(){
   return (
@@ -110,7 +109,6 @@ export default function Partenaires(){
       <br />
       <br />
       <br />
-      <Temoignage />
     </>
   );
 };
