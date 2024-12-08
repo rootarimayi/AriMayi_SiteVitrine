@@ -2,6 +2,7 @@ import Banner from "../components/Banner";
 import Image from "next/image";
 import happyness from "@/public/assets/happiness.png";
 import CostumButton from "../components/CostumButton";
+import Journal from "../components/Journal";
 import Equipe from "../equipe/page";
 
 export default function Identite() {
@@ -76,6 +77,7 @@ export default function Identite() {
       </header>
 
       <Equipe />
+      <Journal />
     </>
   );
 }

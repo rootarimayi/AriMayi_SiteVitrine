@@ -1,21 +1,16 @@
 import Banner from "../components/Banner";
 import Image from "next/image";
 import cardImg3 from "@/public/assets/zachary-nelson-98Elr-LIvD8-unsplash.jpg";
+import Temoignage from "../Temoignage/page";
 
 export default function Partenaires(){
   return (
     <>
       <Banner className="bg-partenairesBanner">
-        <h3 className="text-[22px] font-semibold text-center text-white">
-      
-        </h3>
-        <p className="text-center text-white">
-        
-        </p>
+        <h3 className="text-[22px] font-semibold text-center text-white"></h3>
+        <p className="text-center text-white"></p>
       </Banner>
-      <div className="text-[24px] text-center py-[220px] font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
-
-      </div>
+      <div className="text-[24px] text-center py-[220px] font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text"></div>
       <header className="text-center mb-12">
         <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
           Nos services pour les partenaires
@@ -115,6 +110,7 @@ export default function Partenaires(){
       <br />
       <br />
       <br />
+      <Temoignage />
     </>
   );
 };

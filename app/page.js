@@ -14,6 +14,7 @@ import Form from "./form/page";
 import Carte from "./components/Carte";
 import Equipe from "./equipe/page";
 import Opportunite from "./opportunite/page";
+import Journal from "./components/Carousel";
 
 export default function Home() {
   let slider = [
@@ -89,6 +90,7 @@ export default function Home() {
               content="Jeune diplômé sans emploi ? Rejoignez notre organisme pour une formation ciblée qui vous démarque. Développez des compétences recherchées par les recruteurs grâce à nos projets concrets et décrochez enfin le poste que vous méritez."
               className="bg-[#FEF9F5]"
             />
+          
           </div>
         </div>
       </div>
