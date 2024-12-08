@@ -18,6 +18,7 @@ module.exports = {
       },
       backgroundImage: {
         'HomepageBanner': 'url("/assets/banniere-acceuil.png")',
+        'HomepageBannerMobile': 'url("/assets/acceuilMobile.png")',
         'apprenantsBanner': 'url("/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg")',
         'partenairesBanner': 'url("/assets/creatopy-b6Fo9loWZUk-unsplash.jpg")',
         'identiteBanner': 'url("/assets/jud-mackrill-Of_m3hMsoAA-unsplash.jpg")',
