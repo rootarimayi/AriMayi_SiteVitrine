@@ -28,7 +28,7 @@ export default function Header() {
                   className="hidden pb-[10px] md:block md:w-[200px] lg:w-[300px] xl:w-[400px] ml-0"
                 />
                 <Image
-                  src={logoMobile}
+                  src={logo}
                   alt="logo AriMayi"
                   width={60}
                   height={60}
@@ -57,16 +57,10 @@ export default function Header() {
                   Partenaires
                 </Link>
                 <Link
-                  href="/formations"
-                  className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
-                >
-                  Formations
-                </Link>
-                <Link
                   href="/identite"
                   className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"
                 >
-                  Identite
+                  notre Identité
                 </Link>
                 <Link
                   href="/contact"
@@ -83,7 +77,7 @@ export default function Header() {
             </div>
             <CostumButton
               text="Accés à la Plateforme"
-              classes="text-white font-Opensans  text-[17px] md:text-[16px] bg-[#F68A67] tracking-[.5px] hover:scale-110 lg:hidden "
+              classes="text-white font-Opensans  text-[17px]  md:hidden  lg:hidden "
               src="#"
             />
             <button
