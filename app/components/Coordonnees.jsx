@@ -49,24 +49,24 @@ export default function Coordonnees() {
             placeholder="Nom"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="bg-gray-700 text-white p-3 rounded-md w-full"
+            className="bg-gray-700 text-black p-3 rounded-md border border-blue-500 focus:outline-none focus:border-blue-500 w-64"
           />
           <input
             type="email"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="bg-gray-700 text-white p-3 rounded-md w-full"
+            className="bg-gray-700 text-black p-3 rounded-md border border-blue-500 focus:outline-none focus:border-blue-500 w-64"
           />
           <textarea
             placeholder="Message"
             value={message}
             onChange={(e) => setMessage(e.target.value)}
-            className="bg-gray-700 text-white p-3 rounded-md w-full h-24"
-          ></textarea>
+            className="bg-gray-700 text-black p-3 rounded-md border border-blue-500 focus:outline-none focus:border-blue-500 w-64"
+          ></textarea> <br />
           <button
             type="submit"
-            className="bg-black text-white py-3 px-6 rounded-md hover:bg-gray-800 transition-colors duration-300"
+            className="bg-black text-white ml-16 py-3 px-6 rounded-md hover:bg-gray-800 transition-colors duration-300 w-25 self-center "
           >
             Soumettre
           </button>
