@@ -34,10 +34,12 @@ export default function Identite() {
         <section className="text-left mb-8">
           <h2 className="text-xl mt-4 text-gray-800">
             Inspiré des mots japonais Ari et chinois Mǎyǐ, signifiant
-            &quot;fourmi&quot;, ARIMAYI a choisi cet animal pour incarner ses
+           <bold> &quot;fourmi&quot;</bold>, ARIMAYI a choisi cet animal pour incarner ses
             valeurs essentielles.
           </h2>
+          <br />
           <h2 className="text-2xl mt-4 text-gray-700">Pourquoi la fourmi ?</h2>
+       <br />
           <p className="text-xl text-gray-700 text-start mb-4 leading-relaxed">
             Parce qu&apos;elle illustre la force de l&apos;unité et du travail
             collaboratif. Les fourmis accomplissent collectivement des tâches
@@ -54,8 +56,8 @@ export default function Identite() {
             src={logoMobile}
             alt="logo"
             layout="intrinsic" // Changed to intrinsic for automatic size scaling
-            width={200} // Reduced the width of the image
-            height={120} // Adjusted height to maintain the aspect ratio
+            width={350} // Reduced the width of the image
+            height={250} // Adjusted height to maintain the aspect ratio
             className="object-cover mx-auto"
           />
         </section>

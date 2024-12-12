@@ -8,8 +8,8 @@ export default function Footer() {
       aria-labelledby="footer-heading"
     >
       <h2 id="footer-heading" className="sr-only"></h2>
-      <div className="mx-auto max-w-7xl px-6 pb-8 pt-16 lg:px-8 lg:pt-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="ml-4 max-w-7xl px-6 pb-8 pt-16 lg:px-8 lg:pt-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-20">
           <div className="flex justify-start items-center">
             <div>
               <Image
@@ -24,27 +24,41 @@ export default function Footer() {
             </div>
           </div>
           <div className="mt-8 md:mt-0">
-            <h3 className="text-sm font-semibold leading-6 text-secondary-400">
-              ARIMAYI
+            <h3 className="text-xl font-semibold leading-6 text-secondary-400">
+              À Propos
             </h3>
             <ul className="mt-6 space-y-4">
               <li>
-                <a href="https://www.arimayi.io/">À propos dARIMAYI</a>
+                <a href="https://www.arimayi.io/">Qui sommes-nous</a>
+              </li>
+              <li>
+                <a href="https://www.arimayi.io/">FAQ</a>
+              </li>
+              <li>
+                <a href="https://www.arimayi.io/">Nous Contacter</a>
               </li>
             </ul>
           </div>
           <div className="mt-8 md:mt-0">
-            <h3 className="text-sm font-semibold leading-6 text-secondary-400">
-              Informations légales
+            <h3 className="text-xl font-semibold leading-6 text-secondary-400">
+              Services
             </h3>
             <ul className="mt-6 space-y-4">
               <li>
-                <a href="#">Code de conduite</a>
+                <a href="#">Apprenants</a>
               </li>
               <li>
-                <a href="#">Déclaration de confidentialité</a>
+                <a href="#">Partenaires</a>
+              </li>
+              <li>
+                <a href="#">Platforme</a>
               </li>
             </ul>
+          </div>
+          <div className="mt-8 md:mt-0">
+            <h2 className="text-xl font-semibold leading-6 text-secondary-400">
+              S&apos; abonner à la newsletter
+            </h2>
           </div>
         </div>
       </div>
