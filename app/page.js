@@ -15,7 +15,7 @@ import Carte from "./components/Carte";
 import Equipe from "./equipe/page";
 import Opportunite from "./opportunite/page";
 import Journal from "./components/Carousel";
-
+import TestimonialSection from "./components/TestimonialSection";
 export default function Home() {
   let slider = [
     slide1,
@@ -93,7 +93,7 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <Equipe />
+      <TestimonialSection />
       <Form />
     </>
   );
