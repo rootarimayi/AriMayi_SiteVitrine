@@ -25,15 +25,17 @@ module.exports = {
         contactBanner:
           'url("/assets/nathan-anderson-FHiJWoBodrs-unsplash.jpg")',
         bgAri: 'url("/assets/bgAri.svg")',
+        candidat:
+          'url("/assets/christina-wocintechchat-com-OW5KP_Pj85Q-unsplash.jpg")',
       },
       screens: {
         lg: "1180px",
-        sm: '700px',
+        sm: "700px",
       },
     },
   },
   plugins: [],
   variants: {
-    backgroundImage: ["responsive"], 
+    backgroundImage: ["responsive"],
   },
 };

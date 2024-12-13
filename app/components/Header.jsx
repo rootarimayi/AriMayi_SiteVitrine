@@ -51,6 +51,12 @@ export default function Header() {
                   Apprenants
                 </Link>
                 <Link
+                  href="/formations"
+                  className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
+                >
+                  Formations
+                </Link>
+                <Link
                   href="/partenaires"
                   className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
                 >
