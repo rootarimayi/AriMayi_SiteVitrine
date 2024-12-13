@@ -5,10 +5,10 @@ export default function Candidature() {
   return (
     <>
       <br />
-      <br /> <br /> 
-      <div className="flex h-screen">
+      <br /> <br />
+      <div className="flex flex-col md:flex-row h-auto md:h-screen">
         {}
-        <div className="w-1/2 bg-gray-200 flex items-center justify-center">
+        <div className="w-full md:w-1/2 bg-gray-200 flex items-center justify-center">
           <Image
             src={candidat}
             alt="Placeholder"
@@ -17,23 +17,23 @@ export default function Candidature() {
         </div>
 
         {}
-        <div className="w-1/2 bg-white flex items-center justify-center">
+        <div className="w-full md:w-1/2 bg-white flex items-center justify-center">
           <div className="mt-50 p-8">
             <br />
             <br />
             <h1 className="text-2xl text-center font-bold mb-1">
               Je candidate dès maintenant !
-            </h1> 
+            </h1>
             <p className="text-gray-600 text-center mb-1">
               Pour déposer votre candidature, il vous suffit de remplir le
               formulaire ci-dessous.
             </p>
-            <form className="max-w-lg mx-auto p-1 bg-white rounded-lg shadow-md dark:bg-gray-800">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-5">
+            <form className="max-w-lg mx-auto p-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
                   <label
                     htmlFor="nom"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Nom
                   </label>
@@ -48,14 +48,14 @@ export default function Candidature() {
                 <div>
                   <label
                     htmlFor="prenom"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Prénom
                   </label>
                   <input
                     type="text"
                     id="prenom"
-                    className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    className="bg-gray-50 mb-4 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
                     placeholder="Votre prénom"
                     required
                   />
@@ -65,7 +65,7 @@ export default function Candidature() {
                 <div>
                   <label
                     htmlFor="age"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Âge
                   </label>
@@ -80,7 +80,7 @@ export default function Candidature() {
                 <div>
                   <label
                     htmlFor="telephone"
-                    className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
                   >
                     Téléphone
                   </label>
@@ -96,7 +96,7 @@ export default function Candidature() {
               <div className="mb-5">
                 <label
                   htmlFor="email"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Email
                 </label>
@@ -111,7 +111,7 @@ export default function Candidature() {
               <div className="mb-5">
                 <label
                   htmlFor="programme"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
                 >
                   Quel formation vous intéresse ?
                 </label>
