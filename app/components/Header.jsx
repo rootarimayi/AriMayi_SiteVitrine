@@ -51,7 +51,7 @@ export default function Header() {
                   Apprenants
                 </Link>
                 <Link
-                  href="/formations"
+                  href="/formation"
                   className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
                 >
                   Formations
