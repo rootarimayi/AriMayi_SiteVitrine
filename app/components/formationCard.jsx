@@ -1,6 +1,5 @@
 import Image from "next/image";
 
-
 const specialties = [
   {
     image: "design.jpeg",
@@ -34,7 +33,7 @@ const specialties = [
   },
 ];
 
-const FormationCard = () => { 
+const FormationCard = () => {
   return (
     <>
       <br />
