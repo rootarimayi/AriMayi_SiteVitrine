@@ -66,7 +66,7 @@ export default function Header() {
                   href="/identite"
                   className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"
                 >
-                  notre Identité
+                  Identité
                 </Link>
                 <Link
                   href="/contact"
