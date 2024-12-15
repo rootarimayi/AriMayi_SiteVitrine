@@ -34,7 +34,7 @@ const specialties = [
   },
 ];
 
-const FormationCard = () => {
+const FormationCard = () => { 
   return (
     <>
       <br />
