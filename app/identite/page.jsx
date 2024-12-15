@@ -55,9 +55,9 @@ export default function Identite() {
           <Image
             src={logoMobile}
             alt="logo"
-            layout="intrinsic" // Changed to intrinsic for automatic size scaling
-            width={350} // Reduced the width of the image
-            height={250} // Adjusted height to maintain the aspect ratio
+            layout="intrinsic" 
+            width={350} 
+            height={250} 
             className="object-cover mx-auto"
           />
         </section>
