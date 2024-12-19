@@ -15,7 +15,7 @@ export default function Apprenants(){
             progressif, pertinent et immédiatement applicable.
           </h2>
           <p className="text-gray-700 mb-12">
-            À chaque étape, le cadre de l’<strong>AFEST </strong>allie
+            À chaque étape, le cadre de l’<b>AFEST </b>allie
             formation, autonomie et suivi personnalisé, permettant ainsi un
             apprentissage progressif, pertinent et immédiatement applicable.
             Notre approche à la fois humaine et performante assure à chaque
