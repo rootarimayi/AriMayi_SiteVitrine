@@ -52,7 +52,7 @@ export default function CourseDetails() {
               compétences.
             </li>
             <li>
-              Professionnels en reconversion désirant s'orienter vers les
+              Professionnels en reconversion désirant s&apos;orienter vers les
               métiers du design.
             </li>
           </ul>
@@ -100,7 +100,7 @@ export default function CourseDetails() {
             <li>Du 10/09/2025 au 13/12/2025 à distance</li>
           </ul>
           <button className="w-full bg-green-600 text-white py-2 px-4 rounded-lg hover:bg-green-700 transition">
-            S'inscrire
+            S&apos;inscrire
           </button>
         </div>
       </div>
