@@ -1,73 +1,133 @@
 "use client";
-import { useState, useRef } from "react";
-import React from "react";
 import Image from "next/image";
-import slide2 from "@/public/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg";
+import React, { useState } from "react";
 
-export default function PartnerTestimony() {
-  const [showModal, setShowModal] = useState(false);
-   const videoRef = useRef(null);
+export default function TestimonialSection() {
+  // Testimonials data
+  const testimonials = [
+    {
+      name: "Katia",
+      titre: "Entrepreneur",
+      avatar: "/assets/katia.JPG",
+      message:
+        "Arimayi propose un vrai accompagnement centré sur l'entrepreneur... une vraie formule gagnant gagnant",
+      videoUrl: "Katia.mp4",
+    },
+  ];
 
-  const toggleModal = () => {
-    if (videoRef.current) {
-      videoRef.current.pause(); // to pause vid on bg
-    }
-    setShowModal(!showModal);
+  // State for modal visibility
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [currentVideo, setCurrentVideo] = useState("");
+
+  // vid modal
+  const openModal = (videoUrl) => {
+   console.log(`Opening video modal for: ${videoUrl}`);
+ 
+
+  setCurrentVideo(videoUrl);
+  setIsModalOpen(true);
+  };
+
+  // Close modal
+  const closeModal = () => {
+    setIsModalOpen(false);
+    setCurrentVideo("");
   };
 
   return (
-    <div className="flex flex-wrap justify-between p-5">
-      {/* text */}
-      <div className="w-full md:w-1/2 flex items-center justify-center">
-        <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
-          Témoignages de nos partenaires
-        </h1>
-      </div>
+    <>
+      <section className="py-12 bg-white">
+        {}
+        <div className="max-w-3xl mx-auto flex flex-col items-center mb-8">
+          <h3 className="text-[28px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-[5px]">
+            Témoignages
+          </h3>
+          <br />
+          <p className="text-center font-Opensans text-[16px] leading-[25px] text-black my-[10px] gap-4">
+            Expert de la formation en situation de travail. AriMayi vous propose
+            un apprentissage pratique et immerssif sur des projets concrets
+            confiés par nos partenariats experts
+          </p>
+        </div>
+        <br />
+        <br />
+        {/* Temoignages */}
+        <div className="flex items-center justify-center">
+          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 max-w-14xl px-4 justify-center">
+            {testimonials.map((testimonial, i) => (
+              <div
+                key={i}
+                className="bg-[#353535] shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105 hover:shadow-xl"
+              >
+                <div className="flex items-center mb-4">
+                  {}
+                  <Image
+                    src={testimonial.avatar}
+                    alt={testimonial.name}
+                    width={100}
+                    height={100}
+                    className="w-12 h-12 rounded-full mr-4 object-cover"
+                  />
+                  <div className="flex flex-col">
+                    <h3 className="text-lg font-bold text-[#F68A67]">
+                      {testimonial.name}
+                    </h3>
 
-      {/*vid*/}
-      <div className="w-full md:w-1/2 relative">
-        <video
-          ref={videoRef}
-          className="cursor-pointer rounded-lg max-h-[700px] w-auto"
-          controls
-          onClick={toggleModal}
-          muted
-        >
-          <source src="/Katia.mp4" type="video/mp4" />
-          vid not supported
-        </video>
-        <h4 className="text-gray-800 font-bold mt-4">Katia: Entrepreneur </h4>
-      </div>
-
-      {/* Modal */}
-      {showModal && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-70 flex items-center justify-center z-50">
-          <div className="relative bg-white p-5 max-w-full max-h-full">
-            <button
-              className="absolute top-2 right-2 bg-red-500 text-white p-2 rounded-full hover:bg-red-600"
-              onClick={toggleModal}
-              style={{
-                width: "30px",
-                height: "30px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-              }}
-            >
-              x
-            </button>
-            <video
-              controls
-              autoPlay
-              width="auto"
-              style={{ maxHeight: "600px", maxWidth: "100%" }}
-            >
-              <source src="/Katia.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+                    <h3 className=" text-sm text-white">
+                      {testimonial.titre}
+                    </h3>
+                  </div>
+                </div>
+                <p className="textsemibold text-lg text-white mb-4">
+                  &quot; {testimonial.message}&quot;
+                </p>
+                <button
+                  onClick={() => openModal(testimonial.videoUrl)}
+                  className="text-[#F68A67] hover:underline transition-colors"
+                >
+                  Voir le vid
+                </button>
+              </div>
+            ))}
           </div>
         </div>
-      )}
-    </div>
+
+        {/* vid */}
+        {isModalOpen && (
+          <div
+            className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
+            role="dialog"
+            aria-modal="true"
+          >
+            <div
+              className="bg-white rounded-lg shadow-2xl w-full h-full relative p-0"
+              style={{ width: "900px", height: "400px" }}
+            >
+              <button
+                onClick={closeModal}
+                className="absolute top-2 right-2 bg-red-500 text-white rounded-full w-8 h-8 flex items-center justify-center text-xl hover:bg-red-600 transition"
+                aria-label="Close video modal"
+              >
+                &times;
+              </button>
+              <div className="w-full aspect-video">
+                <iframe
+                  width="100%"
+                  height="100%"
+                  src={currentVideo}
+                  title="Testimonial Video"
+                  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{ objectFit: "cover" }}
+                  className="rounded-lg"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        )}
+      </section>
+      <br />
+      <br />
+    </>
   );
 }
