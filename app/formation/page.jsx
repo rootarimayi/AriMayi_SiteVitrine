@@ -1,4 +1,5 @@
 import Image from "next/image";
+import DetailFormation from "../components/DetailFormation";
 
 const specialties = [
   {
@@ -76,6 +77,7 @@ export default function Formation() {
       <br />
       <br />
       <br />
+      <DetailFormation/>
     </>
   );
 }
