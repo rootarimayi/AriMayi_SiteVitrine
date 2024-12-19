@@ -17,8 +17,8 @@ const Monserrat = localFont({
 
 
 export const metadata = {
-  title: "AriMayi . Un rêve, Un projet, Une réalité.",
-  description: "Site vitrine AriMayi",
+  title: "l'expérience concrète par la formation",
+  description: "AriMayi ",
 };
 
 export default function RootLayout({ children }) {
