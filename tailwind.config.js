@@ -16,6 +16,8 @@ module.exports = {
         gray: "#353535",
       },
       backgroundImage: {
+        Partnerlogo: 'url("/logo/partnerlogo.png")',
+        Partnerarimayi: 'url("/logo/partnerarimayi.png")',
         HomepageBanner: 'url("/assets/banniere-acceuil.png")',
         HomepageBannerMobile: 'url("/assets/acceuilMobile.png")',
         apprenantsBanner:
@@ -27,18 +29,12 @@ module.exports = {
         bgAri: 'url("/assets/bgAri.svg")',
         candidat:
           'url("/assets/christina-wocintechchat-com-OW5KP_Pj85Q-unsplash.jpg")',
-          cybersecuriy:
-          'url("/assets/cyber.JPEG")',
-          commercial:
-          'url("/assets/commercial.JPEG")',
-          design:
-          'url("/assets/design.JPEG")',
-          mobile:
-          'url("/assets/mobile.JPG")',
-          ai:
-          'url("/assets/ai.JPG")',
-          conception:
-          'url("/assets/conception.JPG")',
+        cybersecuriy: 'url("/assets/cyber.JPEG")',
+        commercial: 'url("/assets/commercial.JPEG")',
+        design: 'url("/assets/design.JPEG")',
+        mobile: 'url("/assets/mobile.JPG")',
+        ai: 'url("/assets/ai.JPG")',
+        conception: 'url("/assets/conception.JPG")',
       },
       screens: {
         lg: "1180px",
