@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
 
+
 export default function Equipe() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeBio, setActiveBio] = useState(null);
@@ -125,7 +126,7 @@ export default function Equipe() {
 
       {/* Modal */}
       {isOpen && activeBio && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+        <><div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
           <div className="bg-white w-96 p-6 rounded-lg relative flex">
             <button
               className="absolute top-2 right-2 text-gray-500 text-xl"
@@ -141,8 +142,7 @@ export default function Equipe() {
                   alt={activeBio.name}
                   src={activeBio.imgSrc}
                   width={250}
-                  height={250}
-                />
+                  height={250} />
               </div>
 
               <div className="w-2/3">
@@ -161,6 +161,8 @@ export default function Equipe() {
             </div>
           </div>
         </div>
+      
+        </>
       )}
     </>
   );

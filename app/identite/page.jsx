@@ -5,6 +5,7 @@ import logoMobile from "@/public/logo/logo_mobile.svg";
 import CostumButton from "../components/CostumButton";
 import Journal from "../components/Journal";
 import Equipe from "../equipe/page";
+import Fondateur from "../components/Fondateur";
 
 export default function Identite() {
   return (
@@ -34,12 +35,12 @@ export default function Identite() {
         <section className="text-left mb-8">
           <h2 className="text-xl mt-4 text-gray-800">
             Inspiré des mots japonais Ari et chinois Mǎyǐ, signifiant
-           <bold> &quot;fourmi&quot;</bold>, ARIMAYI a choisi cet animal pour incarner ses
-            valeurs essentielles.
+            <strong> &quot;fourmi&quot;</strong>, ARIMAYI a choisi cet animal
+            pour incarner ses valeurs essentielles.
           </h2>
           <br />
           <h2 className="text-2xl mt-4 text-gray-700">Pourquoi la fourmi ?</h2>
-       <br />
+          <br />
           <p className="text-xl text-gray-700 text-start mb-4 leading-relaxed">
             Parce qu&apos;elle illustre la force de l&apos;unité et du travail
             collaboratif. Les fourmis accomplissent collectivement des tâches
@@ -55,9 +56,9 @@ export default function Identite() {
           <Image
             src={logoMobile}
             alt="logo"
-            layout="intrinsic" 
-            width={350} 
-            height={250} 
+            layout="intrinsic"
+            width={350}
+            height={250}
             className="object-cover mx-auto"
           />
         </section>
@@ -78,18 +79,14 @@ export default function Identite() {
       </div>
 
       {}
-      <header className="text-center mb-12">
-        <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
-          Notre équipe
-        </h1>
-        <p className="text-gray-600 leading-relaxed">
-          Une équipe dédiée au service de votre réussite
-        </p>
-      </header>
-
-      <Equipe />
-      <br /><br /><br />
+      <Fondateur />
+      <br />
+      <br />
+      <br />
       <Journal />
+      <br />
+      <br />
+      <br />
     </>
   );
 }
