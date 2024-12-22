@@ -23,9 +23,9 @@ export default function Fondateur() {
         <section className="w-full py-8 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-8 md:mb-16">
-             <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
-          L&apos;Histoire de Notre Fondateur
-        </h1>
+              <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
+                L&apos;Histoire de Notre Fondateur
+              </h1>
               <p className="mt-2 md:mt-4 text-base md:text-lg text-gray-600">
                 Écoutez directement la vision derrière notre succès
               </p>
@@ -45,7 +45,7 @@ export default function Fondateur() {
 
                   <div className="mt-6">
                     <p className="text-base md:text-lg text-gray-700 italic">
-                      "{testimonial.quote}"
+                      &quot;{testimonial.quote} &quot;
                     </p>
 
                     <div className="mt-4 md:mt-6 flex items-center">
