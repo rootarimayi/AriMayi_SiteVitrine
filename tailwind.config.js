@@ -19,6 +19,7 @@ module.exports = {
         Partnerlogo: 'url("/logo/partnerlogo.png")',
         Partnerarimayi: 'url("/logo/partnerarimayi.png")',
         HomepageBanner: 'url("/assets/banniere-acceuil.png")',
+        HomepageBanne: 'url("/assets/bannerr.JPG")',
         HomepageBannerMobile: 'url("/assets/acceuilMobile.png")',
         apprenantsBanner:
           'url("/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg")',

@@ -4,6 +4,9 @@ import Card from "./components/Card";
 import Image from "next/image";
 import happyness from "@/public/assets/happiness.png";
 import cardImg from "@/public/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg";
+import mission1 from "@/public/assets/mission1.jpg";
+import mission2 from "@/public/assets/mission2.jpg";
+import mission3 from "@/public/assets/mission3.jpg";
 import cardImg2 from "@/public/assets/adetola.jpg";
 import cardImg3 from "@/public/assets/zachary-nelson-98Elr-LIvD8-unsplash.jpg"
 import Carousel from "./components/Carousel";
@@ -25,7 +28,7 @@ export default function Home() {
   ]
   return (
     <>
-      <Banner className="bg-HomepageBanner min-h-[700px] pl-[50px] sm:bg-HomepageBanner bg-cover bg-center transition-all duration-300 ease-in-out ">
+      <Banner className="bg-HomepageBanne min-h-[700px] pl-[50px] sm:bg-HomepageBanne bg-cover bg-center transition-all duration-300 ease-in-out ">
         <h3 className="text-[48px] text-start font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
           Trouvez votre futur opportunité dans l&apos;IT
         </h3>
@@ -73,21 +76,21 @@ export default function Home() {
           </p>
           <div className="cards flex flex-col md:flex-row items-center justify-center gap-3">
             <Carte
-              image={cardImg}
+              image={mission1}
               titre="Je cherche à gagner de l'expérience"
               content="Jeune diplômé sans emploi ? Rejoignez notre organisme pour une formation ciblée qui vous démarque. Développez des compétences recherchées par les recruteurs grâce à nos projets concrets et décrochez enfin le poste que vous méritez."
               className="bg-[#FEF9F5]"
             />
             <Carte
-              image={cardImg}
-              titre="Je cherche à gagner de l'expérience"
-              content="Jeune diplômé sans emploi ? Rejoignez notre organisme pour une formation ciblée qui vous démarque. Développez des compétences recherchées par les recruteurs grâce à nos projets concrets et décrochez enfin le poste que vous méritez."
+              image={mission2}
+              titre="Je recherche un nouveau métier dans l'IT"
+              content="Rejoignez notre organisme et transformez votre carrière dans l’IT ! Profitez d’une formation complète et de notre accompagnement vers des projets concrets pour réussir votre reconversion dans un secteur en plein essor."
               className="bg-[#FEF9F5]"
             />
             <Carte
-              image={cardImg}
-              titre="Je cherche à gagner de l'expérience"
-              content="Jeune diplômé sans emploi ? Rejoignez notre organisme pour une formation ciblée qui vous démarque. Développez des compétences recherchées par les recruteurs grâce à nos projets concrets et décrochez enfin le poste que vous méritez."
+              image={mission3}
+              titre="Je recherche un contrat d'apprentissage"
+              content="Boostez votre parcours avec un contrat d'apprentissage intégrant la POEI (Préparation Opérationnelle à l’Emploi Individuelle) : grâce à notre référentiel de partenaires, accédez à des projets enrichissants qui conjuguent formation et expérience concrète en entreprise."
               className="bg-[#FEF9F5]"
             />
           </div>
