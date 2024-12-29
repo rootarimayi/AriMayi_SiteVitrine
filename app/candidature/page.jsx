@@ -18,16 +18,13 @@ export default function Candidature() {
 
         {}
         <div className="w-full md:w-1/2 bg-white flex items-center justify-center">
-          <div className="mt-50 p-8">
+          <div className="mt-50 p-6">
             <br />
             <br />
-            <h1 className="text-2xl text-center font-bold mb-1">
-              Je candidate dès maintenant !
+            <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent text-center bg-clip-text">
+              Je m'inscris dès maintenant !
             </h1>
-            <p className="text-gray-600 text-center mb-1">
-              Pour déposer votre candidature, il vous suffit de remplir le
-              formulaire ci-dessous.
-            </p>
+
             <form className="max-w-lg mx-auto p-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
               <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
                 <div>
@@ -61,19 +58,19 @@ export default function Candidature() {
                   />
                 </div>
               </div>
+
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
-                <div>
+                <div className="mb-5">
                   <label
-                    htmlFor="age"
+                    htmlFor="date_naissance"
                     className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
                   >
-                    Âge
+                    Date de naissance
                   </label>
                   <input
-                    type="number"
-                    id="age"
+                    type="date"
+                    id="date_naissance"
                     className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                    placeholder="Votre âge"
                     required
                   />
                 </div>
@@ -137,20 +134,6 @@ export default function Candidature() {
                   </option>
                 </select>
               </div>
-              <div className="mb-5">
-                <label
-                  htmlFor="cv"
-                  className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-                >
-                  Téléchargez votre CV
-                </label>
-                <input
-                  type="file"
-                  id="cv"
-                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
-                  required
-                />
-              </div>
               <div className="flex items-start mb-5">
                 <div className="flex items-center h-5">
                   <input
@@ -170,7 +153,7 @@ export default function Candidature() {
               </div>
               <button
                 type="submit"
-                className="text-white align-center mb-4 bg-orange hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                className="text-white display-center align-center mb-4 bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
               >
                 Je candidate
               </button>
