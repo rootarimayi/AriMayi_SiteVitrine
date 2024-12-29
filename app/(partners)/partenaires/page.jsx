@@ -1,6 +1,9 @@
 import Banner from "../../components/Banner";
 import Image from "next/image";
 import cardImg3 from "@/public/assets/zachary-nelson-98Elr-LIvD8-unsplash.jpg";
+import par1 from "@/public/assets/PHOTO-2024-12-22-20-02-46.jpg";
+import par2 from "@/public/assets/PHOTO-2024-12-22-20-03-05.jpg";
+import par3 from "@/public/assets/PHOTO-2024-12-22-20-03-34.jpg";
 import PartnerTestimony from "../../components/PartnerTestimony";
 import PartenaireForm from "../../components/PartenaireForm";
 
@@ -31,7 +34,7 @@ export default function Partenaires(){
         {/* Image */}
         <div className="w-full md:w-1/2">
           <Image
-            src={cardImg3}
+            src={par1}
             alt="Team working on a project"
             className="rounded-lg shadow-lg"
           />
@@ -58,7 +61,7 @@ export default function Partenaires(){
         {/* Image */}
         <div className="w-full md:w-1/2">
           <Image
-            src={cardImg3}
+            src={par2}
             alt="Team working on a project"
             className="rounded-lg shadow-lg"
           />
@@ -88,7 +91,9 @@ export default function Partenaires(){
         {/* Image */}
         <div className="w-full md:w-1/2">
           <Image
-            src={cardImg3}
+            src={par3}
+      
+            objectFit="cover"
             alt="Team working on a project"
             className="rounded-lg shadow-lg"
           />

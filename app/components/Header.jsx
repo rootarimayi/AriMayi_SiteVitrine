@@ -25,7 +25,7 @@ export default function Header() {
                   src={logo}
                   alt="logo AriMayi"
                   priority
-                  className="hidden pb-[10px] md:block md:w-[200px] lg:w-[300px] xl:w-[400px] ml-0"
+                  className="hidden pb-[10px] md:block md:w-[300px] lg:w-[400px] xl:w-[600px] ml-0"
                 />
                 <Image
                   src={logo}
@@ -45,6 +45,12 @@ export default function Header() {
                   Accueil
                 </Link>
                 <Link
+                  href="/partenaires"
+                  className="font-Opensans font-bold px-4 py-2 text-[20px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
+                >
+                  Partenaires
+                </Link>
+                <Link
                   href="/apprenants"
                   className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
                 >
@@ -56,12 +62,7 @@ export default function Header() {
                 >
                   Formations
                 </Link>
-                <Link
-                  href="/partenaires"
-                  className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
-                >
-                  Partenaires
-                </Link>
+
                 <Link
                   href="/identite"
                   className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"

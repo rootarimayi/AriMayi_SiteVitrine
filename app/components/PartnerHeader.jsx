@@ -24,7 +24,7 @@ export default function Header() {
                   width={50}
                   height={40}
                   priority
-                  className="hidden pb-[10px] md:block md:w-[70px]  lg:w-[70px] xl:w-[70px] ml-0"
+                  className="hidden pb-[10px] md:block md:w-[70px]  lg:w-[100px] xl:w-[115px] ml-0"
                 />
 
                 <Image
@@ -83,58 +83,8 @@ export default function Header() {
             </button>
           </div>
         </div>
-        {isOpen && (
-          <nav className="menu-mobile w-[330px] lg:hidden bg-white top-[100%] left-0  h-screen overflow-auto">
-            <div className=" flex flex-col">
-              <Link
-                href="/"
-                className="pl-[50px] font-Opensans font-normal text-[16px] py-[20px] text-[#353535] border-b border-orange active:bg-orange  active:text-white"
-                onClick={toggleNavebar}
-              >
-                Accueil
-              </Link>
-              <Link
-                href="/apprenants"
-                className="pl-[50px] font-Opensans font-normal text-[16px] py-[20px] text-[#353535] border-b border-orange active:bg-orange  active:text-white"
-                onClick={toggleNavebar}
-              >
-                Apprenants
-              </Link>
-              <Link
-                href="/partenaires"
-                className="pl-[50px] font-Opensans font-normal text-[16px] py-[20px] text-[#353535] border-b border-orange active:bg-orange  active:text-white"
-                onClick={toggleNavebar}
-              >
-                Partenaires
-              </Link>
-              <Link
-                href="/identite"
-                className="pl-[50px] font-Opensans font-normal text-[16px] py-[20px] text-[#353535] border-b border-orange active:bg-orange  active:text-white"
-                onClick={toggleNavebar}
-              >
-                Identite
-              </Link>
-              <Link
-                href="/formations"
-                className="pl-[50px] font-Opensans font-normal text-[16px] py-[20px] text-[#353535] border-b border-orange active:bg-orange  active:text-white"
-                onClick={toggleNavebar}
-              >
-                Formations
-              </Link>
-              <Link
-                href="/contact"
-                className="pl-[50px] font-Opensans font-normal text-[16px] py-[20px] text-[#353535] border-b border-orange active:bg-orange  active:text-white"
-                onClick={toggleNavebar}
-              >
-                Contact
-              </Link>
-            </div>
-          </nav>
-        )}
+   
       </header>
-      {isOpen && (
-        <div className="bg-black w-full h-full  fixed overscroll-none"></div>
-      )}
     </>
   );
 }

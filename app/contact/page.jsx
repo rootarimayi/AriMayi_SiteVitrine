@@ -18,17 +18,33 @@ export default function Contact(){
         <br />
         <br />
         <Collapse
-          title="Comment puis-je postuler pour un stage ou un contrat d'apprentissage?"
-          content="Pour postuler à nos offres de stage ou de contrat d'apprentissage, veuillez remplir le formulaire de demande sur notre site. Nous vous contacterons dans les plus brefs délais pour la suite du processus de sélection."
+          title="Quelle language de programmation vais-je apprendre?"
+          content="rep."
         />
 
         <Collapse
-          title="Quels types de projets digitaux les start-up proposent-elles?"
+          title="Est-ce que l'issue de la formation? je serai employable?"
           content="Nos start-up partenaires proposent une variété de projets digitaux allant du développement d'applications mobiles à la conception de sites web. Chaque projet offre une opportunité unique d'acquérir des compétences en situation de travail."
         />
 
         <Collapse
-          title="Comment les start-up et les apprenants bénéficient-ils de ce partenariat?"
+          title="Est-ce que vous allez m'aider a trouver un emploi?"
+          content="Ce partenariat crée une relation gagnant-gagnant où les apprenants acquièrent des compétences en situation de travail tout en aidant les start-up à concrétiser leurs projets digitaux. Cela favorise l'insertion professionnelle des apprenants et la réussite des start-up."
+        />
+        <Collapse
+          title="Combien de temps dure la formation?"
+          content="Ce partenariat crée une relation gagnant-gagnant où les apprenants acquièrent des compétences en situation de travail tout en aidant les start-up à concrétiser leurs projets digitaux. Cela favorise l'insertion professionnelle des apprenants et la réussite des start-up."
+        />
+        <Collapse
+          title="Est-ce que l'AFEST?"
+          content="Ce partenariat crée une relation gagnant-gagnant où les apprenants acquièrent des compétences en situation de travail tout en aidant les start-up à concrétiser leurs projets digitaux. Cela favorise l'insertion professionnelle des apprenants et la réussite des start-up."
+        />
+        <Collapse
+          title="Est-ce que POEI/POEC?"
+          content="Ce partenariat crée une relation gagnant-gagnant où les apprenants acquièrent des compétences en situation de travail tout en aidant les start-up à concrétiser leurs projets digitaux. Cela favorise l'insertion professionnelle des apprenants et la réussite des start-up."
+        />
+        <Collapse
+          title="Votre formation est-elle certifiante?"
           content="Ce partenariat crée une relation gagnant-gagnant où les apprenants acquièrent des compétences en situation de travail tout en aidant les start-up à concrétiser leurs projets digitaux. Cela favorise l'insertion professionnelle des apprenants et la réussite des start-up."
         />
       </div>

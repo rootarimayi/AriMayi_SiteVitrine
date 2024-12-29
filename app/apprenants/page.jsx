@@ -1,11 +1,16 @@
 
 import cardImg from "@/public/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg";
+import app1 from "@/public/assets/PHOTO-2024-12-22-20-01-27.jpg";
+import app2 from "@/public/assets/PHOTO-2024-12-22-20-01-44.jpg";
+import app3 from "@/public/assets/PHOTO-2024-12-22-20-02-06.jpg";
 import Image from "next/image";
 import Opportunite from "../opportunite/page";
 
 export default function Apprenants(){
   return (
     <>
+    <br /><br /> <br /><br /><br /> <br />
+    <br />
       <div className="bg-white py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -28,7 +33,7 @@ export default function Apprenants(){
           <div className="flex flex-col md:flex-row items-center mb-12">
             <div className="w-full md:w-1/3 h-48 relative mb-4 md:mb-0 md:mr-6">
               <Image
-                src={cardImg}
+                src={app1}
                 alt="Jeunes diplômés"
                 layout="fill"
                 objectFit="cover"
@@ -51,7 +56,7 @@ export default function Apprenants(){
           <div className="flex flex-col md:flex-row-reverse items-center mb-12">
             <div className="w-full md:w-1/3 h-48 relative mb-4 md:mb-0 md:ml-6">
               <Image
-                src={cardImg}
+                src={app2}
                 alt="Personnes en reconversion"
                 layout="fill"
                 objectFit="cover"
@@ -75,7 +80,7 @@ export default function Apprenants(){
           <div className="flex flex-col md:flex-row items-center">
             <div className="w-full md:w-1/3 h-48 relative mb-4 md:mb-0 md:mr-6">
               <Image
-                src={cardImg}
+                src={app3}
                 alt="Futurs apprentis"
                 layout="fill"
                 objectFit="cover"
@@ -95,6 +100,7 @@ export default function Apprenants(){
           </div>
         </div>
       </div>
+      <br /><br /><br /><br /><b></b>
       <Opportunite />
     </>
   );

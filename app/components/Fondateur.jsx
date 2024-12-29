@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import fondat from "@/public/assets/PHOTO-2024-12-22-20-04-35.jpg";
 import Image from "next/image";
 import { FaQuoteLeft } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
@@ -10,7 +11,7 @@ import { FaLinkedin } from "react-icons/fa";
       author: "Samir Bedouhene",
       role: "Founder & CEO",
       company: "Arimayi",
-      image: "/assets/Samii.JPG",
+     
       quote:
         " Arimayi incarne une vision où l'entraide et l'insertion professionnelle deviennent des moteurs de réussite collective. Chaque jour, nous unissons nos forces pour offrir à de jeunes talents l'opportunité de découvrir, apprendre et s'épanouir au travers de projets concrets et impactants, Aux entreprises, nous proposons bien plus qu'un service : une chance unique de collaborer avec une structure engagée et innovante. Confier vos projets à Arimayi, c'est faire le choix d'une expertise doublée d’une mission sociale forte. C'est s'investir dans l'avenir en soutenant l'insertion professionnelle, tout en bénéficiant de solutions agiles et adaptées à vos besoins.Continuons à faire de l'entraide le moteur de projets porteurs de sens et davenir. ",
     },
@@ -51,7 +52,7 @@ export default function Fondateur() {
                     <div className="mt-4 md:mt-6 flex items-center">
                       <div className="relative w-10 h-10 md:w-12 md:h-12">
                         <Image
-                          src={testimonial.image}
+                            src={fondat}
                           alt={testimonial.author}
                           fill
                           sizes="(max-width: 768px) 40px, 48px"
