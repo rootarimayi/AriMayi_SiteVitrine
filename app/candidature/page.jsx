@@ -22,7 +22,7 @@ export default function Candidature() {
             <br />
             <br />
             <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent text-center bg-clip-text">
-              Je m'inscris dès maintenant !
+              Je m&apos;inscris dès maintenant !
             </h1>
 
             <form className="max-w-lg mx-auto p-4 bg-white rounded-lg shadow-md dark:bg-gray-800">
