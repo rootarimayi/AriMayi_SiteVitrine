@@ -50,30 +50,21 @@ export default function Home() {
           />
         </div>
       </Banner>
-      {/**************** arimayi Section  ***********/}
-      {/**************** slider section ***********/}
-      <section className="section-cards flex flex-col md:flex-row bg-black py-[50px]">
-        <div className="container">
-          <h3 className="text-[28px] text-start font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-[5px]">
-            Témoignages
-          </h3>
-          <div className="w-[600px] mx-auto py-[20px]">
-            <Carousel slider={slider} />
-          </div>
-        </div>
-      </section>
-      {/*************** Cards section *************************/}
-      <div className=" py-[50px]  flex flex-col items-center">
+
+      <div className=" py-[50px]  flex flex-col items-center bg-[#353535]">
         <div className="container flex flex-col gap-[20px]">
-          <h3 className="text-[28px] text-start font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-[5px]">
-            Nos missions
-          </h3>
-          <p className="text-left font-Opensans text-[16px] leading-[25px] text-black my-[10px]">
-            Expert de la formation en situation de travail, AriMayi vous propose
-            un apprentissage pratique et immersif sur des projets concrets
-            confiés par nos partenaires (startups, TPE, PME) pour une adaptation
-            réussie aux exigences de votre métier.
-          </p>
+          <div className="max-w-3xl mx-auto flex flex-col items-center mb-8">
+            <h3 className="text-[28px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-[5px]">
+              Nos missions
+            </h3>
+            <br /> <br />
+            <p className="text-center font-Opensans text-[20px] leading-[25px] text-white my-[10px] gap-4">
+              Expert de la formation en situation de travail, AriMayi vous
+              propose un apprentissage pratique et immersif sur des projets
+              concrets confiés par nos partenaires (startups, TPE, PME) pour une
+              adaptation réussie aux exigences de votre métier.
+            </p>
+          </div>
           <div className="cards flex flex-col md:flex-row items-center justify-center gap-3">
             <Carte
               image={mission1}

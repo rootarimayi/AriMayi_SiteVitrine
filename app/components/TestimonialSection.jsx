@@ -57,8 +57,10 @@ export default function TestimonialSection() {
           <h3 className="text-[28px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-[5px]">
             Témoignages
           </h3>
+          
           <br />
-          <p className="text-center font-Opensans text-[16px] leading-[25px] text-black my-[10px] gap-4">
+          <br />
+          <p className="text-center font-Opensans text-[20px] leading-[25px] text-black my-[10px] gap-4">
             Expert de la formation en situation de travail. AriMayi vous propose
             un apprentissage pratique et immerssif sur des projets concrets
             confiés par nos partenariats experts
