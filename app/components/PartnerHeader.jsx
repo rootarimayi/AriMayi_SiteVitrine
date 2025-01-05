@@ -2,7 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-
+import logopart from "@/public/logo/Partnerarimayi.png";
+import logoMobilepart from "@/public/logo/Partnerlogo.png";
 import CostumButton from "./CostumButton";
 
 export default function Header() {
@@ -19,7 +20,7 @@ export default function Header() {
             <div className="flex items-center ">
               <div className="flex-shrink-0">
                 <Image
-                  src="/logo/Partnerarimayi.png"
+                  src={logopart}
                   alt="logo AriMayi"
                   width={50}
                   height={40}
@@ -28,7 +29,7 @@ export default function Header() {
                 />
 
                 <Image
-                  src="/logo/Partnerlogo.png"
+                  src={logoMobilepart}
                   alt="logo AriMayi"
                   width={60}
                   height={60}
