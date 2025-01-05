@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-import logo from "@/public/Assets/logo/Logo-arimayi-Principal.svg";
-import logoMobile from "@/public/Assets/logo/logo_mobile.svg";
+import logo from "@/public/logo/Logo-arimayi-Principal.svg";
+import logoMobile from "@/public/logo/logo_mobile.svg";
 import CostumButton from "./CostumButton";
 
 

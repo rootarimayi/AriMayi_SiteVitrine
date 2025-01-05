@@ -16,8 +16,8 @@ module.exports = {
         gray: "#353535",
       },
       backgroundImage: {
-        Partnerlogo: 'url("/assets/logo/partnerlogo.png")',
-        Partnerarimayi: 'url("/assets/logo/partnerarimayi.png")',
+        Partnerlogo: 'url("/logo/partnerlogo.png")',
+        Partnerarimayi: 'url("/logo/partnerarimayi.png")',
         HomepageBanner: 'url("/assets/banniere-acceuil.png")',
         HomepageBanne: 'url("/assets/bannerr.png")',
         HomepageBannerMobile: 'url("/assets/acceuilMobile.png")',
@@ -37,7 +37,6 @@ module.exports = {
         mobile: 'url("/assets/mobile.JPG")',
         ai: 'url("/assets/ai.JPG")',
         conception: 'url("/assets/conception.JPG")',
-        katia: 'url("/assets/katia.JPG")',
       },
       screens: {
         lg: "1180px",
