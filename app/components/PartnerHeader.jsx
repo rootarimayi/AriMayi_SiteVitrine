@@ -2,8 +2,8 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import logopart from "@/public/logo/Partnerarimayi.png";
-import logoMobilepart from "@/public/logo/Partnerlogo.png";
+import logopart from "@/public/logo/partnerarimayi.svg";
+import logoMobilepart from "@/public/logo/partnerlogo.svg";
 import CostumButton from "./CostumButton";
 
 export default function Header() {
