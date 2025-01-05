@@ -41,7 +41,7 @@ export default function Footer() {
           </div>
           <div className="mt-8 md:mt-0">
             <h3 className="text-xl font-semibold leading-6 text-secondary-400">
-              Services
+              Service
             </h3>
             <ul className="mt-6 space-y-4">
               <li>
