@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const DetailFormation = ({ formation }) => {
   if (!formation) {
-    return <p>Formation data is missing or invalid.</p>; // Fallback UI in case of missing formation
+     return <p className="text-white ">Formation data is missing or invalid.</p>; // Fallback UI in case of missing formation
   }
 
   return (

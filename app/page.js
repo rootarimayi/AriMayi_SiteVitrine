@@ -1,5 +1,6 @@
 import Banner from "./components/Banner";
 import CostumButton from "./components/CostumButton";
+import Coordonnees from "./components/Coordonnees";
 import Card from "./components/Card";
 import Image from "next/image";
 import happyness from "@/public/assets/happiness.png";
@@ -7,9 +8,7 @@ import cardImg from "@/public/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg";
 import mission1 from "@/public/assets/mission1.jpg";
 import mission2 from "@/public/assets/mission2.jpg";
 import mission3 from "@/public/assets/mission3.jpg";
-import cardImg2 from "@/public/assets/adetola.jpg";
-import cardImg3 from "@/public/assets/zachary-nelson-98Elr-LIvD8-unsplash.jpg"
-import Carousel from "./components/Carousel";
+
 import slide1 from "@/public/assets/jud-mackrill-Of_m3hMsoAA-unsplash.jpg";
 import slide2 from "@/public/assets/brooke-cagle--uHVRvDr7pg-unsplash.jpg";
 import slide3 from "@/public/assets/christina-wocintechchat-com-OW5KP_Pj85Q-unsplash.jpg";
@@ -94,7 +93,10 @@ export default function Home() {
         </div>
       </div>
       <TestimonialSection />
-      <Form />
+      <h3 className="text-[36px] text-center justify-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
+        Contactez-nous
+      </h3>
+      <Coordonnees />
     </>
   );
 }

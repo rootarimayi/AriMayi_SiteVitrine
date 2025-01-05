@@ -16,10 +16,10 @@ module.exports = {
         gray: "#353535",
       },
       backgroundImage: {
-        Partnerlogo: 'url("/logo/partnerlogo.png")',
-        Partnerarimayi: 'url("/logo/partnerarimayi.png")',
+        Partnerlogo: 'url("/assets/logo/partnerlogo.png")',
+        Partnerarimayi: 'url("/assets/logo/partnerarimayi.png")',
         HomepageBanner: 'url("/assets/banniere-acceuil.png")',
-        HomepageBanne: 'url("/assets/bannerr.JPG")',
+        HomepageBanne: 'url("/assets/bannerr.png")',
         HomepageBannerMobile: 'url("/assets/acceuilMobile.png")',
         apprenantsBanner:
           'url("/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg")',
@@ -37,6 +37,7 @@ module.exports = {
         mobile: 'url("/assets/mobile.JPG")',
         ai: 'url("/assets/ai.JPG")',
         conception: 'url("/assets/conception.JPG")',
+        katia: 'url("/assets/katia.JPG")',
       },
       screens: {
         lg: "1180px",

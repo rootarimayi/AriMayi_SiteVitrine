@@ -8,7 +8,31 @@ export default function Contact(){
     <>
       <br />
       <br />
+      <br />
+      <br />
       <br /> <br />
+      <div className="flex flex-col items-center text-center">
+        <br />
+        <br />
+        <br />
+        <br />
+        
+
+        <h3 className="text-[48px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
+          Contactez-nous
+        </h3>
+        <br />
+        <br />
+        <br /> <br /><br />
+        <br /> <br /><br />
+        <p className="text-gray-800 mb-8">
+          Votre point de départ vers de nouvelles opportunités professionnelles
+          et la réussite de votre projet
+        </p>
+        <br />
+        <br />
+        
+      </div>
       <Coordonnees />
       <div className="faq flex flex-col gap-3 items-center py-4">
         <br />

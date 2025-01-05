@@ -31,60 +31,61 @@ export default function Fondateur() {
                 Écoutez directement la vision derrière notre succès
               </p>
             </div>
-
-            <div className="grid gap-4 md:gap-6 lg:gap-8 md:grid-cols-2">
-              {testimonials.map((testimonial) => (
-                <div
-                  key={testimonial.id}
-                  className="relative p-4 md:p-6 lg:p-8 bg-white rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
-                >
-                  <div className="absolute -top-4 left-6 md:left-8">
-                    <div className="p-2 bg-indigo-600 rounded-lg">
-                      <FaQuoteLeft className="w-4 h-4 md:w-6 md:h-6 text-white" />
+            <div className="flex justify-center py-8">
+              <div className="w-full max-w-3xl px-4 md:px-6 lg:px-8">
+                {testimonials.map((testimonial) => (
+                  <div
+                    key={testimonial.id}
+                    className="relative p-4 md:p-6 lg:p-8 bg-white rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300"
+                  >
+                    <div className="absolute -top-4 left-6 md:left-8">
+                      <div className="p-2 bg-indigo-600 rounded-lg">
+                        <FaQuoteLeft className="w-4 h-4 md:w-6 md:h-6 text-white" />
+                      </div>
                     </div>
-                  </div>
 
-                  <div className="mt-6">
-                    <p className="text-base md:text-lg text-gray-700 italic">
-                      &quot;{testimonial.quote} &quot;
-                    </p>
+                    <div className="mt-6">
+                      <p className="text-base md:text-lg text-gray-700 italic">
+                        &quot;{testimonial.quote} &quot;
+                      </p>
 
-                    <div className="mt-4 md:mt-6 flex items-center">
-                      <div className="relative w-10 h-10 md:w-12 md:h-12">
-                        <Image
+                      <div className="mt-4 md:mt-6 flex items-center">
+                        <div className="relative w-10 h-10 md:w-12 md:h-12">
+                          <Image
                             src={fondat}
-                          alt={testimonial.author}
-                          fill
-                          sizes="(max-width: 768px) 40px, 48px"
-                          className="rounded-full object-cover"
-                          priority={testimonial.id === 1}
-                        />
-                      </div>
+                            alt={testimonial.author}
+                            fill
+                            sizes="(max-width: 768px) 40px, 48px"
+                            className="rounded-full object-cover"
+                            priority={testimonial.id === 1}
+                          />
+                        </div>
 
-                      <div className="ml-3 md:ml-4">
-                        <h4 className="text-base md:text-lg font-semibold text-gray-900">
-                          {testimonial.author}
-                        </h4>
-                        <div className="text-sm md:text-base text-gray-600">
-                          {testimonial.role}
-                        </div>
-                        <div className="text-sm md:text-base text-indigo-600 font-medium">
-                          {testimonial.company}
-                        </div>
-                        <div>
-                          <a
-                            href="https://www.linkedin.com/in/samir-bedouhene/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <FaLinkedin className="text-blue-600 text-xl" />
-                          </a>
+                        <div className="ml-3 md:ml-4">
+                          <h4 className="text-base md:text-lg font-semibold text-gray-900">
+                            {testimonial.author}
+                          </h4>
+                          <div className="text-sm md:text-base text-gray-600">
+                            {testimonial.role}
+                          </div>
+                          <div className="text-sm md:text-base text-indigo-600 font-medium">
+                            {testimonial.company}
+                          </div>
+                          <div>
+                            <a
+                              href="https://www.linkedin.com/in/samir-bedouhene/"
+                              target="_blank"
+                              rel="noopener noreferrer"
+                            >
+                              <FaLinkedin className="text-blue-600 text-xl" />
+                            </a>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </section>

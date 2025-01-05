@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/logo/Logo-arimayi-Principal.svg";
+import logo from "@/public/Assets/logo/Logo-arimayi-Principal.svg";
 import { FaLinkedin } from "react-icons/fa";
 export default function Footer() {
   return (

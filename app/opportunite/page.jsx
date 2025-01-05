@@ -61,7 +61,7 @@ export default function Opportunite() {
       </p>
 
       {/* Card Section */}
-      <div className="max-w-4xl   mx-auto flex justify-center">
+      <div className="max-w-4xl   mx-auto flex flex-wrap justify-center">
         <div
           className={`transition-transform duration-500 transform ${
             currentPage === 1
@@ -77,7 +77,7 @@ export default function Opportunite() {
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`flex-shrink-0 w-full max-w-md shadow-md p-8 rounded-2xl ${
+              className={`flex-shrink-0 w-full sm:w-auto max-w-md shadow-md p-8 rounded-2xl ${
                 cardColors[index]
               } ${
                 cardColors[index] === "bg-[#353535]"
