@@ -36,63 +36,55 @@ export default function TestimonialSection() {
 
   return (
     <>
-      <section className="py-12 bg-white">
-        {}
-        <div className="max-w-3xl mx-auto flex flex-col items-center mb-8">
-          <h3 className="text-[28px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-[5px]">
+      <section className="py-16 bg-white h-screen flex flex-col items-center justify-center">
+        {/* Intro Text */}
+        <div className="max-w-3xl mx-auto flex flex-col items-center mb-12">
+          <h3 className="text-[36px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-6">
             Témoignages
           </h3>
-          <br />
-          <p className="text-center font-Opensans text-[16px] leading-[25px] text-black my-[10px] gap-4">
+          <p className="text-center font-Opensans text-[18px] leading-[30px] text-black my-6">
             Expert de la formation en situation de travail. AriMayi vous propose
-            un apprentissage pratique et immerssif sur des projets concrets
-            confiés par nos partenariats experts
+            un apprentissage pratique et immersif sur des projets concrets
+            confiés par nos partenariats experts.
           </p>
         </div>
-        <br />
-        <br />
-        {/* Temoignages */}
-        <div className="flex items-center justify-center">
-          <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 max-w-14xl px-4 justify-center">
-            {testimonials.map((testimonial, i) => (
-              <div
-                key={i}
-                className="bg-[#353535] shadow-lg rounded-lg p-4 transform transition duration-300 hover:scale-105 hover:shadow-xl"
-              >
-                <div className="flex items-center mb-4">
-                  {}
-                  <Image
-                    src={testimonial.avatar}
-                    alt={testimonial.name}
-                    width={100}
-                    height={100}
-                    className="w-12 h-12 rounded-full mr-4 object-cover"
-                  />
-                  <div className="flex flex-col">
-                    <h3 className="text-lg font-bold text-[#F68A67]">
-                      {testimonial.name}
-                    </h3>
 
-                    <h3 className=" text-sm text-white">
-                      {testimonial.titre}
-                    </h3>
-                  </div>
+        {/* Testimonials Section (Centered with Larger Cards) */}
+        <div className="flex items-center justify-center w-full flex-wrap gap-14 px-4">
+          {testimonials.map((testimonial, i) => (
+            <div
+              key={i}
+              className="bg-[#353535] shadow-lg rounded-lg p-6 transform transition duration-300 hover:scale-105 hover:shadow-xl max-w-lg"
+            >
+              <div className="flex items-center mb-4">
+                <Image
+                  src={testimonial.avatar}
+                  alt={testimonial.name}
+                  width={120}
+                  height={120}
+                  className="w-20 h-20 rounded-full mr-6 object-cover"
+                />
+                <div className="flex flex-col">
+                  <h3 className="text-xl font-bold text-[#F68A67]">
+                    {testimonial.name}
+                  </h3>
+                  <h3 className="text-sm text-white">{testimonial.titre}</h3>
                 </div>
-                <p className="textsemibold text-lg text-white mb-4">
-                  &quot; {testimonial.message}&quot;
-                </p>
-                <button
-                  onClick={() => openModal(testimonial.videoUrl)}
-                  className="text-[#F68A67] hover:underline transition-colors"
-                >
-                  Voir le vid
-                </button>
               </div>
-            ))}
-          </div>
+              <p className="text-semibold text-lg text-white mb-6">
+                &quot; {testimonial.message}&quot;
+              </p>
+              <button
+                onClick={() => openModal(testimonial.videoUrl)}
+                className="text-[#F68A67] hover:underline transition-colors"
+              >
+                Voir le vid
+              </button>
+            </div>
+          ))}
         </div>
 
-        {/* vid */}
+        {/* Video Modal */}
         {isModalOpen && (
           <div
             className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50"
@@ -126,6 +118,7 @@ export default function TestimonialSection() {
           </div>
         )}
       </section>
+
       <br />
       <br />
     </>

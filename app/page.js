@@ -28,7 +28,13 @@ export default function Home() {
   ]
   return (
     <>
-      <Banner className="bg-HomepageBanne min-h-[700px] pl-[50px] sm:bg-HomepageBanne bg-cover bg-center transition-all duration-300 ease-in-out ">
+      <Banner className="bg-HomepageBanne sm:bg-HomepageBanne bg-cover bg-center transition-all duration-300 ease-in-out ">
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
+        <br /> <br />
         <h3 className="text-[48px] text-start font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
           Trouvez votre futur opportunité dans l&apos;IT
         </h3>

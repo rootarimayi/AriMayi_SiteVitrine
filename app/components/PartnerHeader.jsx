@@ -24,7 +24,7 @@ export default function Header() {
                   width={50}
                   height={40}
                   priority
-                  className="hidden pb-[10px] md:block md:w-[70px]  lg:w-[100px] xl:w-[115px] ml-0"
+                  className="hidden md:block ml-0"
                 />
 
                 <Image
@@ -38,17 +38,46 @@ export default function Header() {
             </div>
             <div className="hidden   lg:flex items-center gap-5">
               <nav className="ml-4 flex items-end space-x-4 gap-1">
-               
+                <Link
+                  href="/apprenants"
+                  className="font-Opensans font-bold px-4 py-2 text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#f6ed67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
+                >
+                  Apprenants
+                </Link>
+
+                <Link
+                  href="/formation"
+                  className="font-Opensans font-bold text-[12px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
+                >
+                  Formations
+                </Link>
+
+                <Link
+                  href="/identite"
+                  className="font-Opensans font-bold text-[12px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"
+                >
+                  Identité
+                </Link>
+                <Link
+                  href="/contact"
+                  className="font-Opensans font-bold text-[12px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"
+                >
+                  Contact
+                </Link>
               </nav>
               <CostumButton
                 text="Accés à la Plateforme"
-                classes="text-white font-Opensans font-bold text-[16px] tracking-[.5px] bg-orange hover:scale-110"
+                classes="font-Opensans font-bold px-6 py-3 text-[16px] text-white tracking-wide 
+             rounded-full bg-gradient-to-r from-[#F68A67]/30 via-[#FF7F50]/20 to-[#FFA500]/10
+             backdrop-blur-md border border-[#FFA500]/40
+             shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out 
+             focus:outline-none focus:ring-2 focus:ring-[#FF7F50]"
                 src=""
               />
             </div>
             <CostumButton
               text="Accés à la Plateforme"
-              classes="text-white font-Opensans  text-[17px]  md:hidden  lg:hidden "
+              classes="text-white font-Opensans  text-[8px]  md:hidden  lg:hidden "
               src="#"
             />
             <button
@@ -83,7 +112,6 @@ export default function Header() {
             </button>
           </div>
         </div>
-   
       </header>
     </>
   );

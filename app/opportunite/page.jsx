@@ -7,23 +7,23 @@ export default function Opportunite() {
   const cards = [
     {
       id: 1,
-      title: "Entreprise de développement web",
+      title: "Développement d’une plateforme RH",
       description:
-        "Partenariat avec une entreprise spécialisée dans le développement de sites web sur mesure, pour la réalisation d’un projet d’envergure.",
+        "Nos apprenants ont à la conception et au développement d’une plateforme innovante destinée à accompagner les professionnels en transition de carrière. L’objectif est de simplifier leur intégration dans de nouveaux postes ou secteurs, avec des parcours personnalisés, des ressources adaptées, et des outils interactifs pour favoriser une montée en compétences efficace.",
       link: "#",
     },
     {
       id: 2,
-      title: "Agence de marketing digital",
+      title: "Site d’annonces immobilières",
       description:
-        "Collaboration avec une agence de marketing digital pour la promotion et la visibilité des projets réalisés par nos apprenants.",
+        "Ce projet vise à créer un outil dédié aux Français souhaitant trouver un logement en Espagne. Vous contribuerez à développer une interface intuitive, intégrant des filtres avancés (localisation, budget, type de logement) et des informations pratiques, tout en facilitant les échanges entre locataires et propriétaires.",
       link: "#",
     },
     {
       id: 3,
-      title: "Société de conseil et stratégie IT",
+      title: "Plateforme de soutien scolaire",
       description:
-        "Partenariat avec une société de conseil en IT pour l’optimisation des processus et des solutions mises en place dans nos projets.",
+        "Vous travaillerez sur la création d’un espace numérique dédié à l’accompagnement des élèves dans leur réussite éducative. Cette plateforme offrira des cours en ligne, des exercices interactifs, et des séances de tutorat personnalisées. Vous serez amenés à concevoir des fonctionnalités comme le suivi des progrès, la mise en relation avec des enseignants qualifiés, et des outils ludiques pour rendre l’apprentissage engageant et efficace",
       link: "#",
     },
   ];

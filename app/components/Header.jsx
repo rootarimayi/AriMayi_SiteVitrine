@@ -24,67 +24,75 @@ export default function Header() {
                 <Image
                   src={logo}
                   alt="logo AriMayi"
-                  priority
-                  className="hidden pb-[10px] md:block md:w-[300px] lg:w-[400px] xl:w-[600px] ml-0"
+                  className="hidden md:block ml-0"
+                  style={{
+                    maxWidth: "100%",
+                    width: "clamp(200px, 20vw, 600px)", // Responsive width: between 200px and 600px
+                  }}
                 />
                 <Image
                   src={logo}
                   alt="logo AriMayi"
                   width={60}
                   height={60}
-                  className=" md:hidden"
+                  className="block md:hidden"
                 />
               </div>
             </div>
             <div className="hidden   lg:flex items-center gap-5">
               <nav className="ml-4 flex items-end space-x-4 gap-1">
                 <Link
-                  href="/"
-                  className="font-Opensans font-bold text-[16px] text-white  hover:text-orange focus:text-orange rounded-lg  tracking-[.5px]"
-                >
-                  Accueil
-                </Link>
-                <Link
                   href="/partenaires"
-                  className="font-Opensans font-bold px-4 py-2 text-[20px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
+                  className="font-Opensans font-bold px-4 py-2 text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#f6ed67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
                 >
                   Partenaires
                 </Link>
                 <Link
+                  href="/"
+                  className="font-Opensans font-bold text-[12px] text-white  hover:text-orange focus:text-orange rounded-lg  tracking-[.5px]"
+                >
+                  Accueil
+                </Link>
+
+                <Link
                   href="/apprenants"
-                  className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
+                  className="font-Opensans font-bold text-[12px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
                 >
                   Apprenants
                 </Link>
                 <Link
                   href="/formation"
-                  className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
+                  className="font-Opensans font-bold text-[12px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#F68A67]"
                 >
                   Formations
                 </Link>
 
                 <Link
                   href="/identite"
-                  className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"
+                  className="font-Opensans font-bold text-[12px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"
                 >
                   Identité
                 </Link>
                 <Link
                   href="/contact"
-                  className="font-Opensans font-bold text-[16px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"
+                  className="font-Opensans font-bold text-[12px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]"
                 >
                   Contact
                 </Link>
               </nav>
               <CostumButton
                 text="Accés à la Plateforme"
-                classes="text-white font-Opensans font-bold text-[16px] tracking-[.5px] bg-orange hover:scale-110"
+                classes="font-Opensans font-bold px-6 py-3 text-[16px] text-white tracking-wide 
+             rounded-full bg-gradient-to-r from-white/30 via-white/20 to-white/10
+             backdrop-blur-md border border-white/30 
+             shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out 
+             focus:outline-none focus:ring-2 focus:ring-[#816CFF]"
                 src=""
               />
             </div>
             <CostumButton
               text="Accés à la Plateforme"
-              classes="text-white font-Opensans  text-[17px]  md:hidden  lg:hidden "
+              classes="text-white font-Opensans  text-[8px]  md:hidden  lg:hidden "
               src="#"
             />
             <button
