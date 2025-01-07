@@ -181,7 +181,7 @@ export default function Coordonnees() {
                   En soumettant ce formulaire, j&apos;accepte la collecte des
                   informations saisies et l&apos;enregistrement de mes données
                   afin d&apos;être recontacté par AriMayi. Pour en savoir plus, 
-                  <Link href="/" legacyBehavior>
+                  <Link href="/politique" legacyBehavior>
                     <a className="text-blue-500" onClick={() => {}}>
                        je consulte la politique de confidentialité
                     </a>
