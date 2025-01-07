@@ -43,7 +43,7 @@ export default function Header() {
               <nav className="ml-4 flex items-end space-x-4 gap-1">
                 <Link
                   href="/partenaires"
-                  className="font-Opensans font-bold px-4 py-2 text-[16px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#f6ed67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
+                  className="font-Opensans font-bold  px-1 py-1  text-[14px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#f6ed67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
                 >
                   Partenaires
                 </Link>

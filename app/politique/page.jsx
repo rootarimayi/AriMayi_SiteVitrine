@@ -33,29 +33,29 @@ export default function Politique() {
                 <div className="mt-6">
                   <p className="text-base md:text-lg text-gray-700">
                     Les données collectées par le biais de ce formulaire de
-                    contact font l’objet d’un traitement par l’entreprise
-                    AriMayi sise 24 rue du Général Eboué 92130 Issy les
-                    Moulineaux. Ces données sont collectées afin que nous
-                    puissions vous répondre lorsque vous nous contactez pour
-                    toute question sur les prestations proposées par
-                    l’entreprise AriMayi. L’utilisation des données personnelles
-                    dans ce cadre repose sur la base du consentement des
-                    personnes concernées.
+                    contact font l&apos;objet d&apos;un traitement par
+                    l&apos;entreprise AriMayi sise 24 rue du Général Eboué 92130
+                    Issy les Moulineaux. Ces données sont collectées afin que
+                    nous puissions vous répondre lorsque vous nous contactez
+                    pour toute question sur les prestations proposées par
+                    l&apos;entreprise AriMayi. L&apos;utilisation des données
+                    personnelles dans ce cadre repose sur la base du
+                    consentement des personnes concernées.
                   </p>
 
                   <p className="mt-4 text-base md:text-lg text-gray-700">
                     Les données collectées seront communiquées aux seuls
-                    destinataires suivants : l’équipe support et l’équipe
-                    commerciale. La durée de conservation est fixée à 6 mois
-                    maximum.
+                    destinataires suivants : l&apos;équipe support et
+                    l&apos;équipe commerciale. La durée de conservation est
+                    fixée à 6 mois maximum.
                   </p>
 
                   <p className="mt-4 text-base md:text-lg text-gray-700">
                     Vous avez des droits sur vos données personnelles : droit
-                    d’accès à vos données personnelles, droit d’effacement,
-                    droit d'opposition, droit de rectification, etc. Pour faire
-                    une demande d’exercice des droits, écrivez à cette adresse
-                    mail :{" "}
+                    d&apos;accès à vos données personnelles, droit
+                    d&apos;effacement, droit d'opposition, droit de
+                    rectification, etc. Pour faire une demande d&apos;exercice
+                    des droits, écrivez à cette adresse mail :{" "}
                     <a href="mailto:droit@rgpd.fr" className="text-indigo-600">
                       droit@rgpd.fr
                     </a>
@@ -72,11 +72,10 @@ export default function Politique() {
                     >
                       cnil.fr
                     </a>{" "}
-                    pour plus d’informations sur vos droits. Vous pouvez
+                    pour plus d&apos;informations sur vos droits. Vous pouvez
                     adresser une réclamation à la CNIL si vous estimez que vos
                     droits RGPD ne sont pas respectés.
                   </p>
-
                 </div>
               </div>
             </div>
