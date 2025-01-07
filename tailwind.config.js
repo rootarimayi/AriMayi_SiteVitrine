@@ -28,8 +28,7 @@ module.exports = {
         identiteBanner: 'url("/assets/PHOTO-2024-12-22-20-04-03.jpg")',
         contacctBanner: 'url("/assets/contac.jpg")',
         formaBanner: 'url("/assets/appren.jpg")',
-        conttBanner:
-          'url("/assets/nathan-anderson-FHiJWoBodrs-unsplash.jpg")',
+        conttBanner: 'url("/assets/nathan-anderson-FHiJWoBodrs-unsplash.jpg")',
         bgAri: 'url("/assets/bgAri.svg")',
         candidat:
           'url("/assets/christina-wocintechchat-com-OW5KP_Pj85Q-unsplash.jpg")',
@@ -38,6 +37,8 @@ module.exports = {
         design: 'url("/assets/design.JPEG")',
         mobile: 'url("/assets/mobile.JPG")',
         ai: 'url("/assets/ai.JPG")',
+        certif: 'url("/assets/BEDOUHENE.JPG")',
+
         conception: 'url("/assets/conception.JPG")',
       },
       screens: {
