@@ -7,9 +7,9 @@ export default function Collapse({ title, content }) {
 	const [isOpen, setIsOpen] = useState(false);
 
 	return (
-    <div className="dropdown w-[70%] m-2">
+    <div className="dropdown w-[70%] m-0">
       <div
-        className="dropdown-title bg-[#FEF9F5] flex justify-between items-center p-8 rounded-t-md cursor-pointer transition-all duration-300 ease-in-out"
+        className="dropdown-title bg-[#FEF9F5] flex justify-between items-center p-2 rounded-t-md cursor-pointer transition-all duration-300 ease-in-out"
         onClick={() => setIsOpen((current) => !current)}
       >
         <p className="text-gray-800 font-semibold">{title}</p>
@@ -24,11 +24,12 @@ export default function Collapse({ title, content }) {
       </div>
 
       <div
-        className={`dropdown-content bg-[#FEF9F5] bg-opacity-50 p-8 rounded-b-md transition-all duration-300 ease-in-out ${
-          isOpen ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+        className={`dropdown-content bg-[#FEF9F5] bg-opacity-50 p-4 rounded-b-md transition-all duration-300 ease-in-out ${
+          isOpen ? "h-auto opacity-100" : "h-0 opacity-0 overflow-hidden"
         }`}
-      >
-        {content}
+        style={{ height: isOpen ? "auto" : "0" }}
+      
+        >{content}
       </div>
     </div>
   );

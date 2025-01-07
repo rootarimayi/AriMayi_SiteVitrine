@@ -26,7 +26,9 @@ module.exports = {
         partenairesBanner: 'url("/assets/PHOTO-2024-12-22-20-02-27.jpg")',
         identiteBanne: 'url("/assets/jud-mackrill-Of_m3hMsoAA-unsplash.jpg")',
         identiteBanner: 'url("/assets/PHOTO-2024-12-22-20-04-03.jpg")',
-        contactBanner:
+        contacctBanner: 'url("/assets/contac.jpg")',
+        formaBanner: 'url("/assets/appren.jpg")',
+        conttBanner:
           'url("/assets/nathan-anderson-FHiJWoBodrs-unsplash.jpg")',
         bgAri: 'url("/assets/bgAri.svg")',
         candidat:

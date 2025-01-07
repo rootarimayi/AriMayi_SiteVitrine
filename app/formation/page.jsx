@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import DetailFormation from "../components/DetailFormation";
 import { specialties } from "./data";
-
+import Banner from "../components/Banner";
 
 const specialtie = [
   {
@@ -52,6 +52,20 @@ const specialtie = [
 export default function Formation() {
   return (
     <>
+      <Banner className="bg-formaBanner">
+        <h1
+          style={{
+            textAlign: "center",
+            alignSelf: "center",
+            fontSize: "2rem",
+            margin: "0 0 10px",
+            padding: "50px",
+            color: "white",
+          }}
+        >
+          Nos formations
+        </h1>
+      </Banner>
       <br />
       <br />
       <br />
@@ -60,7 +74,7 @@ export default function Formation() {
       <br />
       <section className="bg-gray-100 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text text-center">
+          <h1 className="text-3xl font-bold text-gray-900 mb-2 text-center">
             Explorez nos formations
           </h1>
           <br />
