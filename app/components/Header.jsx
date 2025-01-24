@@ -86,7 +86,7 @@ export default function Header() {
              backdrop-blur-md border border-white/30 
              shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out 
              focus:outline-none focus:ring-2 focus:ring-[#816CFF]"
-                src=""
+                src="/formation"
               />
             </div>
             <CostumButton

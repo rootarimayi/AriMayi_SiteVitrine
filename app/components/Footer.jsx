@@ -74,7 +74,7 @@ export default function Footer() {
           </a>
         </div>
         <p className="mt-8 text-xs leading-5 md:order-1 md:mt-0 text-white">
-          © 2024 ARIMAYI. Tous droits réservés.
+          © 2025 ARIMAYI. Tous droits réservés.
         </p>
       </div>
     </footer>

@@ -80,13 +80,13 @@ export default function Header() {
              backdrop-blur-md border border-[#FFA500]/40
              shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out 
              focus:outline-none focus:ring-2 focus:ring-[#FF7F50]"
-                src=""
+                src="/formation"
               />
             </div>
             <CostumButton
               text="Accés à la Plateforme"
               classes="text-white font-Opensans  text-[8px]  md:hidden  lg:hidden "
-              src="#"
+              src="/formation"
             />
             <button
               className="inline-flex items-center justify-center p-2 rounded-lg text-white lg:hidden"

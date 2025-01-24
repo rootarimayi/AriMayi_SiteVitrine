@@ -5,11 +5,11 @@ import Img from "@/public/assets/comming-soon.png";
 function page() {
   return (
     <div className="flex flex-col justify-center items-center rounded-lg">
-      <h1 className="mt-96">En cours de construction</h1>
+      <h1 className="mt-96 font-semibold">En cours de développement</h1>
       <Image
         src={Img}
         alt="Woman with a glasses"
-        className="rounded-lg shadow-lg xl:w-1/5 w-2/3  mt-10 mb-96"
+        className="rounded-lg shadow-lg xl:w-1/5 w-2/3  mt-14 mb-96"
       />
     </div>
   );
