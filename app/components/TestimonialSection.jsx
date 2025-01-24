@@ -36,11 +36,10 @@ export default function TestimonialSection() {
 
   // vid modal
   const openModal = (videoUrl) => {
-   console.log(`Opening video modal for: ${videoUrl}`);
- 
+    console.log(`Opening video modal for: ${videoUrl}`);
 
-  setCurrentVideo(videoUrl);
-  setIsModalOpen(true);
+    setCurrentVideo(videoUrl);
+    setIsModalOpen(true);
   };
 
   // Close modal
@@ -57,7 +56,7 @@ export default function TestimonialSection() {
           <h3 className="text-[28px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-[5px]">
             Témoignages
           </h3>
-          
+
           <br />
           <br />
           <p className="text-center font-Opensans text-[20px] leading-[25px] text-black my-[10px] gap-4">
@@ -90,9 +89,7 @@ export default function TestimonialSection() {
                       {testimonial.name}
                     </h3>
 
-                    <h3 className=" text-sm text-white">
-                      {testimonial.titre}
-                    </h3>
+                    <h3 className=" text-sm text-white">{testimonial.titre}</h3>
                   </div>
                 </div>
                 <p className="textsemibold text-lg text-white mb-4">
@@ -102,7 +99,7 @@ export default function TestimonialSection() {
                   onClick={() => openModal(testimonial.videoUrl)}
                   className="text-[#F68A67] hover:underline transition-colors"
                 >
-                  Voir le vid
+                  Voir la vidéo
                 </button>
               </div>
             ))}

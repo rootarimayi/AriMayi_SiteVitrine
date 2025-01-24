@@ -1,11 +1,10 @@
 "use client";
-import { useState, } from "react";
+import { useState } from "react";
 import React from "react";
 import Image from "next/image";
 
-
 export default function PartenaireForm() {
-    const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState({
     companyName: "",
     email: "",
     phoneNumber: "",

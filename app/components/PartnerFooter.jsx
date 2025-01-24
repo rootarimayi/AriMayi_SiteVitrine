@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/logo/partnerarimayi.svg";
+import logo from "@/public/logo/Logo AriMayi - Vertical - Blanc.png";
 import { FaLinkedin } from "react-icons/fa";
 export default function Footer() {
   return (
@@ -16,7 +16,7 @@ export default function Footer() {
                 src={logo}
                 alt="logo AriMayi"
                 loading="lazy"
-                width={60}
+                width={130}
                 height={40}
                 decoding="async"
                 style="color:transparent"

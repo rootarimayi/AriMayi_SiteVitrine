@@ -3,7 +3,6 @@ import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { FaLinkedin } from "react-icons/fa";
 
-
 export default function Equipe() {
   const [isOpen, setIsOpen] = useState(false);
   const [activeBio, setActiveBio] = useState(null);
@@ -67,11 +66,7 @@ export default function Equipe() {
           <div
             className="relative"
             onClick={() =>
-              handleCardClick(
-                bioSamir,
-                "/assets/Samir.JPG",
-                "Samir"
-              )
+              handleCardClick(bioSamir, "/assets/Samir.JPG", "Samir")
             }
           >
             <div className="relative group">
@@ -97,11 +92,7 @@ export default function Equipe() {
           <div
             className="relative"
             onClick={() =>
-              handleCardClick(
-                bioKatia,
-                "/assets/Samir.JPG",
-                "Katia"
-              )
+              handleCardClick(bioKatia, "/assets/Samir.JPG", "Katia")
             }
           >
             <div className="relative group">
@@ -126,42 +117,43 @@ export default function Equipe() {
 
       {/* Modal */}
       {isOpen && activeBio && (
-        <><div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-          <div className="bg-white w-96 p-6 rounded-lg relative flex">
-            <button
-              className="absolute top-2 right-2 text-gray-500 text-xl"
-              onClick={handleCloseModal}
-            >
-              &times;
-            </button>
+        <>
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
+            <div className="bg-white w-96 p-6 rounded-lg relative flex">
+              <button
+                className="absolute top-2 right-2 text-gray-500 text-xl"
+                onClick={handleCloseModal}
+              >
+                &times;
+              </button>
 
-            <div className="flex w-full">
-              <div className="w-1/3 mr-4">
-                <Image
-                  className="rounded-lg object-cover"
-                  alt={activeBio.name}
-                  src={activeBio.imgSrc}
-                  width={250}
-                  height={250} />
-              </div>
+              <div className="flex w-full">
+                <div className="w-1/3 mr-4">
+                  <Image
+                    className="rounded-lg object-cover"
+                    alt={activeBio.name}
+                    src={activeBio.imgSrc}
+                    width={250}
+                    height={250}
+                  />
+                </div>
 
-              <div className="w-2/3">
-                <div>
-                  <h2 className="text-2xl font-semibold">{activeBio.name}</h2>
-                  <p className="mt-2">{activeBio.bio}</p>
+                <div className="w-2/3">
                   <div>
-                    <a
-                      href={`https://www.linkedin.com/in/${activeBio.name.toLowerCase()}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    ></a>
+                    <h2 className="text-2xl font-semibold">{activeBio.name}</h2>
+                    <p className="mt-2">{activeBio.bio}</p>
+                    <div>
+                      <a
+                        href={`https://www.linkedin.com/in/${activeBio.name.toLowerCase()}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      ></a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      
         </>
       )}
     </>

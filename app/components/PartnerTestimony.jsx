@@ -21,11 +21,10 @@ export default function TestimonialSection() {
 
   // vid modal
   const openModal = (videoUrl) => {
-   console.log(`Opening video modal for: ${videoUrl}`);
- 
+    console.log(`Opening video modal for: ${videoUrl}`);
 
-  setCurrentVideo(videoUrl);
-  setIsModalOpen(true);
+    setCurrentVideo(videoUrl);
+    setIsModalOpen(true);
   };
 
   // Close modal
@@ -78,7 +77,7 @@ export default function TestimonialSection() {
                 onClick={() => openModal(testimonial.videoUrl)}
                 className="text-[#F68A67] hover:underline transition-colors"
               >
-                Voir le vid
+                Voir la vidéo
               </button>
             </div>
           ))}

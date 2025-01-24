@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import logopart from "@/public/logo/partnerarimayi.svg";
+import logopart from "@/public/logo/Logo AriMayi - Principal - Blanc - no text.png";
 import logoMobilepart from "@/public/logo/partnerlogo.svg";
 import CostumButton from "./CostumButton";
 
@@ -19,15 +19,15 @@ export default function Header() {
           <div className="container flex items-center justify-between gap-2">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
+                <span className="text-[#afaeae] absolute left-52 ml-2 top-7 text-[10px]">
+                  "L'experience concrète par la formation"
+                </span>
                 <Image
                   src={logopart}
                   alt="logo AriMayi"
-                  width={50}
-                  height={40}
-                  priority
                   className="hidden md:block ml-0"
+                  height={80}
                 />
-
                 <Image
                   src={logoMobilepart}
                   alt="logo AriMayi"
@@ -37,7 +37,7 @@ export default function Header() {
                 />
               </div>
             </div>
-            <div className="hidden   lg:flex items-center gap-5">
+            <div className="hidden lg:flex items-center gap-5">
               <nav className="ml-4 flex items-center space-x-4 gap-1">
                 <Link
                   href="/apprenants"

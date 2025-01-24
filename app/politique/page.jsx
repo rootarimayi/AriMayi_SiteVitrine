@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
- // Using shield icon to symbolize confidentiality
+// Using shield icon to symbolize confidentiality
 
 export default function Politique() {
   return (
@@ -57,7 +57,6 @@ export default function Politique() {
                   </p>
                 </div>
                 <div className="border-t border-dashed border-gray-400 mt-6"></div>{" "}
-              
                 <div className="mt-6 text-gray-700">
                   <h2 className="text-xl font-semibold">
                     3. Vos droits concernant les données personnelles
@@ -96,7 +95,6 @@ export default function Politique() {
                   </p>
                 </div>
                 <div className="border-t border-dashed border-gray-400 mt-6"></div>{" "}
-           
                 <div className="mt-6">
                   <h4 className="text-base md:text-lg font-semibold text-gray-900">
                     Arimayi - Confidentialité et Sécurité
@@ -107,7 +105,6 @@ export default function Politique() {
                   <div className="text-sm md:text-base text-indigo-600 font-medium">
                     Une organisation de confiance.
                   </div>
-                
                 </div>
               </div>
             </div>

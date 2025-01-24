@@ -1,5 +1,5 @@
-"use client"
-import React, { useState } from 'react';
+"use client";
+import React, { useState } from "react";
 import Image from "next/image";
 import happyness from "@/public/assets/happiness.png";
 import { FaQuoteLeft } from "react-icons/fa";

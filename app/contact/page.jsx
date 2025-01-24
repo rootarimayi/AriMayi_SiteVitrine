@@ -2,8 +2,7 @@ import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import Coordonnees from "../components/Coordonnees";
 
-
-export default function Contact(){
+export default function Contact() {
   return (
     <>
       <Banner className="bg-contacctBanner">
@@ -31,7 +30,7 @@ export default function Contact(){
         <br />
         <br />
         <h3 className="text-[48px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
-         Arimayi
+          Arimayi
         </h3>
         <br />
         <br />
@@ -107,4 +106,4 @@ export default function Contact(){
       </div>
     </>
   );
-};
+}

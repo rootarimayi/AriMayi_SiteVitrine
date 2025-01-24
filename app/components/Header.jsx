@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-import logo from "@/public/logo/Logo-arimayi-Principal.svg";
+import logo from "@/public/logo/Logo AriMayi - Principal - no text.png";
 import logoMobile from "@/public/logo/logo_mobile.svg";
 import CostumButton from "./CostumButton";
 
@@ -20,14 +20,14 @@ export default function Header() {
           <div className="container flex items-center justify-between gap-2">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
+                <span className="text-[#afaeae] absolute left-52 ml-2 top-7 text-[10px]">
+                  "L'experience concrète par la formation"
+                </span>
                 <Image
                   src={logo}
                   alt="logo AriMayi"
                   className="hidden md:block ml-0"
-                  style={{
-                    maxWidth: "100%",
-                    width: "clamp(200px, 20vw, 600px)", // Responsive width: between 200px and 600px
-                  }}
+                  height={80}
                 />
                 <Image
                   src={logo}
