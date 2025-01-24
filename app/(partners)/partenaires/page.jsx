@@ -13,11 +13,10 @@ export default function Partenaires() {
         <Image
           src={Img}
           alt="Woman with a glasses"
-          className="rounded-lg shadow-lg w-1/3 mt-48"
+          className="rounded-lg shadow-lg w-1/3 mt-40"
         />
       </div>
-      <div className="text-[24px] text-center py-[70px] font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text"></div>
-      <header className="text-center mb-12">
+      <header className="text-center mb-12  mt-12">
         <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
           Nos services pour les partenaires
         </h1>
