@@ -46,7 +46,7 @@ export default function Home() {
           <CostumButton
             text="Découvrez nous Formations"
             classes="font-Opensans text-[20px]  bg-orange text-white  hover:scale-110 mx-[10px]"
-            src="/formations"
+            src="/formation"
           />
         </div>
       </Banner>
