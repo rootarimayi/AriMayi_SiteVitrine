@@ -1,4 +1,5 @@
 import cardImg from "@/public/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg";
+import Img from "@/public/assets/PHOTO 2025-01-17 à 11.44.28_0fe09d41.jpg";
 import app1 from "@/public/assets/PHOTO-2024-12-22-20-01-27.jpg";
 import app2 from "@/public/assets/PHOTO-2024-12-22-20-01-44.jpg";
 import app3 from "@/public/assets/PHOTO-2024-12-22-20-02-06.jpg";
@@ -100,6 +101,13 @@ export default function Apprenants() {
             </div>
           </div>
         </div>
+      </div>
+      <div className="flex justify-center items-center rounded-lg  ">
+        <Image
+          src={Img}
+          alt="Woman with a glasses"
+          className="rounded-lg shadow-lg xl:w-1/5 w-2/3  m-6"
+        />
       </div>
       <Opportunite />
     </>

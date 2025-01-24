@@ -20,7 +20,7 @@ export default function Header() {
           <div className="container flex items-center justify-between gap-2">
             <div className="flex items-center ">
               <div className="flex-shrink-0">
-                <span className="text-[#afaeae] absolute left-52 ml-2 top-7 text-[10px]">
+                <span className="text-[#afaeae] absolute left-32 top-7 text-[10px]">
                   "L'experience concrète par la formation"
                 </span>
                 <Image

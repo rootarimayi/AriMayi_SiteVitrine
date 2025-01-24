@@ -1,8 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function Opportunite() {
   const [currentPage, setCurrentPage] = useState(1);
+  const [isMobile, setIsMobile] = useState(false);
 
   const cards = [
     {
@@ -29,14 +30,25 @@ export default function Opportunite() {
   ];
 
   const handlePageChange = (direction) => {
-    if (direction === "next" && currentPage < 5) {
+    if (direction === "next" && currentPage < cards.length) {
       setCurrentPage(currentPage + 1);
     } else if (direction === "prev" && currentPage > 1) {
       setCurrentPage(currentPage - 1);
     }
   };
 
-  // Define an array of colors for the card backgrounds
+  // Hook pour détecter la taille de l'écran et ajuster la vue
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth >= 768); // 768px comme limite pour mobile (taille de l'écran)
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Vérifie la taille dès le chargement de la page
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   const cardColors = [
     "bg-white", // White
     "bg-[#F68A67]", // #F68A67 (Orange)
@@ -44,11 +56,36 @@ export default function Opportunite() {
     "bg-white", // White
   ];
 
-  // Determine the text color based on the background color
   const getTextColor = (index) => {
     return cardColors[index] === "bg-[#353535]"
       ? "text-white"
       : "text-gray-800";
+  };
+
+  // Gestion du défilement horizontal avec la translation (inversée)
+  const getTranslateX = () => {
+    if (isMobile) {
+      // Pour mobile, appliquer le comportement desktop (plus de décalage)
+      return currentPage === 1
+        ? "translate-x-[28%]"
+        : currentPage === 2
+        ? "translate-x-[-21%]"
+        : currentPage === 3
+        ? "translate-x-[-68%]"
+        : "translate-x-0";
+    } else {
+      // Pour desktop, appliquer le comportement mobile (moins de décalage)
+      return currentPage === 1
+        ? "translate-x-[33%]"
+        : currentPage === 2
+        ? "translate-x-[-4%]"
+        : "translate-x-[-43%]";
+    }
+  };
+
+  // La largeur des cartes (inversée)
+  const getWidth = () => {
+    return isMobile ? `${cards.length * 100}%` : `${cards.length * 80}%`;
   };
 
   return (
@@ -63,34 +100,21 @@ export default function Opportunite() {
       </p>
 
       {/* Card Section */}
-      <div className="  max-w-4xl   mx-auto flex flex-wrap justify-center">
+      <div className="max-w-4xl mx-auto flex flex-wrap justify-center">
         <div
-          className={`transition-transform duration-500 transform ${
-            currentPage === 1
-              ? "translate-x-[-10%]" // Move a bit to the left from the start
-              : currentPage === 2
-              ? "translate-x-[-25%]" // Move more left on the second page
-              : currentPage === 3
-              ? "translate-x-[-50%]" // Further move left on the third page
-              : "translate-x-0"
-          } flex gap-x-7`}
-          style={{ width: `${cards.length * 100}%` }}
+          className={`transition-transform duration-500 transform ${getTranslateX()} flex gap-x-7`}
+          style={{ width: getWidth() }}
         >
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`flex-shrink-0 w-80 sm:w-auto max-w-md md:w-32  lg:w-full shadow-md p-8 rounded-2xl ${
+              className={`flex-shrink-0 w-1/3 sm:w-1/2 lg:w-1/2 xl:w-full shadow-md p-8 rounded-2xl ${
                 cardColors[index]
-              } ${
-                cardColors[index] === "bg-[#353535]"
-                  ? "text-white"
-                  : "text-gray-800"
-              }`}
-              style={{ minHeight: "230px", maxWidth: "400px" }} // Adjusted minHeight for cards
+              } ${getTextColor(index)}`}
+              style={{ minHeight: "230px", maxWidth: "400px" }}
             >
               <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-              <p className="text-sm mb-3">{card.description}</p>{" "}
-              {/* Reduced margin */}
+              <p className="text-sm mb-3">{card.description}</p>
               <a
                 href={card.link}
                 className="text-indigo-600 font-medium hover:underline text-sm"

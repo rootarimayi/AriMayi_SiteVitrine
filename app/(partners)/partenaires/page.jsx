@@ -1,6 +1,7 @@
 import Banner from "../../components/Banner";
 import Image from "next/image";
 import cardImg3 from "@/public/assets/zachary-nelson-98Elr-LIvD8-unsplash.jpg";
+import Img from "@/public/assets/PHOTO-2024-12-22-20-02-27.jpg";
 import par1 from "@/public/assets/PHOTO-2024-12-22-20-02-46.jpg";
 import par2 from "@/public/assets/PHOTO-2024-12-22-20-03-05.jpg";
 import par3 from "@/public/assets/PHOTO-2024-12-22-20-03-34.jpg";
@@ -10,10 +11,13 @@ import PartenaireForm from "../../components/PartenaireForm";
 export default function Partenaires() {
   return (
     <>
-      <Banner className="bg-partenairesBanner">
-        <h3 className="text-[22px] font-semibold text-center text-white"></h3>
-        <p className="text-center text-white"></p>
-      </Banner>
+      <div className="flex justify-center items-center rounded-lg  ">
+        <Image
+          src={Img}
+          alt="Woman with a glasses"
+          className="rounded-lg shadow-lg w-1/3 mt-48"
+        />
+      </div>
       <div className="text-[24px] text-center py-[70px] font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text"></div>
       <header className="text-center mb-12">
         <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">

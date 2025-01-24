@@ -83,7 +83,7 @@ export default function Formation() {
           <br />
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {specialties.map((specialty) => (
-              <Link href={`/formation/${specialty.id}`} key={specialty.id}>
+              <Link href={`/comingsoon`} key={specialty.id}>
                 <div className="h-full bg-white rounded-lg shadow-lg flex flex-col transform transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <div className="h-48 w-full relative">
                     <Image
