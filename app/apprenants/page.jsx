@@ -1,4 +1,3 @@
-
 import cardImg from "@/public/assets/brooke-cagle-g1Kr4Ozfoac-unsplash.jpg";
 import app1 from "@/public/assets/PHOTO-2024-12-22-20-01-27.jpg";
 import app2 from "@/public/assets/PHOTO-2024-12-22-20-01-44.jpg";
@@ -6,11 +5,14 @@ import app3 from "@/public/assets/PHOTO-2024-12-22-20-02-06.jpg";
 import Image from "next/image";
 import Opportunite from "../opportunite/page";
 
-export default function Apprenants(){
+export default function Apprenants() {
   return (
     <>
-    <br /><br /> <br /><br /><br /> <br />
-    <br />
+      <br />
+      <br /> <br />
+      <br />
+      <br /> <br />
+      <br />
       <div className="bg-white py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -20,13 +22,12 @@ export default function Apprenants(){
             progressif, pertinent et immédiatement applicable.
           </h2>
           <p className="text-gray-700 mb-12">
-            À chaque étape, le cadre de l’<b>AFEST </b>allie
-            formation, autonomie et suivi personnalisé, permettant ainsi un
-            apprentissage progressif, pertinent et immédiatement applicable.
-            Notre approche à la fois humaine et performante assure à chaque
-            apprenant, quel que soit son parcours, une montée en compétences
-            concrète, et lui donne les clés pour s’insérer durablement dans le
-            monde du travail.
+            À chaque étape, le cadre de l’<b>AFEST </b>allie formation,
+            autonomie et suivi personnalisé, permettant ainsi un apprentissage
+            progressif, pertinent et immédiatement applicable. Notre approche à
+            la fois humaine et performante assure à chaque apprenant, quel que
+            soit son parcours, une montée en compétences concrète, et lui donne
+            les clés pour s’insérer durablement dans le monde du travail.
           </p>
 
           {}
@@ -53,7 +54,7 @@ export default function Apprenants(){
           </div>
 
           {}
-          <div className="flex flex-col md:flex-row-reverse items-center mb-12">
+          <div className="flex flex-col md:flex-row-reverse items-center ">
             <div className="w-full md:w-1/3 h-48 relative mb-4 md:mb-0 md:ml-6">
               <Image
                 src={app2}
@@ -100,8 +101,7 @@ export default function Apprenants(){
           </div>
         </div>
       </div>
-      <br /><br /><br /><br /><b></b>
       <Opportunite />
     </>
   );
-};
+}

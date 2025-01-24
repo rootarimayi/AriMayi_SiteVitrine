@@ -7,28 +7,28 @@ import Banner from "../components/Banner";
 const specialtie = [
   {
     id: 1, // Added unique id for each specialty
-   
+
     image: "design.jpeg",
     title: "Designer (niveau 5)",
     description: "Designer (niveau 5)",
   },
   {
     id: 2,
-  
+
     image: "mobile.jpg",
     title: "Développeur web mobile (niveau 5)",
     description: "Développeur web mobile (niveau 5)",
   },
   {
     id: 3,
-  
+
     image: "conception.jpg",
     title: "Concepteur Développeur (niveau 6)",
     description: "Concepteur Développeur (niveau 6)",
   },
   {
     id: 4,
-    
+
     image: "cyber.jpeg",
     title: "Cybersécurité (niveau 6)",
     description: "Cybersécurité (niveau 6)",

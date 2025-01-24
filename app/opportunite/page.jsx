@@ -29,7 +29,7 @@ export default function Opportunite() {
   ];
 
   const handlePageChange = (direction) => {
-    if (direction === "next" && currentPage < cards.length) {
+    if (direction === "next" && currentPage < 5) {
       setCurrentPage(currentPage + 1);
     } else if (direction === "prev" && currentPage > 1) {
       setCurrentPage(currentPage - 1);
@@ -54,14 +54,16 @@ export default function Opportunite() {
   return (
     <div className="bg-gray-50 py-8 px-4">
       <h2 className="text-2xl font-semibold text-center mb-4 text-indigo-700">
-        Des opportunités dans divers secteurs
+        Des projets inspirants pour votre apprentissage
       </h2>
       <p className="text-center mb-6 text-gray-600 text-sm">
-        Découvrez nos partenaires qui ont contribué au succès de nos projets
+        Nos projets vous permettront de développer des compétences variées tout
+        en contribuant à des solutions concrètes pour des besoins réels. Prêts à
+        relever le défi ? 🚀
       </p>
 
       {/* Card Section */}
-      <div className="max-w-4xl   mx-auto flex flex-wrap justify-center">
+      <div className="  max-w-4xl   mx-auto flex flex-wrap justify-center">
         <div
           className={`transition-transform duration-500 transform ${
             currentPage === 1
@@ -77,7 +79,7 @@ export default function Opportunite() {
           {cards.map((card, index) => (
             <div
               key={card.id}
-              className={`flex-shrink-0 w-full sm:w-auto max-w-md shadow-md p-8 rounded-2xl ${
+              className={`flex-shrink-0 w-80 sm:w-auto max-w-md md:w-32  lg:w-full shadow-md p-8 rounded-2xl ${
                 cardColors[index]
               } ${
                 cardColors[index] === "bg-[#353535]"

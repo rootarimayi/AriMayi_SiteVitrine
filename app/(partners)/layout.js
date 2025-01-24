@@ -1,6 +1,6 @@
 import localFont from "next/font/local";
 import PartnerHeader from "../components/PartnerHeader";
-import Footer from "../components/Footer"; // Go up one level to access components
+import PartnerFooter from "../components/PartnerFooter"; // Go up one level to access components
 import "../globals.css"; // Go up one level to access globals.css
 
 const OpenSans = localFont({
@@ -24,6 +24,7 @@ export default function PartnerLayout({ children }) {
     <>
       <PartnerHeader /> {}
       {children}
+      <PartnerFooter /> {}
     </>
   );
 }

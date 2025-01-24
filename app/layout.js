@@ -15,7 +15,6 @@ const Monserrat = localFont({
   variable: "--font-monserrat",
 });
 
-
 export const metadata = {
   title: "l'expérience concrète par la formation",
   description: "AriMayi ",

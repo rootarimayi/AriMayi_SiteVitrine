@@ -19,15 +19,10 @@ import Opportunite from "./opportunite/page";
 import Journal from "./components/Carousel";
 import TestimonialSection from "./components/TestimonialSection";
 export default function Home() {
-  let slider = [
-    slide1,
-    slide2,
-    slide3
-
-  ]
+  let slider = [slide1, slide2, slide3];
   return (
     <>
-      <Banner className="bg-HomepageBanne sm:bg-HomepageBanne bg-cover bg-center transition-all duration-300 ease-in-out ">
+      <Banner className="bg-HomepageBanne sm:bg-HomepageBanne bg-cover bg-center transition-all duration-300 ease-in-out">
         <br /> <br />
         <br /> <br />
         <br /> <br />

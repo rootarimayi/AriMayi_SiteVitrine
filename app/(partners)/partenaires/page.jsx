@@ -7,7 +7,7 @@ import par3 from "@/public/assets/PHOTO-2024-12-22-20-03-34.jpg";
 import PartnerTestimony from "../../components/PartnerTestimony";
 import PartenaireForm from "../../components/PartenaireForm";
 
-export default function Partenaires(){
+export default function Partenaires() {
   return (
     <>
       <Banner className="bg-partenairesBanner">
@@ -92,7 +92,6 @@ export default function Partenaires(){
         <div className="w-full md:w-1/2">
           <Image
             src={par3}
-      
             objectFit="cover"
             alt="Team working on a project"
             className="rounded-lg shadow-lg"
@@ -129,4 +128,4 @@ export default function Partenaires(){
       <br />
     </>
   );
-};
+}

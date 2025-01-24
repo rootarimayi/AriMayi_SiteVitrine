@@ -38,7 +38,7 @@ export default function Header() {
               </div>
             </div>
             <div className="hidden   lg:flex items-center gap-5">
-              <nav className="ml-4 flex items-end space-x-4 gap-1">
+              <nav className="ml-4 flex items-center space-x-4 gap-1">
                 <Link
                   href="/apprenants"
                   className="font-Opensans font-bold px-1 py-1 text-[12px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#f6ed67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
