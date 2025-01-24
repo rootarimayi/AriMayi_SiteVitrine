@@ -1,6 +1,4 @@
-import Banner from "../../components/Banner";
 import Image from "next/image";
-import cardImg3 from "@/public/assets/zachary-nelson-98Elr-LIvD8-unsplash.jpg";
 import Img from "@/public/assets/PHOTO-2024-12-22-20-02-27.jpg";
 import par1 from "@/public/assets/PHOTO-2024-12-22-20-02-46.jpg";
 import par2 from "@/public/assets/PHOTO-2024-12-22-20-03-05.jpg";
