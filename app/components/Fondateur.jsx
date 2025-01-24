@@ -25,11 +25,8 @@ export default function Fondateur() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
             <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
-              L&apos;Mot du Fondateur
+              Le Mot du Fondateur
             </h1>
-            <p className="mt-2 md:mt-4 text-base md:text-lg text-gray-600">
-              Écoutez directement la vision derrière notre succès
-            </p>
           </div>
           <div className="flex justify-center py-8">
             <div className="w-full max-w-3xl px-4 md:px-6 lg:px-8">
@@ -61,22 +58,20 @@ export default function Fondateur() {
                         />
                         <Link href="https://www.linkedin.com/in/samir-bedouhene/">
                           {" "}
-                          <FaLinkedin className="text-blue-600 text-xl relative top-14 ml-3" />
+                          <FaLinkedin className="text-blue-600 text-xl relative top-14 ml-4" />
                         </Link>
                       </div>
 
-                      <div className="ml-3 md:ml-4">
+                      <div className="ml-3 md:ml-4 mt-7">
                         <h4 className="text-base md:text-lg font-semibold text-gray-900">
                           {testimonial.author}
                         </h4>
                         <div className="text-sm md:text-base text-gray-600">
                           {testimonial.role}
                         </div>
-                        <div className="text-sm md:text-base text-indigo-600 font-medium">
-                          {testimonial.company}
-                        </div>
+
                         <div className="text-sm md:text-base font-semibold">
-                          certifié par l'AFEST
+                          certifié A-AFEST
                         </div>
                         <div>
                           <a

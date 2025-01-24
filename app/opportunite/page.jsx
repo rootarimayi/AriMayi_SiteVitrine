@@ -93,7 +93,7 @@ export default function Opportunite() {
       <h2 className="text-2xl font-semibold text-center mb-4 text-indigo-700">
         Des projets inspirants pour votre apprentissage
       </h2>
-      <p className="text-center mb-6 text-gray-600 text-sm">
+      <p className="text-center mb-6 text-gray-600 text-lg text-sm">
         Nos projets vous permettront de développer des compétences variées tout
         en contribuant à des solutions concrètes pour des besoins réels. Prêts à
         relever le défi ? 🚀

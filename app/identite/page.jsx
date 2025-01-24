@@ -25,13 +25,6 @@ export default function Identite() {
         </h1>
       </Banner>
       <div className="container mx-auto px-4 py-8">
-        <br />
-        <br />
-        <h1 className="text-5xl text-center mb-16 font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
-          ARIMAYI
-        </h1>{" "}
-        <br />
-        <br />
         <section className="text-left mb-8">
           <h2 className="text-xl mt-4 text-gray-800">
             Inspiré des mots japonais Ari et chinois Mǎyǐ, signifiant
@@ -57,7 +50,7 @@ export default function Identite() {
             src={logoMobile}
             alt="logo"
             layout="intrinsic"
-            width={350}
+            width={300}
             height={250}
             className="object-cover mx-auto"
           />
@@ -80,13 +73,8 @@ export default function Identite() {
 
       {}
       <Fondateur />
-      <br />
-      <br />
-      <br />
+
       <Journal />
-      <br />
-      <br />
-      <br />
     </>
   );
 }

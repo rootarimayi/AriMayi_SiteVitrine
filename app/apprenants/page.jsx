@@ -12,8 +12,14 @@ export default function Apprenants() {
       <br />
       <br /> <br />
       <br />
-      <br /> <br />
       <br />
+      <div className="flex justify-center items-center rounded-lg  ">
+        <Image
+          src={Img}
+          alt="Woman with a glasses"
+          className="rounded-lg shadow-lg xl:w-1/5 w-2/3 "
+        />
+      </div>
       <div className="bg-white py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
@@ -101,13 +107,6 @@ export default function Apprenants() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="flex justify-center items-center rounded-lg  ">
-        <Image
-          src={Img}
-          alt="Woman with a glasses"
-          className="rounded-lg shadow-lg xl:w-1/5 w-2/3  m-6"
-        />
       </div>
       <Opportunite />
     </>
