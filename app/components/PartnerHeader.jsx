@@ -20,7 +20,7 @@ export default function Header() {
             <div className="flex items-center "> 
               <div className="flex-shrink-0">
                 <span className="text-[#afaeae] absolute left-32 top-7 text-[10px]">
-                  Lexperience concrète par la formation
+                  L&#39;experience concrète par la formation
                 </span>
                 <Image
                   src={logopart}
