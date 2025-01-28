@@ -17,10 +17,10 @@ export default function Header() {
       <header className="fixed z-10 w-full">
         <div className=" bg-[#444444]  relative py-[10px] ">
           <div className="container flex items-center justify-between gap-2">
-            <div className="flex items-center ">
+            <div className="flex items-center "> 
               <div className="flex-shrink-0">
                 <span className="text-[#afaeae] absolute left-32 top-7 text-[10px]">
-                  "L'experience concrète par la formation"
+                  Lexperience concrète par la formation
                 </span>
                 <Image
                   src={logopart}
@@ -33,7 +33,7 @@ export default function Header() {
                   alt="logo AriMayi"
                   width={60}
                   height={60}
-                  className=" md:hidden"
+                  className="md:hidden"
                 />
               </div>
             </div>
