@@ -100,34 +100,31 @@ export default function Opportunite() {
       </p>
 
       {/* Card Section */}
-      <div className="max-w-4xl mx-auto flex flex-wrap justify-center">
+      <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6">
+        {cards.map((card, index) => (
         <div
-          className={`transition-transform duration-500 transform ${getTranslateX()} flex gap-x-7`}
-          style={{ width: getWidth() }}
+            key={card.id}
+            className={`flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 xl:w-1/5 shadow-md p-6 rounded-2xl ${
+            cardColors[index]
+            } ${getTextColor(index)} flex flex-col justify-between`}
+            style={{ minHeight: "230px" }}
         >
-          {cards.map((card, index) => (
-            <div
-              key={card.id}
-              className={`flex-shrink-0 w-1/3 sm:w-1/2 lg:w-1/2 xl:w-full shadow-md p-8 rounded-2xl ${
-                cardColors[index]
-              } ${getTextColor(index)}`}
-              style={{ minHeight: "230px", maxWidth: "400px" }}
-            >
-              <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-              <p className="text-sm mb-3">{card.description}</p>
-              <a
-                href={card.link}
-                className="text-indigo-600 font-medium hover:underline text-sm"
-              >
-                EN SAVOIR PLUS &rarr;
-              </a>
+            <div className="flex-grow">
+            <h3 className="text-xl font-bold mb-2">{card.title}</h3>
+            <p className="text-sm mb-3">{card.description}</p>
             </div>
-          ))}
+            <a
+            href={card.link}
+            className="text-indigo-600 font-medium hover:underline text-sm"
+            >
+            EN SAVOIR PLUS &rarr;
+            </a>
         </div>
-      </div>
+        ))}
+    </div>
 
       {/* Pagination */}
-      <div className="mt-4 flex justify-center space-x-2">
+      {/* <div className="mt-4 flex justify-center space-x-2">
         <button
           onClick={() => handlePageChange("prev")}
           className={`px-2 py-1 rounded-full border ${
@@ -150,7 +147,7 @@ export default function Opportunite() {
         >
           &#8594;
         </button>
-      </div>
+      </div> */}
     </div>
   );
 }

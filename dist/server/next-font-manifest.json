@@ -1,0 +1,41 @@
+{
+  "app": {
+    "[project]/app/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ],
+    "[project]/app/_not-found/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ],
+    "[project]/app/(partners)/partenaires/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf",
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ],
+    "[project]/app/apprenants/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ],
+    "[project]/app/formation/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ],
+    "[project]/app/comingsoon/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ],
+    "[project]/app/contact/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ],
+    "[project]/app/identite/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

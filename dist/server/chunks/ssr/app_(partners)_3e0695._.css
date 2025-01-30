@@ -1,0 +1,105 @@
+/* [project]/app/(partners)/opensans_ebc7775e.module.css [app-client] (css) */
+@font-face {
+  font-family: OpenSans;
+  src: url("/_next/static/media/OpenSans_Regular_webfont-s.p.7653369e.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OpenSans Fallback;
+  src: local(Arial);
+  ascent-override: 101.48%;
+  descent-override: 27.82%;
+  line-gap-override: 0.0%;
+  size-adjust: 105.33%;
+}
+
+.opensans_ebc7775e-module__hELdXq__className {
+  font-family: OpenSans, OpenSans Fallback;
+  font-weight: 400;
+}
+
+.opensans_ebc7775e-module__hELdXq__variable {
+  --font-open-sans: "OpenSans", "OpenSans Fallback";
+}
+
+
+/* [project]/app/(partners)/opensans_ebc7775e.module.css [app-client] (css) */
+@font-face {
+  font-family: OpenSans;
+  src: url("/_next/static/media/OpenSans_Regular_webfont-s.p.7653369e.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OpenSans Fallback;
+  src: local(Arial);
+  ascent-override: 101.48%;
+  descent-override: 27.82%;
+  line-gap-override: 0.0%;
+  size-adjust: 105.33%;
+}
+
+.opensans_ebc7775e-module__hELdXq__className {
+  font-family: OpenSans, OpenSans Fallback;
+  font-weight: 400;
+}
+
+.opensans_ebc7775e-module__hELdXq__variable {
+  --font-open-sans: "OpenSans", "OpenSans Fallback";
+}
+
+
+/* [project]/app/(partners)/montserrat_44b2ca66.module.css [app-client] (css) */
+@font-face {
+  font-family: Montserrat;
+  src: url("/_next/static/media/Montserrat_Black-s.p.4ce6d68a.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat Fallback;
+  src: local(Arial);
+  ascent-override: 77.36%;
+  descent-override: 20.06%;
+  line-gap-override: 0.0%;
+  size-adjust: 125.14%;
+}
+
+.montserrat_44b2ca66-module__CpozUW__className {
+  font-family: Montserrat, Montserrat Fallback;
+}
+
+.montserrat_44b2ca66-module__CpozUW__variable {
+  --font-montserrat: "Montserrat", "Montserrat Fallback";
+}
+
+
+/* [project]/app/(partners)/montserrat_44b2ca66.module.css [app-client] (css) */
+@font-face {
+  font-family: Montserrat;
+  src: url("/_next/static/media/Montserrat_Black-s.p.4ce6d68a.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Montserrat Fallback;
+  src: local(Arial);
+  ascent-override: 77.36%;
+  descent-override: 20.06%;
+  line-gap-override: 0.0%;
+  size-adjust: 125.14%;
+}
+
+.montserrat_44b2ca66-module__CpozUW__className {
+  font-family: Montserrat, Montserrat Fallback;
+}
+
+.montserrat_44b2ca66-module__CpozUW__variable {
+  --font-montserrat: "Montserrat", "Montserrat Fallback";
+}
+
+
+/*# sourceMappingURL=app_%28partners%29_3e0695._.css.map*/

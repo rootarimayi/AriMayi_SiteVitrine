@@ -180,7 +180,7 @@ export default function Coordonnees() {
                   
                   En soumettant ce formulaire, j&apos;accepte la collecte des
                   informations saisies et l&apos;enregistrement de mes données
-                  afin d&apos;être recontacté par AriMayi. Pour en savoir plus, 
+                  afin d&apos;être recontacté.e par AriMayi. Pour en savoir plus, 
                   <Link href="/politique" legacyBehavior>
                     <a className="text-blue-500" onClick={() => {}}>
                        je consulte la politique de confidentialité
@@ -193,7 +193,7 @@ export default function Coordonnees() {
                   type="submit"
                   className="text-white mb-4 bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
                 >
-                  envoyer
+                  Envoyer
                 </button>
               </div>
             </form>

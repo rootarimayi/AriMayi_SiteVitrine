@@ -19,38 +19,18 @@ export default function Contact() {
           Contactez-nous
         </h1>
       </Banner>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br /> <br />
-      <div className="flex flex-col items-center text-center">
-        <br />
-        <br />
-        <br />
-        <br />
-        <h3 className="text-[48px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
-          Arimayi
+      <div className="flex flex-col items-center text-center mt-20">
+        <h3 className="text-[48px] text-center font-montserrat font-bold uppercase gradient-title w-full md:w-[60%]">
+            Arimayi
         </h3>
-        <br />
-        <br />
-        <br /> <br />
-        <br />
-        <br /> <br />
-        <br />
-        <p className="text-gray-800 mb-8">
-          Votre point de départ vers de nouvelles opportunités professionnelles
-          et la réussite de votre projet
+        
+        <p className="text-gray-800 mb-0">
+            Votre point de départ vers de nouvelles opportunités professionnelles et la réussite de votre projet
         </p>
-        <br />
-        <br />
       </div>
       <Coordonnees />
-      <div className="faq flex flex-col gap-1 items-center py-2">
-        <br />
-        <br />
-        <br />
-        <h2 className="text-4xl font-bold mb-3 text-gray-800">FAQ</h2>
+      <div className="flex flex-col items-center text-center mt-20">
+        <h2 className="text-[48px] text-center font-montserrat font-bold uppercase gradient-title w-full md:w-[60%]">FAQ</h2>
         <br />
         <br />
         <Collapse

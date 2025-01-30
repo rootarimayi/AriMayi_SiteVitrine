@@ -21,7 +21,7 @@ export default function Form() {
     e.preventDefault();
     setIsSubmitting(true);
     setTimeout(() => {
-      alert("demande envoyée!");
+      alert("Demande envoyée!");
       setIsSubmitting(false);
       setFormData({
         name: "",

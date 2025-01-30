@@ -20,7 +20,7 @@ export default function Header() {
             <div className="flex items-center "> 
               <div className="flex-shrink-0">
                 <span className="text-[#afaeae] absolute left-32 top-7 text-[10px]">
-                  L&#39;experience concrète par la formation
+                  L&#39;expérience concrète par la formation
                 </span>
                 <Image
                   src={logopart}
@@ -74,7 +74,7 @@ export default function Header() {
                 </Link>
               </nav>
               <CostumButton
-                text="Accés à la Plateforme"
+                text="Accès à la Plateforme"
                 classes="font-Opensans font-bold px-6 py-3 text-[16px] text-white tracking-wide 
              rounded-full bg-gradient-to-r from-[#F68A67]/30 via-[#FF7F50]/20 to-[#FFA500]/10
              backdrop-blur-md border border-[#FFA500]/40
@@ -84,7 +84,7 @@ export default function Header() {
               />
             </div>
             <CostumButton
-              text="Accés à la Plateforme"
+              text="Accès à la Plateforme"
               classes="text-white font-Opensans  text-[8px]  md:hidden  lg:hidden "
               src="/formation"
             />

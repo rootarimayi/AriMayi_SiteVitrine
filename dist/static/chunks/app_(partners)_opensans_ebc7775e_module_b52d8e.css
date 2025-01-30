@@ -1,0 +1,27 @@
+/* [project]/app/(partners)/opensans_ebc7775e.module.css [app-client] (css) */
+@font-face {
+  font-family: OpenSans;
+  src: url("../media/OpenSans_Regular_webfont-s.p.7653369e.woff") format("woff");
+  font-display: swap;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: OpenSans Fallback;
+  src: local(Arial);
+  ascent-override: 101.48%;
+  descent-override: 27.82%;
+  line-gap-override: 0.0%;
+  size-adjust: 105.33%;
+}
+
+.opensans_ebc7775e-module__hELdXq__className {
+  font-family: OpenSans, OpenSans Fallback;
+  font-weight: 400;
+}
+
+.opensans_ebc7775e-module__hELdXq__variable {
+  --font-open-sans: "OpenSans", "OpenSans Fallback";
+}
+
+/*# sourceMappingURL=app_%28partners%29_opensans_ebc7775e_module_b52d8e.css.map*/

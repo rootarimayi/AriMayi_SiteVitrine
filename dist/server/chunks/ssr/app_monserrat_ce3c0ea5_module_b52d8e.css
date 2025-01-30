@@ -1,0 +1,25 @@
+/* [project]/app/monserrat_ce3c0ea5.module.css [app-client] (css) */
+@font-face {
+  font-family: Monserrat;
+  src: url("/_next/static/media/Montserrat_Black-s.p.4ce6d68a.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Monserrat Fallback;
+  src: local(Arial);
+  ascent-override: 77.36%;
+  descent-override: 20.06%;
+  line-gap-override: 0.0%;
+  size-adjust: 125.14%;
+}
+
+.monserrat_ce3c0ea5-module__SSJ7ea__className {
+  font-family: Monserrat, Monserrat Fallback;
+}
+
+.monserrat_ce3c0ea5-module__SSJ7ea__variable {
+  --font-monserrat: "Monserrat", "Monserrat Fallback";
+}
+
+/*# sourceMappingURL=app_monserrat_ce3c0ea5_module_b52d8e.css.map*/

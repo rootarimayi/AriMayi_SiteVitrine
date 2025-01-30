@@ -25,51 +25,57 @@ export default function Identite() {
         </h1>
       </Banner>
       <div className="container mx-auto px-4 py-8">
-        <section className="text-left mb-8">
-          <h2 className="text-xl mt-4 text-gray-800">
-            Inspiré des mots japonais Ari et chinois Mǎyǐ, signifiant
-            <strong> &quot;fourmi&quot;</strong>, ARIMAYI a choisi cet animal
-            pour incarner ses valeurs essentielles.
-          </h2>
-          <br />
-          <h2 className="text-2xl mt-4 text-gray-700">Pourquoi la fourmi ?</h2>
-          <br />
-          <p className="text-xl text-gray-700 text-start mb-4 leading-relaxed">
-            Parce qu&apos;elle illustre la force de l&apos;unité et du travail
-            collaboratif. Les fourmis accomplissent collectivement des tâches
-            monumentales, chaque individu jouant un rôle spécifique au service
-            du groupe. Leur capacité à porter jusqu&apos;à 100 fois leur poids
-            symbolise la puissance de la coopération. ARIMAYI encourage chacun à
-            adopter cet esprit d&apos;équipe, convaincu que, par l&apos;union
-            des talents et des compétences, nous pouvons atteindre des objectifs
-            ambitieux et significatifs ensemble.
-          </p>
-        </section>
-        <section className="text-center mb-8">
-          <Image
-            src={logoMobile}
-            alt="logo"
-            layout="intrinsic"
-            width={300}
-            height={250}
-            className="object-cover mx-auto"
-          />
-        </section>
-        <section className="text-left">
-          <p className="text-xl text-gray-700 text-start mb-4 leading-relaxed">
-            AriMayi est une initiative qui vise à se faire rencontrer les
-            personnes en recherche de stage, de contrat d’apprentissage ou de
-            leur premier job dans l’IT et de jeunes startup/TPE en cours de
-            réalisation de leur projet digital. <br />
-            Sur la base d’une méthodologie d’entreprise, l’apprenant acquiert
-            ses compétences en situation de travail pour la réalisation d’un
-            projet concret. <br />
-            Un partenariat gagnant-gagnant construit entre une ressource formée,
-            insérée professionnellement et une startup/TPE qui voit la
-            réalisation de son projet se concrétiser.
-          </p>
-        </section>
-      </div>
+        {/* Phrase au-dessus des blocs */}
+        <h2 className="text-2xl font-bold text-gray-800 mb-20 text-center">
+            Inspiré des mots japonais <strong>Ari</strong> et chinois <strong>Mǎyǐ</strong>, signifiant
+            <strong> &quot;fourmi&quot;</strong>, ARIMAYI a choisi cet animal pour incarner ses valeurs essentielles.
+        </h2>
+
+        {/* Conteneur principal pour aligner les sections */}
+        <div className="flex flex-col md:flex-row justify-between items-start mb-8">
+            {/* Section sur l'inspiration de la fourmi */}
+            <section className="w-full md:w-1/2 mb-4 md:mb-0">
+            <h2 className="text-2xl font-bold text-gray-700 mt-4">Pourquoi la fourmi ?</h2>
+            
+            <p className="text-lg text-gray-700 mb-4 leading-relaxed text-justify">
+                Parce qu&apos;elle illustre la force de l&apos;unité et du travail collaboratif. 
+                Les fourmis accomplissent collectivement des tâches monumentales, chaque individu jouant 
+                un rôle spécifique au service du groupe. Leur capacité à porter jusqu&apos;à 100 fois 
+                leur poids symbolise la puissance de la coopération. ARIMAYI encourage chacun à 
+                adopter cet esprit d&apos;équipe, convaincu que, par l&apos;union des talents et des 
+                compétences, nous pouvons atteindre des objectifs ambitieux et significatifs ensemble.
+            </p>
+            </section>
+
+            {/* Section avec le logo */}
+            <section className="w-full md:w-1/4 mb-4 md:mb-0 text-center">
+            <Image
+                src={logoMobile}
+                alt="logo"
+                layout="intrinsic"
+                width={300}
+                height={250}
+                className="object-cover mx-auto"
+            />
+            </section>
+
+            {/* Section sur l'initiative AriMayi */}
+            <section className="w-full md:w-1/2">
+            <h2 className="text-2xl font-bold text-gray-700 mt-4">À propos d'AriMayi</h2>
+            <p className="text-lg text-gray-700 mb-4 leading-relaxed text-justify">
+                AriMayi est une initiative qui vise à se faire rencontrer les personnes en recherche de stage, 
+                de contrat d’apprentissage ou de leur premier job dans l’IT et de jeunes startup/TPE en cours de 
+                réalisation de leur projet digital. 
+                <br />
+                Sur la base d’une méthodologie d’entreprise, l’apprenant acquiert ses compétences en situation de travail 
+                pour la réalisation d’un projet concret. 
+                <br />
+                Un partenariat gagnant-gagnant construit entre une ressource formée, insérée professionnellement 
+                et une startup/TPE qui voit la réalisation de son projet se concrétiser.
+            </p>
+            </section>
+        </div>
+        </div>
 
       {}
       <Fondateur />

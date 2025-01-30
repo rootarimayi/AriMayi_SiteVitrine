@@ -16,12 +16,12 @@ export default function Header() {
   return (
     <>
       <header className="fixed z-10 w-full">
-        <div className="bg-gray  relative py-[10px]">
+        <div className="relative py-[10px]" style={{ backgroundColor: '#292929' }}>
           <div className="container flex items-center justify-between gap-2">
             <div className="flex items-center">
               <div className="flex-shrink-0">
                 <span className="text-[#afaeae] absolute left-32 top-7 text-[10px]">
-                  L&#39;experience concrète par la formation
+                  L&#39;expérience concrète par la formation
                 </span>
                 <Image
                   src={logo}
@@ -80,19 +80,15 @@ export default function Header() {
                 </Link>
               </nav>
               <CostumButton
-                text="Accés à la Plateforme"
-                classes="font-Opensans font-bold px-6 py-3 text-[16px] text-white tracking-wide 
-             rounded-full bg-gradient-to-r from-white/30 via-white/20 to-white/10
-             backdrop-blur-md border border-white/30 
-             shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out 
-             focus:outline-none focus:ring-2 focus:ring-[#816CFF]"
-                src="/formation"
+                text="Accès à la Plateforme"
+                classes="border-2 border-[#F68A67] text-[#F68A67] rounded-[8px] hover:bg-[#F68A67] hover:text-white transition-all duration-300 ease-in-out"
+                src="/comingsoon"
               />
             </div>
             <CostumButton
-              text="Accés à la Plateforme"
+              text="Accès à la Plateforme"
               classes="text-white font-Opensans  text-[8px]  md:hidden  lg:hidden "
-              src="#"
+              src="/comingsoon"
             />
             <button
               className="inline-flex items-center justify-center p-2 rounded-lg text-white lg:hidden"

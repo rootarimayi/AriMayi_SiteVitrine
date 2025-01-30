@@ -1,0 +1,11 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/app/apprenants/page": [
+      "static/media/OpenSans_Regular_webfont-s.p.7653369e.woff",
+      "static/media/Montserrat_Black-s.p.4ce6d68a.ttf"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}

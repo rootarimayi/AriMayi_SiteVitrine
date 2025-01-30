@@ -24,7 +24,7 @@ export default function Fondateur() {
       <section className="w-full py-8 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
-            <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
+            <h1 className="text-3xl font-monserrat gradient-title">
               Le Mot du Fondateur
             </h1>
           </div>

@@ -23,7 +23,7 @@ export default function Apprenants() {
       <div className="bg-white py-12 px-6">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">
-            À chaque étape, le cadre de l’
+            À chaque étape, le cadre de l&#39;
             <span className="text-blue-600">AFEST</span> allie formation,
             autonomie et suivi personnalisé, permettant ainsi un apprentissage
             progressif, pertinent et immédiatement applicable.

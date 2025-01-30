@@ -34,3 +34,12 @@ body {
   margin: auto;
   width: 95%;
 }
+
+.gradient-title {
+    background: linear-gradient(to right, #54E0E9, #816CFF, #B163FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+  

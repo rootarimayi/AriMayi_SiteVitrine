@@ -18,6 +18,9 @@ import Equipe from "./equipe/page";
 import Opportunite from "./opportunite/page";
 import Journal from "./components/Carousel";
 import TestimonialSection from "./components/TestimonialSection";
+
+import HomeImg from "@/public/assets/bannerr2.png";
+
 export default function Home() {
   let slider = [slide1, slide2, slide3];
   return (
@@ -29,6 +32,7 @@ export default function Home() {
         <br /> <br />
         <br /> <br />
         <br /> <br />
+        
         <h3 className="text-[48px] text-start font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
           Trouvez votre futur opportunité dans l&apos;IT
         </h3>

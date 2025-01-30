@@ -17,7 +17,7 @@ export default function Partenaires() {
         />
       </div>
       <header className="text-center mb-12  mt-12">
-        <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
+        <h1 className="text-3xl font-monserrat gradient-title">
           Nos services pour les partenaires
         </h1>
         <br />
@@ -25,9 +25,9 @@ export default function Partenaires() {
         <p className="text-gray-600 leading-relaxed">
           Chez AriMayi, nous nous engageons à soutenir les entreprises
           partenaires dans le développement de leurs projets digitaux tout en
-          favorisant lapprentissage concret de nos apprenants.
+          favorisant l&#39;apprentissage concret de nos apprenants.
           <br />
-          <strong>Ensemble, construisons lavenir !</strong>
+          <strong>Ensemble, construisons l&#39;avenir !</strong>
         </p>
       </header>
       {/* card 1 */}
@@ -49,7 +49,7 @@ export default function Partenaires() {
           <p className="text-gray-600 leading-relaxed">
             AriMayi vise à mettre en place des partenariats gagnants-gagnants.
             En nous confiant vos projets, vous offrez à nos apprenants
-            lopportunité dévoluer en situation de travail. Vous y gagnez la
+            l&#39;opportunité d&#39;évoluer en situation de travail. Vous y gagnez la
             réalisation de vos objectifs à des tarifs compétitifs.
           </p>
           <p className="text-gray-600 mt-4">
@@ -76,7 +76,7 @@ export default function Partenaires() {
           <p className="text-gray-600 leading-relaxed">
             Grâce à notre méthode de formation <strong>ETIC</strong> <br />
             <strong>E :</strong> Entreprise (ancrage dans la réalité de
-            lentreprise) <br />
+            l&#39;entreprise) <br />
             <strong>T :</strong> Terrain (formation en situation réelle) <br />{" "}
             <strong>I :</strong> Intégration (intégration des acteurs) <br />
             <strong>C :</strong> Compétence (acquisition de compétences ciblées){" "}
@@ -113,20 +113,11 @@ export default function Partenaires() {
           </p>
         </div>
       </section>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <PartnerTestimony />
-      <br />
-      <br />
-      <br />
-      <br />
+  
       <PartenaireForm />
-      <br />
-      <br />
-      <br />
+
     </>
   );
 }
