@@ -84,13 +84,9 @@ export default function Header() {
                 text="Accès à la Plateforme"
                 classes="border-2 border-[#F68A67] text-[#F68A67] rounded-[8px] hover:bg-[#F68A67] hover:text-white transition-all duration-300 ease-in-out"
                 src="/comingsoon"
-              />
+                />
             </div>
-            <CostumButton
-              text="Accès à la Plateforme"
-              classes="text-white font-Opensans  text-[8px]  md:hidden  lg:hidden "
-              src="/comingsoon"
-            />
+ 
             <button
               className="inline-flex items-center justify-center p-2 rounded-lg text-white lg:hidden"
               onClick={toggleNavebar}

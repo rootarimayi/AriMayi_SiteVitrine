@@ -63,7 +63,7 @@ export default function Coordonnees() {
                 <div>
                   <label
                     htmlFor="nom"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left"
                   >
                     Nom:
                   </label>
@@ -81,7 +81,7 @@ export default function Coordonnees() {
                 <div>
                   <label
                     htmlFor="prenom"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left"
                   >
                     Prénom:
                   </label>
@@ -102,7 +102,7 @@ export default function Coordonnees() {
                 <div className="mb-5">
                   <label
                     htmlFor="email"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left"
                   >
                     Email:
                   </label>
@@ -121,7 +121,7 @@ export default function Coordonnees() {
                 <div>
                   <label
                     htmlFor="telephone"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left"
                   >
                     Numéro de téléphone:
                   </label>
@@ -141,7 +141,7 @@ export default function Coordonnees() {
               <div className=" mb-5 ">
                 <label
                   htmlFor="telephone"
-                  className=" mb-4 pb-2 text-sm font-medium text-gray-900 dark:text-black"
+                  className=" mb-4 pb-2 text-sm font-medium text-gray-900 dark:text-black text-left"
                 >
                   Votre message:
                 </label>
@@ -176,10 +176,10 @@ export default function Coordonnees() {
                   
                   En soumettant ce formulaire, j&apos;accepte la collecte des
                   informations saisies et l&apos;enregistrement de mes données
-                  afin d&apos;être recontacté.e par AriMayi. Pour en savoir plus,  
+                  afin d&apos;être recontacté.e par AriMayi. Pour en savoir plus,&nbsp; 
                   <Link href="/politique" legacyBehavior>
                     <a className="text-blue-500" onClick={() => {}}>
-                       je consulte la politique de confidentialité
+                        je consulte la politique de confidentialité
                     </a>
                   </Link>
                 </label>

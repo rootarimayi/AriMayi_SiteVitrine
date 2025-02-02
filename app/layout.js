@@ -1,10 +1,11 @@
 import localFont from "next/font/local";
-
+import { headers } from "next/headers";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
 
 import { Open_Sans, Montserrat } from 'next/font/google'
+import DynamicLayout from "./components/DynamicLayout";
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -61,15 +62,11 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang="en">
-      <body
-        className={`${openSans.variable} ${montserrat.variable} antialiased`}
-      >
-        <Header />
-        {children}
-        <Footer />
-      </body>
-    </html>
-  );
-}
+    return (
+      <html lang="en">
+        <body className="antialiased">
+          <DynamicLayout>{children}</DynamicLayout>
+        </body>
+      </html>
+    );
+  }

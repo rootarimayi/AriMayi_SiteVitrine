@@ -6,7 +6,7 @@ import logopart from "@/public/images/logo-arimayi-slogan-blanc.png";
 import logoMobilepart from "@/public/logo/partnerlogo.svg";
 import CostumButton from "./CostumButton";
 
-export default function Header() {
+export default function PartnerHeader() {
   const [isOpen, setisOpen] = useState(false);
   const toggleNavebar = () => {
     setisOpen(!isOpen);
@@ -14,7 +14,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed z-10 w-full">
+      <header className="fixed z-50 w-full">
         <div className="relative py-[10px]" style={{ backgroundColor: '#444444' }}>
           <div className="container flex items-center justify-between gap-2">
             <div className="flex items-center "> 
@@ -76,15 +76,11 @@ export default function Header() {
               </nav>
               <CostumButton
                 text="Accès à la Plateforme"
-                classes="border-2 border-[#FFF] text-[#FFF] rounded-[8px] hover:bg-[#FFF] hover:text-[#000] transition-all duration-300 ease-in-out"
+                classes="border-2 border-[#FFF] text-[#FFF] rounded-[8px] hover:bg-[#000] hover:text-black hover:border-black transition-all duration-300 ease-in-out"
                 src="/comingsoon"
-            />
+                />
             </div>
-            <CostumButton
-              text="Accès à la Plateforme"
-              classes="text-black font-Opensans  text-[8px] hover:text-black md:hidden  lg:hidden "
-              src="/comingsoon"
-            />
+ 
             <button
               className="inline-flex items-center justify-center p-2 rounded-lg text-white lg:hidden"
               onClick={toggleNavebar}

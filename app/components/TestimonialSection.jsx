@@ -53,7 +53,7 @@ export default function TestimonialSection() {
       <section className="py-12 bg-white">
         {}
         <div className="max-w-3xl mx-auto flex flex-col items-center mb-8">
-          <h3 className="text-[28px] text-center font-monserrat font-bold uppercase gradient-title my-[5px]">
+          <h3 className="text-[28px] text-center font-monserrat font-extrabold uppercase gradient-title my-[5px]">
             Témoignages
           </h3>
 

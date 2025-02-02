@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { FaTiktok, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { IoArrowForward } from "react-icons/io5";
+import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   return (
@@ -27,7 +28,7 @@ export default function Footer() {
               <li><a href="#">Plateforme ↗</a></li>
             </ul>
           </div>
-          <div>
+          {/* <div>
             <h3 className="text-xl font-semibold">S’abonner à la newsletter</h3>
             <div className="mt-4 flex">
               <input type="email" placeholder="SAISIR UNE ADRESSE E-MAIL" className="flex-grow p-3 text-black" style={{ borderTopLeftRadius: '8px', borderBottomLeftRadius: '8px' }}  />
@@ -35,7 +36,8 @@ export default function Footer() {
                 <IoArrowForward size={20} color="white" />
               </button>
             </div>
-          </div>
+          </div> */}
+          <NewsletterForm />
         </div>
       </div>
       <div className="border-gray-700 py-6 text-center text-sm">

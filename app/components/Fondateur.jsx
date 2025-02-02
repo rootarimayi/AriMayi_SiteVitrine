@@ -24,7 +24,7 @@ export default function Fondateur() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Titre principal centré */}
           <div className="text-center mb-8 md:mb-16">
-            <h1 className="text-3xl font-monserrat gradient-title">
+            <h1 className="text-3xl font-monserrat font-extrabold gradient-title">
               Le Mot du Fondateur
             </h1>
           </div>

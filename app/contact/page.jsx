@@ -6,7 +6,7 @@ export default function Contact() {
   return (
     <>
       <ContactBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out">
-        <h3 className="text-center text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-bold uppercase text-[#353535] whitespace-nowrap">
+        <h3 className="text-center text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap">
             Contactez Nous
         </h3>
         </ContactBanner>

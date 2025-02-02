@@ -26,7 +26,7 @@ export default function Home() {
   return (
     <>
       <HomeBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask h-[120vh] bg-cover bg-center transition-all duration-300 ease-in-out">
-        <h3 className="text-[48px] text-start font-monserrat font-bold uppercase text-[#353535] bg-clip-text w-[100%] md:w-[60%]">
+        <h3 className="text-[48px] text-start font-monserrat font-extrabold uppercase text-[#353535] bg-clip-text w-[100%] md:w-[60%]">
           Trouvez votre futur opportunité dans l&apos;IT
         </h3>
         <p className="text-left font-Opensans text-[24px] leading-[40px] text-[#353535] w-[100%] md:w-[60%] lg:w-[50%]">

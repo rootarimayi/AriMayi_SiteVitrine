@@ -15,7 +15,7 @@ export default function Partenaires() {
     return (
       <>
         <PartnerBanner className="bg-cover bg-center transition-all duration-300 ease-in-out">
-            <h3 className="text-left text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-bold uppercase text-[#353535]">
+            <h3 className="text-left text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535]">
                 Nos services pour les partenaires
             </h3>
             <p className="text-left font-Opensans text-[24px] leading-[40px] text-[#353535] w-[100%] md:w-[60%] lg:w-[50%]">

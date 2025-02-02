@@ -14,8 +14,8 @@ export default function Identite() {
   return (
     <>
       <AboutBanner className="bg-cover bg-center transition-all duration-300 ease-in-out">
-        <h3 className="text-left text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-bold uppercase text-[#353535] whitespace-nowrap">
-        Qui sommes nous?
+        <h3 className="text-left text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap">
+            Qui sommes nous?
         </h3>
         <p className="text-left font-Opensans text-[24px] leading-[40px] text-[#353535] w-[100%] md:w-[60%] lg:w-[50%]">
             Nous sommes AriMayi, une plateforme innovante qui connecte les candidats à la recherche de stage, d&apos;apprentissage ou de premier emploi dans l&apos;IT avec des startups et TPE en quête de talents
@@ -23,7 +23,7 @@ export default function Identite() {
       </AboutBanner>
 
       <MissionSection className="bg-cover bg-center bg-[#F4F2FF] transition-all duration-300 ease-in-out">
-        <h3 className="text-2xl text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-bold uppercase text-[#353535] whitespace-nowrap">
+        <h3 className="text-2xl text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap">
             Notre mission
         </h3>
         <p className="text-lg">
@@ -37,7 +37,7 @@ export default function Identite() {
       </MissionSection>
 
       <InspirationSection className="py-20">
-        <h3 className="text-2xl text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-bold uppercase text-[#353535] whitespace-nowrap mb-10">
+        <h3 className="text-2xl text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap mb-10">
             Nos valeurs
         </h3>
         <p className="text-lg mb-6">
@@ -46,7 +46,7 @@ export default function Identite() {
             ses valeurs essentielles.
         </p>
         
-        <h3 className="text-2xl font-bold gradient-title mb-4">Pourquoi la fourmi ?</h3>
+        <h3 className="text-2xl font-extrabold gradient-title mb-4">Pourquoi la fourmi ?</h3>
         <p className="text-lg text-[#353535] leading-[1.8]">
             Parce qu&apos;elle illustre la force de l&apos;unité et du travail collaboratif. 
             Les fourmis accomplissent collectivement des tâches monumentales, chaque individu 

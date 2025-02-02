@@ -1,8 +1,9 @@
 import Image from "next/image";
 import LogoWhite from "@/public/images/logo-arimayi-blanc.png";
-import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaTiktok, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
+import NewsletterForm from "./NewsletterForm";
 
 export default function Footer() {
   return (
@@ -52,7 +53,7 @@ export default function Footer() {
               <li><Link href="/comingsoon">Plateforme ↗</Link></li>
             </ul>
           </div>
-          <div className="mt-8 md:mt-0">
+          {/* <div className="mt-8 md:mt-0">
             <h3 className="text-xl font-semibold">S’abonner à la newsletter</h3>
             <div className="mt-4 flex">
               <input type="email" placeholder="SAISIR UNE ADRESSE E-MAIL" className="flex-grow p-3 text-black" style={{ borderTopLeftRadius: '8px', borderBottomLeftRadius: '8px' }}  />
@@ -60,7 +61,8 @@ export default function Footer() {
                 <IoArrowForward size={20} color="white" />
               </button>
             </div>
-          </div>
+          </div> */}
+          <NewsletterForm />
         </div>
       </div>
 
@@ -68,9 +70,9 @@ export default function Footer() {
         <div className="flex justify-between items-center px-16">
             <p>2025 AriMayi. Tous droits réservés. <a href="#" className="underline">Mentions légales</a></p>
             <div className="flex space-x-4">
-                <a href="#"><FaFacebook size={20} /></a>
+                <a href="https://www.tiktok.com/@arimayi_"><FaTiktok size={20} /></a>
                 <a href="https://www.linkedin.com/company/arimayi/"><FaLinkedin size={20} /></a>
-                <a href="#"><FaInstagram size={20} /></a>
+                <a href="https://www.instagram.com/arimayi___"><FaInstagram size={20} /></a>
             </div>
         </div>
         </div>
