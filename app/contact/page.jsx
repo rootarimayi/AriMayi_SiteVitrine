@@ -1,34 +1,25 @@
-import Banner from "../components/Banner";
+import ContactBanner from "../components/ContactBanner";
 import Collapse from "../components/Collapse";
 import Coordonnees from "../components/Coordonnees";
 
 export default function Contact() {
   return (
     <>
-      <Banner className="bg-contacctBanner">
-        <h1
-          style={{
-            textAlign: "center",
-            alignSelf: "center",
-            fontSize: "2rem",
-            margin: "0 0 10px",
-            padding: "50px",
-            color: "white",
-          }}
-        >
-          Contactez-nous
-        </h1>
-      </Banner>
-      <div className="flex flex-col items-center text-center mt-20">
-        <h3 className="text-[48px] text-center font-montserrat font-bold uppercase gradient-title w-full md:w-[60%]">
-            Arimayi
+      <ContactBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out">
+        <h3 className="text-center text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-bold uppercase text-[#353535] whitespace-nowrap">
+            Contactez Nous
+        </h3>
+        </ContactBanner>
+      <div className="flex flex-col items-center text-center mt-20 bg-[#F4F2FF]">
+        <h3 className="text-[48px] text-center font-montserrat font-bold gradient-title w-full md:w-[60%]">
+            AriMayi
         </h3>
         
         <p className="text-gray-800 mb-0">
             Votre point de départ vers de nouvelles opportunités professionnelles et la réussite de votre projet
         </p>
-      </div>
       <Coordonnees />
+      </div>
       <div className="flex flex-col items-center text-center mt-20">
         <h2 className="text-[48px] text-center font-montserrat font-bold uppercase gradient-title w-full md:w-[60%]">FAQ</h2>
         <br />

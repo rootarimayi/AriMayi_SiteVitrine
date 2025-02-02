@@ -1,11 +1,18 @@
 {
-  "/page": "app/page.js",
-  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/(partners)/partenaires/page": "app/(partners)/partenaires/page.js",
-  "/apprenants/page": "app/apprenants/page.js",
-  "/formation/page": "app/formation/page.js",
-  "/comingsoon/page": "app/comingsoon/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/candidature/page": "app/candidature/page.js",
+  "/equipe/page": "app/equipe/page.js",
   "/contact/page": "app/contact/page.js",
-  "/identite/page": "app/identite/page.js"
+  "/form/page": "app/form/page.js",
+  "/comingsoon/page": "app/comingsoon/page.js",
+  "/formation/[id]/page": "app/formation/[id]/page.js",
+  "/formation/page": "app/formation/page.js",
+  "/identite/page": "app/identite/page.js",
+  "/opportunite/page": "app/opportunite/page.js",
+  "/page": "app/page.js",
+  "/politique/page": "app/politique/page.js",
+  "/temoignage/page": "app/temoignage/page.js",
+  "/apprenants/page": "app/apprenants/page.js",
+  "/(partners)/partenaires/page": "app/(partners)/partenaires/page.js"
 }

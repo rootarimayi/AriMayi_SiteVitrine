@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
 
-import logo from "@/public/logo/Logo AriMayi - Principal - no text.png";
+import logo from "@/public/images/logo-arimayi-slogan.png";
 import logoMobile from "@/public/logo/logo_mobile.svg";
 import CostumButton from "./CostumButton";
 
@@ -15,14 +15,11 @@ export default function Header() {
 
   return (
     <>
-      <header className="fixed z-10 w-full">
+      <header className="fixed z-50 w-full">
         <div className="relative py-[10px]" style={{ backgroundColor: '#292929' }}>
           <div className="container flex items-center justify-between gap-2">
             <div className="flex items-center">
               <div className="flex-shrink-0">
-                <span className="text-[#afaeae] absolute left-32 top-7 text-[10px]">
-                  L&#39;expérience concrète par la formation
-                </span>
                 <Image
                   src={logo}
                   alt="logo AriMayi"
@@ -42,7 +39,11 @@ export default function Header() {
               <nav className="ml-4 flex items-center space-x-4 gap-1">
                 <Link
                   href="/partenaires"
-                  className="font-Opensans font-bold  px-1 py-1  text-[14px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#f6ed67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
+                  className="font-Opensans font-bold px-2 py-2 text-[12px] text-white 
+                    rounded-lg tracking-[.5px] 
+                    bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] 
+                    transition-all duration-300 ease-in-out 
+                    hover:scale-110 hover:shadow-lg hover:text-black focus:outline-none focus:ring-2 focus:ring-[#F68A67]"
                 >
                   Partenaires
                 </Link>

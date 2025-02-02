@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from "@/public/logo/Logo AriMayi - Vertical - Blanc.png";
+import LogoWhite from "@/public/images/logo-arimayi-blanc.png";
 import { FaFacebook, FaLinkedin, FaInstagram } from "react-icons/fa";
 import { IoArrowForward } from "react-icons/io5";
 import Link from "next/link";
@@ -16,7 +16,7 @@ export default function Footer() {
           <div className="flex justify-start items-center">
             <div>
               <Image
-                src="/logo/Logo-Arimayi-simplifié-dégradé.png"
+                src="/images/logo-arimayi-blanc.png"
                 alt="logo AriMayi"
                 loading="lazy"
                 width={130}

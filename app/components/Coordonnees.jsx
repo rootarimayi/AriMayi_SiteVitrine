@@ -51,13 +51,9 @@ export default function Coordonnees() {
  };
 
   return (
-    <div className="bg-gray-600 p-2 rounded-lg shadow-md mx-4 my-6">
-      <div className="flex h-screen justify-center items-center">
-        <div className="w-full max-w-6xl bg-white p-2">
-          <br />
-          <br />
-
-         
+    <div className="bg-gray-600 p-2  mx-4 my-6">
+      <div className="flex h-auto justify-center items-center">
+        <div className="w-full max-w-6xl bg-[#F4F2FF] p-2">
           <div className="mt-50 p-6">
             <form
               className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
@@ -67,9 +63,9 @@ export default function Coordonnees() {
                 <div>
                   <label
                     htmlFor="nom"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black"
                   >
-                    Nom
+                    Nom:
                   </label>
                   <input
                     type="text"
@@ -77,7 +73,7 @@ export default function Coordonnees() {
                     name="nom"
                     value={formData.nom}
                     onChange={handleChange}
-                    className="bg-blue-50  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    className="bg-blue-50  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                     placeholder="Votre nom"
                     required
                   />
@@ -85,9 +81,9 @@ export default function Coordonnees() {
                 <div>
                   <label
                     htmlFor="prenom"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black"
                   >
-                    Prénom
+                    Prénom:
                   </label>
                   <input
                     type="text"
@@ -95,7 +91,7 @@ export default function Coordonnees() {
                     name="prenom"
                     value={formData.prenom}
                     onChange={handleChange}
-                    className="bg-blue-50 mb-4  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    className="bg-blue-50 mb-4  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                     placeholder="Votre prénom"
                     required
                   />
@@ -106,9 +102,9 @@ export default function Coordonnees() {
                 <div className="mb-5">
                   <label
                     htmlFor="email"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black"
                   >
-                    Email
+                    Email:
                   </label>
                   <input
                     type="email"
@@ -116,7 +112,7 @@ export default function Coordonnees() {
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                     placeholder="exemple@domaine.com"
                     required
                   />
@@ -125,9 +121,9 @@ export default function Coordonnees() {
                 <div>
                   <label
                     htmlFor="telephone"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-white"
+                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black"
                   >
-                    Téléphone
+                    Numéro de téléphone:
                   </label>
                   <input
                     type="tel"
@@ -135,7 +131,7 @@ export default function Coordonnees() {
                     name="telephone"
                     value={formData.telephone}
                     onChange={handleChange}
-                    className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white"
+                    className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                     placeholder="Votre numéro"
                     required
                   />
@@ -145,16 +141,16 @@ export default function Coordonnees() {
               <div className=" mb-5 ">
                 <label
                   htmlFor="telephone"
-                  className=" mb-4 pb-2 text-sm font-medium text-gray-900 dark:text-white"
+                  className=" mb-4 pb-2 text-sm font-medium text-gray-900 dark:text-black"
                 >
-                  Votre message
+                  Votre message:
                 </label>
                 <textarea
                   id="message"
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="bg-blue-50 pt-4 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white "
+                  className="bg-blue-50 pt-4 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black "
                   placeholder="Votre message"
                   required
                 />
@@ -180,7 +176,7 @@ export default function Coordonnees() {
                   
                   En soumettant ce formulaire, j&apos;accepte la collecte des
                   informations saisies et l&apos;enregistrement de mes données
-                  afin d&apos;être recontacté.e par AriMayi. Pour en savoir plus, 
+                  afin d&apos;être recontacté.e par AriMayi. Pour en savoir plus,  
                   <Link href="/politique" legacyBehavior>
                     <a className="text-blue-500" onClick={() => {}}>
                        je consulte la politique de confidentialité
@@ -191,7 +187,7 @@ export default function Coordonnees() {
               <div className="flex justify-center items-center">
                 <button
                   type="submit"
-                  className="text-white mb-4 bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+                  className="text-white mb-4 bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg hover:text-black"
                 >
                   Envoyer
                 </button>
@@ -200,14 +196,14 @@ export default function Coordonnees() {
           </div>
         </div>
       </div>
-      <br /> <br />
+
       <div className="flex flex-col lg:flex-row gap-8">
-        <br />
+
         {/* Form */}
 
         {/* Map  */}
         <div className="lg:w-2/3">
-        <br /><br />
+
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d10506.55410614564!2d2.271093!3d48.826958!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e67a83261aa7bd%3A0xcf7423695ff0d6e9!2s24%20Rue%20du%20Gouverneur%20G%C3%A9n%C3%A9ral%20%C3%89bou%C3%A9%2C%2092130%20Issy-les-Moulineaux%2C%20France!5e0!3m2!1sfr!2sus!4v1733645135571!5m2!1sfr!2sus
 "

@@ -41,5 +41,22 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
-  }
-  
+}
+
+.bg-pattern {
+    background-image: url("../public/assets/fourmiliere.svg");
+    background-size: cover;
+    background-position: center;
+}
+
+.image-container {
+  width: 400px;
+  height: auto;
+  clip-path: path(
+    "M-338.16 587.883C-533.753 691.61 -565.909 1018.24 -381.94 1102.25C-250.918 1142.98 -206.451 1076.26 -88.5253 1187.05C527.307 1765.64 844.77 1180.9 824.376 1088.81C773.422 858.713 634.654 1045.98 532.386 472.768C430.117 -100.44 17.9875 232.109 16.1233 305.764C14.2591 379.419 -93.6693 458.224 -338.16 587.883Z"
+  );
+}
+
+.svg-color {
+  fill: #F68A67; /* couleur que tu veux appliquer */
+}

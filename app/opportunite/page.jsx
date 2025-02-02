@@ -100,28 +100,28 @@ export default function Opportunite() {
       </p>
 
       {/* Card Section */}
-      <div className="max-w-6xl mx-auto flex flex-wrap justify-center gap-6">
+      <div className="max-w-7xl mx-auto flex flex-wrap justify-center gap-8">
         {cards.map((card, index) => (
-        <div
+            <div
             key={card.id}
-            className={`flex-shrink-0 w-full sm:w-1/3 lg:w-1/4 xl:w-1/5 shadow-md p-6 rounded-2xl ${
-            cardColors[index]
+            className={`flex-shrink-0 w-full sm:w-[45%] lg:w-[30%] shadow-md p-8 rounded-2xl ${
+                cardColors[index]
             } ${getTextColor(index)} flex flex-col justify-between`}
-            style={{ minHeight: "230px" }}
-        >
+            style={{ minHeight: "200px" }}
+            >
             <div className="flex-grow">
-            <h3 className="text-xl font-bold mb-2">{card.title}</h3>
-            <p className="text-sm mb-3">{card.description}</p>
+                <h3 className="text-2xl font-bold mb-3">{card.title}</h3>
+                <p className="text-base mb-4">{card.description}</p>
             </div>
             <a
-            href={card.link}
-            className="text-indigo-600 font-medium hover:underline text-sm"
+                href={card.link}
+                className="text-indigo-600 font-medium hover:underline text-base"
             >
-            EN SAVOIR PLUS &rarr;
+                EN SAVOIR PLUS &rarr;
             </a>
-        </div>
+            </div>
         ))}
-    </div>
+        </div>
 
       {/* Pagination */}
       {/* <div className="mt-4 flex justify-center space-x-2">

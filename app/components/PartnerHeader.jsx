@@ -2,7 +2,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
-import logopart from "@/public/logo/Logo AriMayi - Principal - Blanc - no text.png";
+import logopart from "@/public/images/logo-arimayi-slogan-blanc.png";
 import logoMobilepart from "@/public/logo/partnerlogo.svg";
 import CostumButton from "./CostumButton";
 
@@ -15,13 +15,10 @@ export default function Header() {
   return (
     <>
       <header className="fixed z-10 w-full">
-        <div className=" bg-[#444444]  relative py-[10px] ">
+        <div className="relative py-[10px]" style={{ backgroundColor: '#444444' }}>
           <div className="container flex items-center justify-between gap-2">
             <div className="flex items-center "> 
               <div className="flex-shrink-0">
-                <span className="text-[#afaeae] absolute left-32 top-7 text-[10px]">
-                  L&#39;expérience concrète par la formation
-                </span>
                 <Image
                   src={logopart}
                   alt="logo AriMayi"
@@ -33,17 +30,21 @@ export default function Header() {
                   alt="logo AriMayi"
                   width={60}
                   height={60}
-                  className="md:hidden"
+                  className="block md:hidden"
                 />
               </div>
             </div>
             <div className="hidden lg:flex items-center gap-5">
               <nav className="ml-4 flex items-center space-x-4 gap-1">
                 <Link
-                  href="/apprenants"
-                  className="font-Opensans font-bold px-1 py-1 text-[12px] text-white hover:text-[#F68A67] rounded-lg  tracking-[.5px] focus:text-[#f6ed67] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] "
+                    href="/apprenants"
+                    className="font-Opensans font-bold px-2 py-2 text-[12px] text-white 
+                        rounded-lg tracking-[.5px] 
+                        bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] 
+                        transition-all duration-300 ease-in-out 
+                        hover:scale-110 hover:shadow-lg hover:text-black focus:outline-none focus:ring-2 focus:ring-[#F68A67]"
                 >
-                  Apprenants
+                Apprenants
                 </Link>
 
                 <Link
@@ -75,18 +76,14 @@ export default function Header() {
               </nav>
               <CostumButton
                 text="Accès à la Plateforme"
-                classes="font-Opensans font-bold px-6 py-3 text-[16px] text-white tracking-wide 
-             rounded-full bg-gradient-to-r from-[#F68A67]/30 via-[#FF7F50]/20 to-[#FFA500]/10
-             backdrop-blur-md border border-[#FFA500]/40
-             shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 ease-in-out 
-             focus:outline-none focus:ring-2 focus:ring-[#FF7F50]"
-                src="/formation"
-              />
+                classes="border-2 border-[#FFF] text-[#FFF] rounded-[8px] hover:bg-[#FFF] hover:text-[#000] transition-all duration-300 ease-in-out"
+                src="/comingsoon"
+            />
             </div>
             <CostumButton
               text="Accès à la Plateforme"
-              classes="text-white font-Opensans  text-[8px]  md:hidden  lg:hidden "
-              src="/formation"
+              classes="text-black font-Opensans  text-[8px] hover:text-black md:hidden  lg:hidden "
+              src="/comingsoon"
             />
             <button
               className="inline-flex items-center justify-center p-2 rounded-lg text-white lg:hidden"

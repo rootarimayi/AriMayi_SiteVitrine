@@ -1,6 +1,8 @@
+"use client";
 import React from "react";
 import Image from "next/image";
-import Img from "@/public/assets/logo-arimayi.svg";
+import { ReactSVG } from "react-svg";
+import Img from "@/public/images/Logo-Arimayi-simple-gradient.png";
 import Mask from "@/public/assets/Mask.png";
 
 function page() {
@@ -13,12 +15,17 @@ function page() {
         style={{ clipPath: "circle(80% at 100% 0%)" }}
         />
 
-        <h1 className="mt-96 font-semibold text-black">Page en cours de développement</h1>
+        <h1 className="text-[30px] text-center font-montserrat gradient-title mt-96 font-semibold text-black">Page en cours de développement</h1>
 
-        <Image
+        {/* <Image
             src={Img}
             alt="Woman with glasses"
             className="rounded-lg xl:w-1/5 w-2/3 mt-14 mb-96"
+            width={60}
+            height={60}
+        /> */}
+        <ReactSVG
+        src="/svg/logo-arimayi.svg"
         />
 
         <Image

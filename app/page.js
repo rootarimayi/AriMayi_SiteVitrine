@@ -1,4 +1,4 @@
-import Banner from "./components/Banner";
+import HomeBanner from "./components/HomeBanner";
 import CostumButton from "./components/CostumButton";
 import Coordonnees from "./components/Coordonnees";
 import Card from "./components/Card";
@@ -25,18 +25,11 @@ export default function Home() {
   let slider = [slide1, slide2, slide3];
   return (
     <>
-      <Banner className="bg-HomepageBanne sm:bg-HomepageBanne h-[120vh] bg-cover bg-center transition-all duration-300 ease-in-out">
-        <br /> <br />
-        <br /> <br />
-        <br /> <br />
-        <br /> <br />
-        <br /> <br />
-        <br /> <br />
-        
-        <h3 className="text-[48px] text-start font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
+      <HomeBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask h-[120vh] bg-cover bg-center transition-all duration-300 ease-in-out">
+        <h3 className="text-[48px] text-start font-monserrat font-bold uppercase text-[#353535] bg-clip-text w-[100%] md:w-[60%]">
           Trouvez votre futur opportunité dans l&apos;IT
         </h3>
-        <p className="text-left font-Opensans text-[24px] leading-[40px] text-white w-[100%] md:w-[60%] lg:w-[50%]">
+        <p className="text-left font-Opensans text-[24px] leading-[40px] text-[#353535] w-[100%] md:w-[60%] lg:w-[50%]">
           Vous êtes étudiant ou en reconversion professionnelle, AriMayi vous
           accompagne depuis votre formation jusqu&apos;à votre intégration en
           entreprise pour une transition réussie vers l&apos;emploi.
@@ -48,17 +41,17 @@ export default function Home() {
             src="/contact"
           />
           <CostumButton
-            text="Découvrez nous Formations"
+            text="Découvrez nos Formations"
             classes="font-Opensans text-[20px]  bg-orange text-white  hover:scale-110 mx-[10px]"
             src="/formation"
           />
         </div>
-      </Banner>
+      </HomeBanner>
 
       <div className=" py-[50px]  flex flex-col items-center bg-[#353535]">
         <div className="container flex flex-col gap-[20px]">
           <div className="max-w-3xl mx-auto flex flex-col items-center mb-8">
-            <h3 className="text-[28px] text-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text my-[5px]">
+            <h3 className="text-[28px] text-center font-monserrat font-bold uppercase gradient-title my-[5px]">
               Nos missions
             </h3>
             <br /> <br />
@@ -92,10 +85,12 @@ export default function Home() {
         </div>
       </div>
       <TestimonialSection />
-      <h3 className="text-[36px] text-center justify-center font-monserrat font-bold uppercase bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text w-[100%] md:w-[60%]">
-        Contactez-nous
-      </h3>
+      <div className="flex flex-col items-center text-center mt-20 bg-[#F4F2FF]">
+        <h3 className="text-[36px] text-center font-monserrat font-bold uppercase gradient-title w-[100%] md:w-[60%] mt-30">
+            Contactez-nous
+        </h3>
       <Coordonnees />
+      </div>
     </>
   );
 }

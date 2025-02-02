@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import React from "react";
+import Link from "next/link";
 import Image from "next/image";
 
 export default function PartenaireForm() {
@@ -28,10 +29,10 @@ export default function PartenaireForm() {
       <div className="container mx-4 p-6">
         <form
           onSubmit={handleSubmit}
-          className="bg-white shadow-lg rounded-xl p-8 border border-gray-200"
+          className="bg-white rounded-lg p-8 shadow-md dark:bg-gray-800"
         >
           {/* Heading */}
-          <h2 className="text-3xl font-semibold text-gray-800 mb-6 text-center">
+          <h2 className="text-3xl font-bold gradient-title mb-6 text-center">
             Vous avez un projet? Contactez-nous
           </h2>
 
@@ -51,8 +52,8 @@ export default function PartenaireForm() {
                   name="companyName"
                   value={formData.companyName}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-blue-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
-                  placeholder="Ex: Ma Société"
+                  className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                  placeholder="Ex: Ma société"
                   required
                 />
               </div>
@@ -69,7 +70,7 @@ export default function PartenaireForm() {
                   name="email"
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-blue-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Ex: contact@email.com"
                   required
                 />
@@ -87,7 +88,7 @@ export default function PartenaireForm() {
                   name="phoneNumber"
                   value={formData.phoneNumber}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-blue-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Ex: +212 600 123 456"
                   required
                 />
@@ -105,7 +106,7 @@ export default function PartenaireForm() {
                   name="contactPerson"
                   value={formData.contactPerson}
                   onChange={handleChange}
-                  className="w-full px-4 py-3 border border-blue-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
                   placeholder="Ex: John Doe"
                   required
                 />
@@ -126,7 +127,7 @@ export default function PartenaireForm() {
                   name="message"
                   value={formData.message}
                   onChange={handleChange}
-                  className="w-full h-48 px-4 py-3 border border-blue-300 rounded-lg focus:ring-blue-500 focus:border-blue-500"
+                  className="bg-blue-50 pt-4 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black "
                   placeholder="Expliquez votre projet ici..."
                   required
                 />
@@ -145,14 +146,18 @@ export default function PartenaireForm() {
                 required
               />
               <label htmlFor="policy" className="ml-3 text-sm text-gray-700">
-                Je respecte les politiques de confidentialité d&apos;Arimayi
+                Je respecte <Link href="/politique" legacyBehavior>
+                    <a className="text-blue-500" onClick={() => {}}>
+                       les politiques de confidentialité 
+                    </a>
+                  </Link> d&apos;Arimayi
               </label>
             </div>
             <button
               type="submit"
-              className="bg-blue-500 text-white font-semibold px-8 py-3 rounded-lg hover:bg-blue-600 focus:ring-4 focus:ring-blue-300"
+              className="text-white mb-4 bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg hover:text-black"
             >
-              Soumettre
+              Envoyer
             </button>
           </div>
         </form>
