@@ -4,7 +4,7 @@ import Image from "next/image";
 import { useState } from "react";
 import logopart from "@/public/images/logo-arimayi-slogan-blanc.png";
 import logoMobilepart from "@/public/logo/partnerlogo.svg";
-import CostumButton from "./CostumButton";
+import CustomButton from "./CustomButton";
 
 export default function PartnerHeader() {
   const [isOpen, setisOpen] = useState(false);
@@ -74,9 +74,9 @@ export default function PartnerHeader() {
                   Contact
                 </Link>
               </nav>
-              <CostumButton
+              <CustomButton
                 text="Accès à la Plateforme"
-                classes="border-2 border-[#FFF] text-[#FFF] rounded-[8px] hover:bg-[#000] hover:text-black hover:border-black transition-all duration-300 ease-in-out"
+                classes="border-2 "
                 src="/comingsoon"
                 />
             </div>
