@@ -1,1 +1,19 @@
-{"pages":{},"app":{"/Users/siyam/Reeway/Arimayi-SiteVitrine/AriMayi_SiteVitrine/app/layout":["static/media/4f05ba3a6752a328-s.p.woff2","static/media/3d9ea938b6afa941-s.p.woff2"],"/Users/siyam/Reeway/Arimayi-SiteVitrine/AriMayi_SiteVitrine/app/(partners)/layout":["static/media/4f05ba3a6752a328-s.p.woff2","static/media/3d9ea938b6afa941-s.p.woff2"]},"appUsingSizeAdjust":true,"pagesUsingSizeAdjust":false}
+{
+  "app": {
+    "[project]/app/contact/page": [
+      "static/media/memvYaGs126MiZpBA_UvWbX2vVnXBbObj2OVTS_mu0SC55I-s.p.fa0778d3.woff2",
+      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
+    ],
+    "[project]/app/page": [
+      "static/media/memvYaGs126MiZpBA_UvWbX2vVnXBbObj2OVTS_mu0SC55I-s.p.fa0778d3.woff2",
+      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
+    ],
+    "[project]/app/(partners)/partenaires/page": [
+      "static/media/memvYaGs126MiZpBA_UvWbX2vVnXBbObj2OVTS_mu0SC55I-s.p.fa0778d3.woff2",
+      "static/media/JTUSjIg1_i6t8kCHKm459WlhyyTh89Y-s.p.d1a74dd0.woff2"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pages": {},
+  "pagesUsingSizeAdjust": false
+}

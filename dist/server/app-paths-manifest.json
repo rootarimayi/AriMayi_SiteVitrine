@@ -1,18 +1,5 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
-  "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/comingsoon/page": "app/comingsoon/page.js",
-  "/candidature/page": "app/candidature/page.js",
-  "/form/page": "app/form/page.js",
-  "/formation/[id]/page": "app/formation/[id]/page.js",
-  "/equipe/page": "app/equipe/page.js",
-  "/opportunite/page": "app/opportunite/page.js",
-  "/page": "app/page.js",
-  "/formation/page": "app/formation/page.js",
-  "/politique/page": "app/politique/page.js",
-  "/temoignage/page": "app/temoignage/page.js",
   "/contact/page": "app/contact/page.js",
-  "/identite/page": "app/identite/page.js",
-  "/apprenants/page": "app/apprenants/page.js",
+  "/page": "app/page.js",
   "/(partners)/partenaires/page": "app/(partners)/partenaires/page.js"
 }
