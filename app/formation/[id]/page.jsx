@@ -1,5 +1,5 @@
 import React from "react";
-import DetailFormation from "../../components/DetailFormation";
+// import DetailFormation from "../../components/DetailFormation";
 import { specialties } from "../data"; 
 
 export default async function Page({ params }) {
@@ -17,7 +17,7 @@ const formation = specialties.find((item) => item.id.toString() === id);
       </h1>
 
       {/* Pass `formation` data to DetailFormation */}
-      <DetailFormation formation={formation} />
+      {/* <DetailFormation formation={formation} /> */}
     </div>
   );
 }

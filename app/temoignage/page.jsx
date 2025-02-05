@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import React, { useState } from "react";
 import Image from "next/image";
 import happyness from "@/public/assets/happiness.png";
@@ -11,9 +12,8 @@ const TestimonialCard = ({ author, quote }) => {
         <Image
           src={happyness}
           alt="happy"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-full"
+          fill
+          className="rounded-full object-cover"
         />
       </div>
       <p className="font-semibold text-lg">{author}</p>
@@ -31,37 +31,33 @@ const TestimonialCard = ({ author, quote }) => {
 const Temoignage = () => {
   const testimonials = [
     {
-      author: "Arimay",
-      quote:
-        "Arimay is qui nous amène vers une bonne gestion digital, nous accompagne dans la structuration de notre projet, nous aide à développer une application ou chaine digitale à notre budge",
+      author: "Arimayi",
+      quote: "AriMayi is qui nous amène vers une bonne gestion digital, nous accompagne dans la structuration de notre projet, nous aide à développer une application ou chaine digitale à notre budge",
     },
     {
-      author: "Arimay",
-      quote:
-        "Arimay a su aussi nous aider centré dans le management de notre equipe, le recrutement et l&apos;animation de notre communauté. du marketing, du Go to Market...",
+      author: "Arimayi",
+      quote: "AriMayi a su aussi nous aider centré dans le management de notre equipe, le recrutement et l'animation de notre communauté. du marketing, du Go to Market...",
     },
     {
-      author: "Arimay",
-      quote:
-        "Arimay nous a fait gagné un temps précieux dans le développement de notre application et l&apos;appréhension de nos différents métiers. Ils nous ont sécurisés et fait progresser dans notre transformation digitale",
+      author: "Arimayi",
+      quote: "AriMayi nous a fait gagné un temps précieux dans le développement de notre application et l'appréhension de nos différents métiers. Ils nous ont sécurisés et fait progresser dans notre transformation digitale",
     },
     {
-      author: "Arimay",
-      quote:
-        "Arimay nous aide toujours pour résoudre des problématiques sur mesure dans le développement de nos applications et la conduite des de nos projets concrets confiés par nos partenariats experts",
+      author: "Arimayi",
+      quote: "AriMayi nous aide toujours pour résoudre des problématiques sur mesure dans le développement de nos applications et la conduite des de nos projets concrets confiés par nos partenariats experts",
     },
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
-    setCurrentIndex((prevIndex) =>
+    setCurrentIndex((prevIndex) => 
       prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1
     );
   };
 
   const handleNext = () => {
-    setCurrentIndex((prevIndex) =>
+    setCurrentIndex((prevIndex) => 
       prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
     );
   };
@@ -90,9 +86,8 @@ const Temoignage = () => {
         <Image
           src={happyness}
           alt="happy"
-          layout="fill"
-          objectFit="cover"
-          className="rounded-full"
+          fill
+          className="rounded-full object-cover"
         />
       </div>
     </div>

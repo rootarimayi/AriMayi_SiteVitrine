@@ -5,7 +5,7 @@ import Footer from "./components/Footer";
 import "./globals.css";
 
 import { Open_Sans, Montserrat } from 'next/font/google'
-import DynamicLayout from "./components/DynamicLayout";
+import DynamicLayout from "./components/Utils/DynamicLayout";
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -63,9 +63,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
     return (
-      <html lang="en">
+      <html lang="fr">
         <body className="antialiased">
           <DynamicLayout>{children}</DynamicLayout>
+          {/* <Header />{children}< Footer/> */}
         </body>
       </html>
     );

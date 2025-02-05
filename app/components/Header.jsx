@@ -1,11 +1,11 @@
 "use client";
+import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 
 import logo from "@/public/images/logo-arimayi-slogan.png";
 import logoMobile from "@/public/logo/logo_mobile.svg";
-import CostumButton from "./CostumButton";
+import CostumButton from "./Buttons/CostumButton";
 
 export default function Header() {
   const [isOpen, setisOpen] = useState(false);
@@ -83,7 +83,7 @@ export default function Header() {
               <CostumButton
                 text="Accès à la Plateforme"
                 classes="border-2 border-[#F68A67] text-[#F68A67] rounded-[8px] hover:bg-[#F68A67] hover:text-white transition-all duration-300 ease-in-out"
-                src="/comingsoon"
+                src="/plateforme"
                 />
             </div>
  

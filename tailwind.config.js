@@ -37,9 +37,9 @@ module.exports = {
         design: 'url("/assets/design.JPEG")',
         mobile: 'url("/assets/mobile.JPG")',
         ai: 'url("/assets/ai.JPG")',
-        certif: 'url("/assets/BEDOUHENE.JPG")',
+        certif: 'url("/assets/certificat-founder.jpg")',
 
-        conception: 'url("/assets/conception.JPG")',
+        conception: 'url("/assets/conception.jpg")',
 
         Mask: 'url("/assets/images/Mask.png")',
       },

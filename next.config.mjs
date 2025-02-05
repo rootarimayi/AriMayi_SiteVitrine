@@ -1,8 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    domains: ["www.google.com"],
-  },
+    reactStrictMode: true,
+    output: 'standalone',
+    serverExternalPackages: ['react-svg'],
 };
-
-export default nextConfig;
+  
+export default nextConfig;  
