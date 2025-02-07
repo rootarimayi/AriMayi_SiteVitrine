@@ -35,8 +35,8 @@ export default function Header() {
                                     <Image
                                         src={logo}
                                         alt="logo AriMayi"
-                                        width={100}
-                                        height={100}
+                                        width={140}
+                                        height={140}
                                         className="block md:hidden"
                                     />
                                 </Link>
