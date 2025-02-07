@@ -35,13 +35,13 @@ export default function TestimonialSection() {
 
   return (
     <>
-      <section className="py-16 bg-white h-screen flex flex-col items-center justify-center">
+      <section className="py-[50px] bg-white flex flex-col items-center justify-center">
         {/* Intro Text */}
         <div className="max-w-3xl mx-auto flex flex-col items-center mb-12">
-          <h3 className="text-[36px] text-center font-monserrat font-extrabold gradient-title my-6">
+            <h3 className="text-left text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase gradient-title">
             Témoignages
           </h3>
-          <p className="text-center font-Opensans text-[18px] leading-[30px] text-black my-6">
+          <p className="text-center font-monserrat text-[20px] leading-[30px] text-black my-6">
             Expert de la formation en situation de travail. AriMayi vous propose
             un apprentissage pratique et immersif sur des projets concrets
             confiés par nos partenariats experts.

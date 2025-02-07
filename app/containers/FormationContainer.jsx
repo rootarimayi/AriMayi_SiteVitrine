@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import { specialties } from "@/app/formation/data";
 import FormationBanner from "../components/Formation/FormationBanner";
+import FormationForm from "../components/Formation/FormationForm";
 
 export default function FormationContainer() {
   const bannerContent = (
-    <h3 className="text-left text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap">
+    <h3 className="text-left gradient-title text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap">
       Nos formations
     </h3>
   );
@@ -14,7 +15,7 @@ export default function FormationContainer() {
   return (
     <main>
       <FormationBanner
-        className="bg-cover bg-center bg-[#F4F2FF] transition-all duration-300 ease-in-out -z-10"
+        className="bg-[#F4F2FF] transition-all duration-300 ease-in-out py-[50px] min-h-[calc(100vh-250px)] -z-10"
       >
         {bannerContent}
       </FormationBanner>
@@ -29,7 +30,7 @@ export default function FormationContainer() {
                       src={`/assets/${specialty.image || "logo-arimayi.png"}`}
                       alt={specialty.title || "Formation"}
                       fill
-                      className="rounded-lg object-cover"
+                      className="rounded-t-[32px] object-cover"
                       priority
                     />
                   </div>
@@ -45,7 +46,9 @@ export default function FormationContainer() {
           </div>
         </div>
       </section>
-      <div className="h-24" />
+      <div className="flex flex-col justify-center  bg-[#F4F2FF]">
+      <FormationForm />
+      </div>
     </main>
   );
 }

@@ -24,7 +24,7 @@ export default function Fondateur() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Titre principal centré */}
           <div className="text-center mb-8 md:mb-16">
-            <h1 className="text-3xl font-monserrat font-extrabold gradient-title">
+            <h1 className="text-[48px] font-monserrat font-extrabold gradient-title">
               Le Mot du Fondateur
             </h1>
           </div>
@@ -83,10 +83,10 @@ export default function Fondateur() {
               </div>
             </div>
   
-            {/* Section certificat */}
+            {/* Section certificat regroupé dans une seule card */}
             <div className="w-full lg:w-1/2">
-              <div className="flex flex-col items-center">
-                <div className="relative w-full h-96 md:h-[500px] mb-6">
+             <div className="min-h-[auto] md:min-h-[550px] p-4 md:p-6 lg:p-8 bg-white rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center">
+                <div className="relative w-full h-72 md:h-[400px]">
                   <Image
                     src="/assets/certificat-founder.jpg"
                     alt="Certificat Accompagnement"
@@ -97,18 +97,12 @@ export default function Fondateur() {
                   />
                 </div>
   
-                <div className="w-full">
-                  <div className="relative p-4 md:p-6 lg:p-8 bg-white rounded-xl md:rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300">
-                    <div className="mt-6">
-                      <div className="mt-4 md:mt-6">
-                        <h4 className="text-base md:text-lg font-semibold text-gray-900">
-                          Formation et Certification
-                        </h4>
-                        <div className="text-sm md:text-base text-gray-600">
-                          Certificat officiel d&apos;accompagnement des apprentissages
-                        </div>
-                      </div>
-                    </div>
+                <div className="mt-6 text-center">
+                  <h4 className="text-base md:text-lg font-semibold text-gray-900">
+                    Formation et Certification
+                  </h4>
+                  <div className="text-sm md:text-base text-gray-600">
+                    Certificat officiel d&apos;accompagnement des apprentissages
                   </div>
                 </div>
               </div>
@@ -118,3 +112,4 @@ export default function Fondateur() {
       </section>
     );
   }
+  

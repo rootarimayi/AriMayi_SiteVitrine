@@ -7,21 +7,23 @@ import Carte from "../components/Utils/Carte";
 import mission1 from "@/public/assets/mission1.jpg";
 import mission2 from "@/public/assets/mission2.jpg";
 import mission3 from "@/public/assets/mission3.jpg";
+import CustomButton from "../components/Buttons/CustomButton";
+import HomeForm from "../components/Home/HomeForm";
 
 export default function HomeContainer() {
   return (
     <main>
-      <HomeBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask h-[120vh] bg-cover bg-center transition-all duration-300 ease-in-out">
+      <HomeBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out py-[50px] min-h-[calc(100vh-200px)]">
         <h3 className="text-[48px] text-start font-monserrat font-extrabold uppercase text-[#353535] bg-clip-text w-[100%] md:w-[60%]">
-          Trouvez votre futur opportunité dans l&apos;IT
+        Trouvez <span className="gradient-title">votre futur</span> opportunité <span className="gradient-title">dans l'IT</span>
         </h3>
-        <p className="text-left font-Opensans text-[24px] leading-[40px] text-[#353535] w-[100%] md:w-[60%] lg:w-[50%]">
+        <p className="text-left font-monserrat text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
           Vous êtes étudiant ou en reconversion professionnelle, AriMayi vous
           accompagne depuis votre formation jusqu&apos;à votre intégration en
           entreprise pour une transition réussie vers l&apos;emploi.
         </p>
         <div className="buttons flex gap-4">
-          <CostumButton
+          <CustomButton
             text="Contactez Nous"
             classes="font-Opensans text-[20px]  text-white bg-orange hover:scale-110"
             src="/contact"
@@ -34,14 +36,14 @@ export default function HomeContainer() {
         </div>
       </HomeBanner>
 
-      <div className=" py-[50px]  flex flex-col items-center bg-[#353535]">
+      <div className="py-[50px] flex flex-col items-center bg-[#F4F2FF] ">
         <div className="container flex flex-col gap-[20px]">
           <div className="max-w-3xl mx-auto flex flex-col items-center mb-8">
-            <h3 className="text-[28px] text-center font-monserrat font-bold uppercase gradient-title my-[5px]">
+            <h3 className="text-[32px] sm:text-[48px] text-center font-montserrat font-extrabold uppercase gradient-title w-full mt-5">
               Nos missions
             </h3>
             <br /> <br />
-            <p className="text-center font-Opensans text-[20px] leading-[25px] text-white my-[10px] gap-4">
+            <p className="text-center font-monserrat text-[20px] leading-[25px] text-[#353535] my-[10px] gap-4">
               Expert de la formation en situation de travail, AriMayi vous
               propose un apprentissage pratique et immersif sur des projets
               concrets confiés par nos partenaires (startups, TPE, PME) pour une
@@ -70,12 +72,9 @@ export default function HomeContainer() {
           </div>
         </div>
       </div>
-      <TestimonialSection />
-      <div className="flex flex-col items-center text-center mt-20 bg-[#F4F2FF]">
-        <h3 className="text-[36px] text-center font-monserrat font-bold uppercase gradient-title w-[100%] md:w-[60%] mt-30">
-            Contactez-nous
-        </h3>
-      <Coordonnees />
+      {/* <TestimonialSection /> */}
+      <div className="flex flex-col justify-center  bg-[#FFF]">
+        <HomeForm />
       </div>
     </main>
   );

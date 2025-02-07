@@ -17,7 +17,7 @@ export default function Footer() {
             <h3 className="text-xl font-semibold">À Propos</h3>
             <ul className="mt-4 space-y-2">
               <li><a href="/identite">Qui sommes-nous</a></li>
-              <li><a href="/contact">FAQ</a></li>
+              <li><a href="/contact">Foire Aux Questions</a></li>
               <li><a href="/contact">Nous Contacter</a></li>
             </ul>
           </div>

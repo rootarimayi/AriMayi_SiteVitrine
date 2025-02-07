@@ -32,7 +32,7 @@ export default function PartenaireForm() {
           className="bg-white rounded-lg p-8 shadow-md dark:bg-gray-800"
         >
           {/* Heading */}
-          <h2 className="text-3xl font-bold gradient-title mb-6 text-center">
+          <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-extrabold gradient-title mb-6 text-center">
             Vous avez un projet? Contactez-nous
           </h2>
 

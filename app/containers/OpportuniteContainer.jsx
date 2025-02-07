@@ -92,10 +92,10 @@ export default function OpportuniteContainer() {
   return (
     <main>
         <div className="bg-gray-50 py-8 px-4">
-        <h2 className="text-2xl font-semibold text-center mb-4 text-indigo-700">
+        <h2 className="text-[24px] font-montserrat font-extrabold text-center mb-4 gradient-title">
             Des projets inspirants pour votre apprentissage
         </h2>
-        <p className="text-center mb-6 text-gray-600 text-lg text-sm">
+        <p className="text-gray-800 text-[18px] leading-[32px] text-[#353535] font-montserrat w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
             Nos projets vous permettront de développer des compétences variées tout
             en contribuant à des solutions concrètes pour des besoins réels. Prêts à
             relever le défi ? 🚀
@@ -112,8 +112,8 @@ export default function OpportuniteContainer() {
                 style={{ minHeight: "200px" }}
                 >
                 <div className="flex-grow">
-                    <h3 className="text-2xl font-bold mb-3">{card.title}</h3>
-                    <p className="text-base text-justify  mb-4">{card.description}</p>
+                    <h3 className="text-2xl font-montserrat font-extrabold mb-3">{card.title}</h3>
+                    <p className="text-base font-montserrat text-justify  mb-4">{card.description}</p>
                 </div>
                 <a
                     href={card.link}
@@ -124,7 +124,7 @@ export default function OpportuniteContainer() {
                 </div>
             ))}
             </div>
-            <Coordonnees />
+            {/* <Coordonnees /> */}
 
         {/* Pagination */}
         {/* <div className="mt-4 flex justify-center space-x-2">

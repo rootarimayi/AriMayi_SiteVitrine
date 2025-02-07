@@ -6,8 +6,8 @@ import Collapse from "../components/Contact/Collapse";
 export default function ContactContainer() {
     return (
       <main>
-        <ContactBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out">
-          <h3 className="text-center text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap">
+        <ContactBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out py-[50px] min-h-[calc(100vh-250px)]">
+          <h3 className="text-center text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase gradient-title whitespace-nowrap">
               Contactez Nous
           </h3>
           </ContactBanner>
@@ -16,7 +16,7 @@ export default function ContactContainer() {
               AriMayi
           </h3>
           
-          <p className="text-gray-800 mb-0">
+          <p className="text-gray-800 text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
               Votre point de départ vers de nouvelles opportunités professionnelles et la réussite de votre projet
           </p>
         <Coordonnees />
