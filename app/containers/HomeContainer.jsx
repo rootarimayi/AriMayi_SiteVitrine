@@ -15,7 +15,7 @@ export default function HomeContainer() {
     <main>
       <HomeBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out py-[50px] min-h-[calc(100vh-200px)]">
         <h3 className="text-[48px] text-start font-monserrat font-extrabold uppercase text-[#353535] bg-clip-text w-[100%] md:w-[60%]">
-        Trouvez <span className="gradient-title">votre futur</span> opportunité <span className="gradient-title">dans l'IT</span>
+        Trouvez <span className="gradient-title">votre futur</span> opportunité <span className="gradient-title">dans l&apos;IT</span>
         </h3>
         <p className="text-left font-monserrat text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
           Vous êtes étudiant ou en reconversion professionnelle, AriMayi vous
