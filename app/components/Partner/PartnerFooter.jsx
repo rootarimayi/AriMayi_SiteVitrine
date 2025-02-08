@@ -69,7 +69,7 @@ export default function PartnerFooter() {
 
       <div className="border-gray-700 py-6 text-center text-sm">
         <div className="flex justify-between items-center px-16">
-            <p>2025 AriMayi. Tous droits réservés. <a href="#" className="underline">Mentions légales</a></p>
+            <p>2025 AriMayi. Tous droits réservés. <a href="/mentions" className="underline">Mentions légales</a></p>
             <div className="flex space-x-4">
                 <a href="https://www.tiktok.com/@arimayi_"><FaTiktok size={20} /></a>
                 <a href="https://www.linkedin.com/company/arimayi/"><FaLinkedin size={20} /></a>

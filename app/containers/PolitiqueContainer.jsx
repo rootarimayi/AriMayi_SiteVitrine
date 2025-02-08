@@ -5,14 +5,11 @@ import React from "react";
 export default function PolitiqueContainer() {
   return (
     <main>
-      <br />
-      <br />
-      <br />
-      <br />
+      <div className="py-[50px]"></div>
       <section className="w-full py-8 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
-            <h1 className="text-3xl font-monserrat bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-transparent bg-clip-text">
+            <h1 className="text-3xl font-monserrat gradient-title font-bold bg-clip-text">
               Politique de Confidentialité
             </h1>
             <p className="mt-2 md:mt-4 text-base md:text-lg text-gray-600">
@@ -66,9 +63,9 @@ export default function PolitiqueContainer() {
                     d&rsquo;accès, droit d&rsquo;effacement, droit
                     d&rsquo;opposition, droit de rectification, etc. Pour faire
                     une demande d&rsquo;exercice de ces droits, écrivez à cette
-                    adresse mail :
+                    adresse mail : 
                     <a href="mailto:droit@rgpd.fr" className="text-indigo-600">
-                      droit@rgpd.fr
+                      rgpd@arimayi.fr
                     </a>
                     .
                   </p>

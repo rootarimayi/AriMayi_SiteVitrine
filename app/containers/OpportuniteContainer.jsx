@@ -92,13 +92,13 @@ export default function OpportuniteContainer() {
   return (
     <main>
         <div className="bg-gray-50 py-8 px-4">
-        <h2 className="text-[24px] font-montserrat font-extrabold text-center mb-4 gradient-title">
+        <h2 className="text-[32px] font-montserrat font-extrabold text-center mb-4 gradient-title">
             Des projets inspirants pour votre apprentissage
         </h2>
-        <p className="text-gray-800 text-[18px] leading-[32px] text-[#353535] font-montserrat w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
+        <p className="text-gray-800 text-center text-[18px] leading-[32px] text-[#353535] font-montserrat w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
             Nos projets vous permettront de développer des compétences variées tout
             en contribuant à des solutions concrètes pour des besoins réels. Prêts à
-            relever le défi ? 🚀
+            relever le défi ?
         </p>
 
         {/* Card Section */}

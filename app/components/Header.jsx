@@ -16,7 +16,7 @@ export default function Header() {
     };
 
     const gradientButtonClass = "font-montserrat font-bold px-2 py-2 text-[12px] text-white rounded-lg tracking-[.5px] bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg hover:text-black focus:outline-none focus:ring-2 focus:ring-[#F68A67]";
-    const normalButtonClass = "font-montserrat font-bold text-[12px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]";
+    const normalButtonClass = "font-montserrat font-bold text-[14px] text-white hover:text-[#F68A67] rounded-lg tracking-[.5px] focus:text-[#F68A67]";
 
     return (
         <>
@@ -45,7 +45,7 @@ export default function Header() {
                         <div className="hidden lg:flex items-center gap-5">
                             <nav className="ml-4 flex items-center">
                                 {/* Premier groupe : Partenaires et Apprenants */}
-                                <div className="flex items-center gap-4 mr-10">
+                                <div className="flex items-center gap-4 mr-20">
                                     <Link
                                         href="/partenaires"
                                         className={activeButton === 'partenaires' ? gradientButtonClass : normalButtonClass}

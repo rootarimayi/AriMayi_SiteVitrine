@@ -62,7 +62,7 @@ export default function ApprenantsContent() {
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Pour les jeunes diplômés
                             </h3>
-                            <p className="text-gray-600">
+                            <p className="text-gray-600 text-justify">
                                 C&apos;est une occasion unique de transformer vos connaissances
                                 théoriques en savoir-faire opérationnels, directement sur le
                                 terrain, là où les compétences prennent tout leur sens.
@@ -83,7 +83,7 @@ export default function ApprenantsContent() {
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Pour les personnes en reconversion
                             </h3>
-                            <p className="text-gray-600">
+                            <p className="text-gray-600 text-justify">
                                 L&apos;AFEST propose un accompagnement dynamique et progressif, vous
                                 permettant d&apos;apprendre un métier par l&apos;expérimentation, de
                                 surmonter les défis du changement et de maîtriser de nouvelles
@@ -105,7 +105,7 @@ export default function ApprenantsContent() {
                             <h3 className="text-xl font-bold text-gray-800 mb-4">
                                 Pour les futurs apprentis
                             </h3>
-                            <p className="text-gray-600">
+                            <p className="text-gray-600 text-justify">
                                 Accédez à une formation qui mêle pratique et réflexion, au cœur
                                 de situations réelles et efficacement préparatoires aux
                                 exigences des entreprises.
