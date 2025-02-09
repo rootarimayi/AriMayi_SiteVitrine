@@ -12,7 +12,7 @@ export default function IdentiteContainer() {
             Qui sommes nous?
         </h3>
         <p className="text-left font-Opensans text-[24px] leading-[40px] text-[#353535] w-[100%] md:w-[60%] lg:w-[50%]">
-            Nous sommes AriMayi, une plateforme innovante qui connecte les candidats à la recherche de stage, d&apos;apprentissage ou de premier emploi dans l&apos;IT avec des startups et TPE en quête de talents
+            Nous sommes AriMayi, l&apos;Incubateur de Talent 2.0, un écosystème où les projets digitaux de nos partenaires &lpar;startups, TPE, PME&rpar; sont pris en charge par nos apprenants en situation de travail. En les confrontant à des défis réels du marché, nous accélérons leur montée en compétences et les préparons à une intégration opérationnelle et immédiate dans l&apos;univers professionnel de l&apos;IT.
         </p>
       </AboutBanner>
 

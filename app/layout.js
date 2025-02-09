@@ -6,6 +6,7 @@ import "./globals.css";
 
 import { Open_Sans, Montserrat } from 'next/font/google'
 import DynamicLayout from "./components/Utils/DynamicLayout";
+import { Toaster } from 'react-hot-toast';
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -65,9 +66,12 @@ export default function RootLayout({ children }) {
     return (
       <html lang="fr">
         <body className="antialiased">
-          <DynamicLayout>{children}</DynamicLayout>
+            <Toaster position="top-right" reverseOrder={false} />
+          <DynamicLayout>
+            {children}
+            </DynamicLayout>
           {/* <Header />{children}< Footer/> */}
         </body>
       </html>
     );
-  }
+}

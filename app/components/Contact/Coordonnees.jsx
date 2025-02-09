@@ -7,48 +7,79 @@ import {
   FaPhone,
   FaEnvelope,
 } from "react-icons/fa";
+import { toast } from 'react-hot-toast';
+
 
 export default function Coordonnees() {
- const [formData, setFormData] = useState({
-   nom: "",
-   prenom: "",
-   email: "",
-   telephone: "",
-   message: "",
-   accept: false,
- });
+    const [formData, setFormData] = useState({
+        nom: "",
+        prenom: "",
+        email: "",
+        telephone: "",
+        message: "",
+        accept: false,
+      });
+    
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [errors, setErrors] = useState({});
 
- const handleChange = (e) => {
-   const { name, value, type, checked } = e.target;
-   setFormData({
-     ...formData,
-     [name]: type === "checkbox" ? checked : value,
-   });
- };
+    const validateField = (name, value) => {
+    let errorMsg = "";
+    if (!value.trim()) errorMsg = "Ce champ est requis.";
+    if (name === "email" && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(value))
+        errorMsg = "Adresse email invalide.";
+    if (name === "telephone" && !/^(?:(?:\+|00)33|0)[1-9](?:[\s.-]*\d{2}){4}$/.test(value))
+        errorMsg = "Numéro de téléphone invalide.";
+    
+    setErrors((prevErrors) => ({ ...prevErrors, [name]: errorMsg }));
+    };
 
- const handleSubmit = async (e) => {
-   e.preventDefault();
+    const handleChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setFormData({
+        ...formData,
+        [name]: type === "checkbox" ? checked : value,
+    });
+    validateField(name, value);
+    };
+    
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
 
-   try {
-     const response = await fetch("/api/form", {
-       method: "POST",
-       headers: {
-         "Content-Type": "application/json",
-       },
-       body: JSON.stringify(formData),
-     });
+        try {
+            const response = await fetch("/api/form", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+            });
 
-     const result = await response.json();
-     if (response.ok) {
-       alert(result.message);
-     } else {
-       alert(result.error);
-     }
-   } catch (error) {
-     console.error("Error submitting form:", error);
-     alert("Une erreur est survenue lors de l'envoi du formulaire.");
-   }
- };
+            if (!response.ok) {
+            const errorData = await response.json();
+            throw new Error(errorData.error || "Une erreur est survenue");
+            }
+
+            const data = await response.json();
+            
+            setFormData({
+            nom: "",
+            prenom: "",
+            email: "",
+            telephone: "",
+            message: "",
+            accept: false,
+            });
+            
+            toast.success("Message envoyé avec succès !");
+        } catch (error) {
+            console.error("Error:", error);
+            toast.error(error.message || "Une erreur est survenue lors de l'envoi du formulaire.");
+        } finally {
+            setIsSubmitting(false);
+        }
+    };    
 
   return (
     <div className="bg-gray-600 p-2  mx-4 my-6">
@@ -187,9 +218,10 @@ export default function Coordonnees() {
               <div className="flex justify-center items-center">
                 <button
                   type="submit"
+                  disabled={isSubmitting}
                   className="text-white mb-4 bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 transition-all duration-300 ease-in-out hover:scale-110 hover:shadow-lg hover:text-black"
                 >
-                  Envoyer
+                    {isSubmitting ? 'Envoi en cours...' : 'Envoyer'}
                 </button>
               </div>
             </form>
