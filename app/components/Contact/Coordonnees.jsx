@@ -49,11 +49,11 @@ export default function Coordonnees() {
 
         try {
             const response = await fetch("/api/form", {
-            method: "POST",
-            headers: {
-                "Content-Type": "application/json",
-            },
-            body: JSON.stringify(formData),
+                method: "POST",
+                headers: {
+                  "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
             });
 
             if (!response.ok) {
@@ -61,7 +61,7 @@ export default function Coordonnees() {
             throw new Error(errorData.error || "Une erreur est survenue");
             }
 
-            const data = await response.json();
+            const data = await response.text();
             
             setFormData({
             nom: "",
@@ -72,7 +72,8 @@ export default function Coordonnees() {
             accept: false,
             });
             
-            toast.success("Message envoyé avec succès !");
+            const jsonData = JSON.parse(data); // Vérifie si c'est bien du JSON
+            toast.success(jsonData.message || "Message envoyé avec succès !");
         } catch (error) {
             console.error("Error:", error);
             toast.error(error.message || "Une erreur est survenue lors de l'envoi du formulaire.");
