@@ -5,11 +5,18 @@ import formationImg from "@/public/assets/adetola.jpg";
 import FormationBannerMobile from "./Mobile/FormationBannerMobile";
 
 export default function FormationBanner({ className, children }) {
-    const [isMobile, setIsMobile] = useState(false);
+    const [screenSize, setScreenSize] = useState("desktop");
 
     useEffect(() => {
         const checkScreenSize = () => {
-        setIsMobile(window.innerWidth < 768);
+            const width = window.innerWidth;
+            if (width < 768) {
+                setScreenSize("mobile");
+            } else if (width >= 768 && width <= 1280) {
+                setScreenSize("tablet");
+            } else {
+                setScreenSize("desktop");
+            }
         };
         checkScreenSize();
         window.addEventListener("resize", checkScreenSize);
@@ -17,14 +24,16 @@ export default function FormationBanner({ className, children }) {
         return () => window.removeEventListener("resize", checkScreenSize);
     }, []);
 
-    if (isMobile) {
+    if (screenSize === "mobile") {
         return <FormationBannerMobile>{children}</FormationBannerMobile>;
     }
 
     return (
         <section
             id="banner"
-            className={`py-[200px] flex items-center justify-between ${className}`}
+            className={`${
+                screenSize === "tablet" ? "pt-[120px] pb-[170px]" : "py-[220px]"
+            } flex items-center justify-between overflow-x-hidden ${className}`}
         >
         <div className="container mx-auto px-4 lg:px-16 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="text-left flex flex-col gap-6">

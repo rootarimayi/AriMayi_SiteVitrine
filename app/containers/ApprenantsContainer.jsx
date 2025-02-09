@@ -15,7 +15,7 @@ export default function ApprenantsContainer() {
     return(
         <main>
             <ApprenantsBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out py-[60px] min-h-[calc(100vh-200px)] -z-20">
-                <h3 className="text-3xl sm:text-4xl md:text-[48px] text-start gradient-title font-monserrat font-extrabold uppercase w-full md:w-[60%] mb-6 leading-[1.4] pt-4">
+                <h3 className="text-[48px] text-start font-monserrat font-extrabold uppercase gradient-title bg-clip-text w-[100%] md:w-[60%]">
                     L&apos;expérience concrète par la formation
                 </h3>
                 <p className="text-left font-Opensans text-[24px] leading-[40px] text-[#353535] w-[100%] md:w-[60%] lg:w-[50%]">

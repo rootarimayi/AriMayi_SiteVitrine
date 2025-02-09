@@ -29,7 +29,7 @@ export default function FormationBannerMobile({ children }) {
     });
   
     return (
-        <section className="relative bg-[#F4F2FF] py-16 flex flex-col items-center justify-start min-h-[50vh] md:min-h-[calc(100vh-200px)] w-full overflow-hidden z-10">
+        <section className="relative bg-[#F4F2FF] py-16 flex flex-col items-center justify-start min-h-[50vh] md:min-h-[calc(100vh-200px)] w-full overflow-x-hidden overflow-hidden z-10">
             <div className="relative z-10 text-center gradient-title max-w-[90%] mb-8">
             {styledChildren}
             </div>

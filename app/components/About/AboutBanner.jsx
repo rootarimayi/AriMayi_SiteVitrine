@@ -23,7 +23,7 @@ export default function AboutBanner({ className, children }) {
     return (
         <section
             id="banner"
-            className={`py-[200px] flex items-center justify-between ${className}`}
+            className={`py-[200px] flex items-center justify-between overflow-x-hidden ${className}`}
         >
         <div className="container mx-auto px-4 lg:px-16 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="text-left flex flex-col gap-6">

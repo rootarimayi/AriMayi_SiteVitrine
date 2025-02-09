@@ -6,7 +6,7 @@ import NewsletterForm from "./Form/NewsletterForm";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#292929] text-white" aria-labelledby="footer-heading">
+    <footer className="bg-[#292929] text-white overflow-hidden" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">Footer</h2>
       <div className="max-w-7xl mx-auto px-6 pb-8 pt-16 lg:px-8 lg:pt-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-20">

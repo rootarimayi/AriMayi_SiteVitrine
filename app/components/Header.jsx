@@ -20,7 +20,7 @@ export default function Header() {
 
     return (
         <>
-            <header className={`fixed z-50 w-full ${isOpen ? 'bg-white' : '#292929'}`}>
+            <header className={`overflow-hidden fixed z-50 w-full ${isOpen ? 'bg-white' : '#292929'}`}>
                 <div className={`relative py-[10px] ${isOpen ? 'bg-white' : 'bg-[#292929]'}`}>
                     <div className="container flex items-center justify-between gap-2">
                         <div className="flex items-center">

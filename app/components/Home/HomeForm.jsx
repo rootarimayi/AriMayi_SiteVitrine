@@ -51,7 +51,7 @@ export default function HomeForm() {
  };
 
   return (
-    <div className="bg-gray-600 p-2  mx-4 my-6">
+    <div className="bg-gray-600 p-2  mx-4 my-6 overflow-hidden">
       <div className="flex h-auto justify-center items-center">
         <div className="w-full max-w-6xl bg-[#FFF] p-2">
         <h3 className="text-[32px] sm:text-[48px] text-center font-montserrat font-extrabold uppercase gradient-title w-full mt-5">
