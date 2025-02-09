@@ -5,11 +5,18 @@ import aboutImg from "@/public/images/about-img.png";
 import AboutBannerMobile from "./Mobile/AboutBannerMobile";
 
 export default function AboutBanner({ className, children }) {
-    const [isMobile, setIsMobile] = useState(false);
+    const [screenSize, setScreenSize] = useState("desktop");
 
     useEffect(() => {
         const checkScreenSize = () => {
-        setIsMobile(window.innerWidth < 768);
+            const width = window.innerWidth;
+            if (width < 768) {
+                setScreenSize("mobile");
+            } else if (width >= 768 && width <= 1280) {
+                setScreenSize("tablet");
+            } else {
+                setScreenSize("desktop");
+            }
         };
         checkScreenSize();
         window.addEventListener("resize", checkScreenSize);
@@ -17,13 +24,15 @@ export default function AboutBanner({ className, children }) {
         return () => window.removeEventListener("resize", checkScreenSize);
     }, []);
 
-    if (isMobile) {
+    if (screenSize === "mobile") {
         return <AboutBannerMobile>{children}</AboutBannerMobile>;
     }
     return (
         <section
             id="banner"
-            className={`py-[200px] flex items-center justify-between overflow-x-hidden ${className}`}
+            className={`${
+                screenSize === "tablet" ? "pt-[120px] pb-[70px]" : "py-[100px]"
+            } flex items-center justify-between overflow-x-hidden overflow-y-hidden ${className} mb-[20px]`}
         >
         <div className="container mx-auto px-4 lg:px-16 grid grid-cols-1 md:grid-cols-2 items-center gap-8">
             <div className="text-left flex flex-col gap-6">
