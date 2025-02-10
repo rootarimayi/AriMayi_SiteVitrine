@@ -55,8 +55,6 @@ export default function Coordonnees() {
                 },
                 body: JSON.stringify(formData),
             });
-            console.log("Headers:", request.headers.get("content-type"));
-
 
             if (!response.ok) {
             const errorData = await response.json();
