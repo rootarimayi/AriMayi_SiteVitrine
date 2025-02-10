@@ -20,6 +20,7 @@ export default function ContactContainer() {
           <p className="text-gray-800 text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
               Votre point de départ vers de nouvelles opportunités professionnelles et la réussite de votre projet
           </p>
+
         <Coordonnees />
         {/* <Contact /> */}
         </div>

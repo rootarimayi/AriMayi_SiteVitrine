@@ -9,6 +9,20 @@ import app2 from "@/public/assets/PHOTO-2024-12-22-20-01-44.jpg";
 import app3 from "@/public/assets/PHOTO-2024-12-22-20-02-06.jpg";
 
 
+const Card = ({ image, titre, content }) => {
+    return (
+      <figure className="card w-full max-w-[300px] h-auto p-0 m-2 rounded-3xl transition-all duration-300 hover:scale-105 bg-white hover:border-gray-600 flex flex-col justify-between shadow-md">
+        <div className="h-[150px] w-full relative">
+          <Image src={image} alt={titre} fill className="object-cover rounded-t-3xl" />
+        </div>
+        <figcaption className="flex flex-col gap-4 p-4 flex-grow">
+          <h2 className="card-title text-lg font-semibold text-gray-800 text-center">{titre}</h2>
+          <p className="card-content text-sm text-gray-600 text-center">{content}</p>
+        </figcaption>
+      </figure>
+    );
+};
+
 export default function ApprenantsContentMobile() {
     return (
         <>
@@ -29,77 +43,26 @@ export default function ApprenantsContentMobile() {
 
             {/* Section 2 */}
             <section className="py-12">
-                <div className="px-4">
-                    {/* Titre centré */}
-                    <h3 className="text-center text-[32px] font-monserrat font-extrabold uppercase gradient-title mb-8">
-                        Pour qui ?
+                <div className="max-w-6xl mx-auto px-4">
+                    <h3 className="text-center text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase gradient-title mb-8">
+                    Pour qui ?
                     </h3>
-
-                    {/* Container pour les 3 colonnes en version mobile */}
-                    <div className="flex flex-col gap-8">
-                        {/* Jeunes diplômés */}
-                        <div className="flex flex-col items-center text-center">
-                            <div className="w-32 h-32 relative mb-4">
-                                <Image
-                                    src={app1}
-                                    alt="Jeunes diplômés"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-full"
-                                />
-                            </div>
-                            <h3 className="text-lg font-bold text-gray-800 mb-2">
-                                Pour les jeunes diplômés
-                            </h3>
-                            <p className="text-sm text-gray-600">
-                                C&apos;est une occasion unique de transformer vos connaissances
-                                théoriques en savoir-faire opérationnels, directement sur le
-                                terrain, là où les compétences prennent tout leur sens.
-                            </p>
-                        </div>
-
-                        {/* Personnes en reconversion */}
-                        <div className="flex flex-col items-center text-center">
-                            <div className="w-32 h-32 relative mb-4">
-                                <Image
-                                    src={app2}
-                                    alt="Personnes en reconversion"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-full"
-                                />
-                            </div>
-                            <h3 className="text-lg font-bold text-gray-800 mb-2">
-                                Pour les personnes en reconversion
-                            </h3>
-                            <p className="text-sm text-gray-600">
-                                L&apos;AFEST propose un accompagnement dynamique et progressif, vous
-                                permettant d&apos;apprendre un métier par l&apos;expérimentation, de
-                                surmonter les défis du changement et de maîtriser de nouvelles
-                                pratiques au quotidien.
-                            </p>
-                        </div>
-
-                        {/* Futurs apprentis */}
-                        <div className="flex flex-col items-center text-center">
-                            <div className="w-32 h-32 relative mb-4">
-                                <Image
-                                    src={app3}
-                                    alt="Futurs apprentis"
-                                    layout="fill"
-                                    objectFit="cover"
-                                    className="rounded-full"
-                                />
-                            </div>
-                            <h3 className="text-lg font-bold text-gray-800 mb-2">
-                                Pour les futurs apprentis
-                            </h3>
-                            <p className="text-sm text-gray-600">
-                                Accédez à une formation qui mêle pratique et réflexion, au cœur
-                                de situations réelles et efficacement préparatoires aux
-                                exigences des entreprises.
-                            </p>
-                        </div>
+                    <div className="flex flex-col items-center gap-8">
+                    <Card 
+                        image={app1} 
+                        titre="Pour les jeunes diplômés" 
+                        content="C'est une occasion unique de transformer vos connaissances théoriques en savoir-faire opérationnels, directement sur le terrain, là où les compétences prennent tout leur sens."
+                    />
+                    <Card 
+                        image={app2} 
+                        titre="Pour les personnes en reconversion" 
+                        content="L'AFEST propose un accompagnement dynamique et progressif, vous permettant d'apprendre un métier par l'expérimentation, de surmonter les défis du changement et de maîtriser de nouvelles pratiques au quotidien."
+                    />
+                    <Card 
+                        image={app3} 
+                        titre="Pour les futurs apprentis" 
+                        content="Accédez à une formation qui mêle pratique et réflexion, au cœur de situations réelles et efficacement préparatoires aux exigences des entreprises."
+                    />
                     </div>
                 </div>
             </section>

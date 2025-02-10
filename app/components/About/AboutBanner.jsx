@@ -31,7 +31,7 @@ export default function AboutBanner({ className, children }) {
         <section
             id="banner"
             className={`${
-                screenSize === "tablet" ? "pt-[120px] pb-[70px]" : "py-[100px]"
+                screenSize === "tablet" ? "pt-[120px] pb-[70px]" : "py-[170px]"
             } flex items-center justify-between overflow-x-hidden overflow-y-hidden ${className} mb-[20px]`}
         >
         <div className="container mx-auto px-4 lg:px-16 grid grid-cols-1 md:grid-cols-2 items-center gap-8">

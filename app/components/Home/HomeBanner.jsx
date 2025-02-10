@@ -32,7 +32,7 @@ export default function HomeBanner({ className, children }) {
     }
     if (screenSize === "tablet" || screenSize === "smallScreen") {
         return (
-            <section id="banner" className={`pt-[100px] pb-[150px] flex items-center justify-between overflow-x-hidden ${className}`}>
+            <section id="banner" className={`pt-[130px] pb-[150px] flex items-center justify-between overflow-x-hidden ${className}`}>
                 <div className="absolute inset-0 flex justify-center items-center -z-10">
                     <img
                         src="/svg/MaskOrange.svg"

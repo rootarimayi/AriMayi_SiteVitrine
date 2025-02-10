@@ -8,9 +8,9 @@ export default function TestimonialSection() {
     {
       name: "Katia",
       titre: "Entrepreneur",
-      avatar: "/assets/katia.jpg",
+      avatar: "/images/katia.jpg",
       message:
-        "Arimayi propose un vrai accompagnement centré sur l'entrepreneur... une vraie formule gagnant gagnant",
+        "AriMayi propose un vrai accompagnement centré sur l'entrepreneur... une vraie formule gagnant gagnant",
       videoUrl: "Katia.mp4",
     },
   ];

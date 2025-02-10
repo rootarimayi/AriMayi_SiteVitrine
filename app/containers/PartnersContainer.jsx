@@ -25,11 +25,9 @@ export default function PartenairesContainer() {
                 </h3>
                 <p className="text-center md:text-left font-Opensans text-[24px] leading-[40px] text-[#353535] max-w-[600px] mx-auto md:mx-0">
                     Chez AriMayi, nous nous engageons à soutenir les entreprises partenaires dans le développement de leurs projets digitaux tout en favorisant l&apos;apprentissage concret de nos apprenants.
-                    <br />
-                    <strong className="gradient-title">Ensemble, construisons l&apos;avenir !</strong>
                 </p>
+                <p><strong className="text-center md:text-left font-Opensans text-[24px] leading-[40px] text-[#353535] max-w-[600px] mx-auto md:mx-0 gradient-title" style={{ marginTop: '60px' }}>Ensemble, construisons l&apos;avenir !</strong></p>
             </PartnerBanner>
-
             
             <PartnerContent />
 

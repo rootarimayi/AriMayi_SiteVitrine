@@ -9,6 +9,7 @@ import Opportunite from "../opportunite/page";
 import ApprenantsForm from "../components/Apprenants/ApprenantsForm";
 import ApprenantsBanner from "../components/Apprenants/ApprenantsBanner";
 import ApprenantsContent from "../components/Apprenants/ApprenantsContent";
+import TestimonialSection from "../components/Home/TestimonialSection";
 
 
 export default function ApprenantsContainer() {
@@ -27,6 +28,8 @@ export default function ApprenantsContainer() {
             <ApprenantsContent />
 
             <Opportunite />
+
+            <TestimonialSection />
 
             <ApprenantsForm />
         </main>

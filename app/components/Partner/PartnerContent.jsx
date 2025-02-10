@@ -43,7 +43,19 @@ export default function PartnerContent() {
             <section className="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center bg-[#F8A185] text-white p-12 rounded-[32px] mt-12">
                 <div className="w-11/12 md:w-1/2">
                     <h2 className="text-[38px] text-[#353535] font-extrabold leading-[48.76px] text-left mb-4">Formez vos futures ressources selon vos besoins et vos méthodes</h2>
-                    <p className="text-[20px] text-[#353535] leading-relaxed flex-1 mb-6">Grâce à notre méthode de formation <strong>ETIC</strong>, nos tuteurs prennent en charge vos nouveaux embauchés pour les former efficacement à vos méthodes et techniques.</p>
+                    {/* <p className="text-[20px] text-[#353535] leading-relaxed flex-1 mb-6">Grâce à notre méthode de formation <strong>ETIC</strong>, nos tuteurs prennent en charge vos nouveaux embauchés pour les former efficacement à vos méthodes et techniques.</p> */}
+                    <p className="text-[20px] text-[#353535] leading-relaxed flex-1 mb-6">
+                    Grâce à notre méthode de formation <strong>ETIC</strong> :
+                    </p>
+                    <ul className="text-[20px] text-[#353535] leading-relaxed flex-1 mb-6">
+                    <li><strong>E</strong> : Engagement</li>
+                    <li><strong>T</strong> : Travail</li>
+                    <li><strong>I</strong> : Inclusion</li>
+                    <li><strong>C</strong> : Compétence</li>
+                    </ul>
+                    <p className="text-[20px] text-[#353535] leading-relaxed flex-1 mb-6">
+                    Nos formateurs et encadrants accompagnent vos futurs embauchés en situation réelle. <strong>Objectif</strong> : les former efficacement, accélérer leur montée en compétences et faciliter leur onboarding pour une intégration fluide et opérationnelle.
+                    </p>
                     <Link href="/comingsoon" className="text-[#FFF] uppercase mt-2">Découvrir nos méthodes &rarr;</Link>
                 </div>
                 <div className="w-11/12 md:w-1/2">

@@ -82,7 +82,7 @@ export default function Coordonnees() {
     };    
 
   return (
-    <div className="bg-gray-600 p-2  mx-4 my-6">
+    <div className="bg-gray-600 p-2 mx-4 my-6 overflow-hidden">
       <div className="flex h-auto justify-center items-center">
         <div className="w-full max-w-6xl bg-[#F4F2FF] p-2">
           <div className="mt-50 p-6">
@@ -90,131 +90,112 @@ export default function Coordonnees() {
               className="max-w-4xl mx-auto p-8 bg-white rounded-lg shadow-md dark:bg-gray-800"
               onSubmit={handleSubmit}
             >
+              {/* Nom et Prénom */}
               <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
-                <div>
-                  <label
-                    htmlFor="nom"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left"
-                  >
-                    Nom:
-                  </label>
-                  <input
-                    type="text"
-                    id="nom"
-                    name="nom"
-                    value={formData.nom}
-                    onChange={handleChange}
-                    className="bg-blue-50  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
-                    placeholder="Votre nom"
-                    required
-                  />
-                </div>
-                <div>
-                  <label
-                    htmlFor="prenom"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left"
-                  >
-                    Prénom:
-                  </label>
-                  <input
-                    type="text"
-                    id="prenom"
-                    name="prenom"
-                    value={formData.prenom}
-                    onChange={handleChange}
-                    className="bg-blue-50 mb-4  text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
-                    placeholder="Votre prénom"
-                    required
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-5">
-                <div className="mb-5">
-                  <label
-                    htmlFor="email"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left"
-                  >
-                    Email:
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
-                    placeholder="exemple@domaine.com"
-                    required
-                  />
+                    <div className="mb-5">
+                    <label htmlFor="nom" className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left">
+                        Nom:
+                    </label>
+                    <input
+                        type="text"
+                        id="nom"
+                        name="nom"
+                        value={formData.nom}
+                        onChange={handleChange}
+                        className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                        placeholder="Votre nom"
+                        required
+                    />
+                    </div>
+                    <div className="mb-5">
+                    <label htmlFor="prenom" className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left">
+                        Prénom:
+                    </label>
+                    <input
+                        type="text"
+                        id="prenom"
+                        name="prenom"
+                        value={formData.prenom}
+                        onChange={handleChange}
+                        className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                        placeholder="Votre prénom"
+                        required
+                    />
+                    </div>
                 </div>
 
-                <div>
-                  <label
-                    htmlFor="telephone"
-                    className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left"
-                  >
-                    Numéro de téléphone:
-                  </label>
-                  <input
-                    type="tel"
-                    id="telephone"
-                    name="telephone"
-                    value={formData.telephone}
-                    onChange={handleChange}
-                    className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
-                    placeholder="Votre numéro"
-                    required
-                  />
-                </div>
-              </div>
+              {/* Email et Téléphone */}
+                    <div className="grid grid-cols-1 gap-10 sm:grid-cols-2">
+                        <div className="mb-5">
+                        <label htmlFor="email" className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left">
+                            Email:
+                        </label>
+                        <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            value={formData.email}
+                            onChange={handleChange}
+                            className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                            placeholder="exemple@domaine.com"
+                            required
+                        />
+                        </div>
+                        <div className="mb-5">
+                        <label htmlFor="telephone" className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left">
+                            Numéro de téléphone:
+                        </label>
+                        <input
+                            type="tel"
+                            id="telephone"
+                            name="telephone"
+                            value={formData.telephone}
+                            onChange={handleChange}
+                            className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                            placeholder="Votre numéro"
+                            required
+                        />
+                        </div>
+                    </div>
 
-              <div className=" mb-5 ">
-                <label
-                  htmlFor="telephone"
-                  className=" mb-4 pb-2 text-sm font-medium text-gray-900 dark:text-black text-left"
-                >
-                  Votre message:
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="bg-blue-50 pt-4 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black "
-                  placeholder="Votre message"
-                  required
-                />
-              </div>
+              {/* Message */}
+              <div className="mb-5">
+                        <label htmlFor="message" className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left">
+                        Votre message:
+                        </label>
+                        <textarea
+                        id="message"
+                        name="message"
+                        value={formData.message}
+                        onChange={handleChange}
+                        className="bg-blue-50 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black"
+                        placeholder="Votre message"
+                        required
+                        />
+                    </div>
 
-              <div className="flex items-center mb-5">
-                <div className="flex items-center h-5">
-                  <input
-                    id="accept"
-                    name="accept"
-                    type="checkbox"
-                    checked={formData.accept}
-                    onChange={handleChange}
-                    className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
-                    required
-                  />
-                </div>
-                <label
-                  htmlFor="accept"
-                  className="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"
-                >
-                  <br />
-                  
-                  En soumettant ce formulaire, j&apos;accepte la collecte des
-                  informations saisies et l&apos;enregistrement de mes données
-                  afin d&apos;être recontacté.e par AriMayi. Pour en savoir plus,&nbsp; 
-                  <Link href="/politique" legacyBehavior>
-                    <a className="text-blue-500" onClick={() => {}}>
-                        je consulte la politique de confidentialité
-                    </a>
-                  </Link>
-                </label>
-              </div>
+              {/* Checkbox */}
+              <div className="flex items-start mb-5">
+                        <div className="flex items-center h-5">
+                        <input
+                            id="accept"
+                            name="accept"
+                            type="checkbox"
+                            checked={formData.accept}
+                            onChange={handleChange}
+                            className="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-blue-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-blue-600 dark:ring-offset-gray-800"
+                            required
+                        />
+                        </div>
+                        <label htmlFor="accept" className="ml-2 text-sm text-left font-medium text-gray-900 dark:text-gray-300">
+                        En soumettant ce formulaire, j&apos;accepte la collecte des informations saisies et l&apos;enregistrement de mes données afin d&apos;être recontacté.e par AriMayi. Pour en savoir plus,&nbsp;
+                        <Link href="/politique" legacyBehavior>
+                            <a className="text-blue-500">je consulte la politique de confidentialité</a>
+                        </Link>
+                        </label>
+                    </div>
+
+                    {/* Bouton */}
               <div className="flex justify-center items-center">
                 <button
                   type="submit"

@@ -1,13 +1,7 @@
 "use client";
 import HomeBanner from "../components/Home/HomeBanner";
 import CostumButton from "../components/Buttons/CostumButton";
-import Coordonnees from "../components/Contact/Coordonnees";
 import TestimonialSection from "../components/Partner/PartnerTestimony";
-import Carte from "../components/Utils/Carte";
-import mission1 from "@/public/assets/mission1.jpg";
-import mission2 from "@/public/assets/mission2.jpg";
-import mission3 from "@/public/assets/mission3.jpg";
-import CustomButton from "../components/Buttons/CustomButton";
 import HomeForm from "../components/Home/HomeForm";
 import { HomeMissionsSection } from "../components/Home/HomeMissionSection";
 
@@ -25,7 +19,7 @@ export default function HomeContainer() {
           entreprise pour une transition réussie vers l&apos;emploi.
         </p>
         <div className="buttons flex gap-4">
-          <CustomButton
+          <CostumButton
             text="Contactez Nous"
             classes="font-montserrat text-[20px]  text-white bg-orange hover:scale-110"
             src="/contact"
@@ -40,7 +34,7 @@ export default function HomeContainer() {
 
       <HomeMissionsSection />
 
-      {/* <TestimonialSection /> */}
+      <TestimonialSection />
       <div className="flex flex-col justify-center  bg-[#FFF]">
         <HomeForm />
       </div>

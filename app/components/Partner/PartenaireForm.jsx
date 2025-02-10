@@ -33,7 +33,7 @@ export default function PartenaireForm() {
         >
           {/* Heading */}
           <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-extrabold gradient-title mb-6 text-center">
-            Vous avez un projet? Contactez-nous
+            Vous avez un projet&nbsp;? Contactez-nous
           </h2>
 
           <div className="flex flex-col md:flex-row gap-6">
@@ -93,7 +93,7 @@ export default function PartenaireForm() {
                   required
                 />
               </div>
-              <div className="mb-4">
+              <div className="">
                 <label
                   htmlFor="contactPerson"
                   className="block text-sm font-medium text-gray-700 mb-2"
@@ -114,24 +114,24 @@ export default function PartenaireForm() {
             </div>
 
             {/* Right Section */}
-            <div className="md:w-1/2">
-              <div className="mb-4 h-full">
-                <label
-                  htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
-                >
-                  Message:
-                </label>
-                <textarea
-                  id="message"
-                  name="message"
-                  value={formData.message}
-                  onChange={handleChange}
-                  className="bg-blue-50 pt-4 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black "
-                  placeholder="Expliquez votre projet ici..."
-                  required
-                />
-              </div>
+            <div className="md:w-1/2 flex flex-col">
+                <div className="mb-4 flex-grow">
+                    <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                    >
+                    Message:
+                    </label>
+                    <textarea
+                    id="message"
+                    name="message"
+                    value={formData.message}
+                    onChange={handleChange}
+                    className="bg-blue-50 pt-4 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-black h-full min-h-[calc(4*46px+3*12px)] resize-none"
+                    placeholder="Expliquez votre projet ici..."
+                    required
+                    />
+                </div>
             </div>
           </div>
 

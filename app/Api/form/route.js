@@ -90,10 +90,10 @@ const sendEmailNotification = async (formData) => {
 // }
 export async function POST(request) {
     try {
-      const rawBody = await request.text(); // 🔄 Lire le corps brut de la requête
-      console.log("Raw Body:", rawBody); // 🔍 Vérifier si c'est vide ou incorrect
+      const rawBody = await request.text();
+      console.log("Raw Body:", rawBody); //Check if empty
   
-      const formData = JSON.parse(rawBody); // 📌 Convertir en JSON manuellement
+      const formData = JSON.parse(rawBody); //Convert JSON manually
       console.log("Données reçues après parsing:", formData); 
   
       const { nom, prenom, email, telephone, message, accept } = formData;

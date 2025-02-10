@@ -95,14 +95,14 @@ export default function OpportuniteContainer() {
         <h2 className="text-[32px] font-montserrat font-extrabold text-center mb-4 gradient-title">
             Des projets inspirants pour votre apprentissage
         </h2>
-        <p className="text-gray-800 text-center text-[18px] leading-[32px] text-[#353535] font-montserrat w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
+        <p className="text-gray-800 text-center text-[18px] leading-[36px] text-[#353535] font-montserrat w-full max-w-3xl mx-auto mt-4 mb-4 md:text-[24px] md:leading-[40px] px-8">
             Nos projets vous permettront de développer des compétences variées tout
             en contribuant à des solutions concrètes pour des besoins réels. Prêts à
             relever le défi ?
         </p>
 
         {/* Card Section */}
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-center  gap-8">
+        <div className="max-w-7xl mx-auto flex flex-wrap justify-center  gap-8 mt-10">
             {cards.map((card, index) => (
                 <div
                 key={card.id}
