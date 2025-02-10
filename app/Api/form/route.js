@@ -87,3 +87,14 @@ export async function POST(request) {
     );
   }
 }
+// export async function POST(req) {
+//     return Response.json({ message: "API fonctionne !" });
+// }
+
+export async function GET() {
+    return NextResponse.json(
+      { message: "Utilisez une requête POST pour soumettre le formulaire." },
+      { status: 200 }
+    );
+  }
+  
