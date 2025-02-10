@@ -46,34 +46,33 @@ export default function Coordonnees() {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setIsSubmitting(true);
-
+    
         try {
             const response = await fetch("/api/form", {
                 method: "POST",
                 headers: {
-                  "Content-Type": "application/json",
+                    "Content-Type": "application/json",
                 },
                 body: JSON.stringify(formData),
             });
-
+    
             if (!response.ok) {
-            const errorData = await response.json();
-            throw new Error(errorData.error || "Une erreur est survenue");
+                const errorData = await response.json();
+                throw new Error(errorData.error || "Une erreur est survenue");
             }
-
-            const data = await response.text();
+    
+            const data = await response.json(); // Changement ici : .text() -> .json()
             
             setFormData({
-            nom: "",
-            prenom: "",
-            email: "",
-            telephone: "",
-            message: "",
-            accept: false,
+                nom: "",
+                prenom: "",
+                email: "",
+                telephone: "",
+                message: "",
+                accept: false,
             });
             
-            const jsonData = JSON.parse(data); // Vérifie si c'est bien du JSON
-            toast.success(jsonData.message || "Message envoyé avec succès !");
+            toast.success(data.message || "Message envoyé avec succès !");
         } catch (error) {
             console.error("Error:", error);
             toast.error(error.message || "Une erreur est survenue lors de l'envoi du formulaire.");
