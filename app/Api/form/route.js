@@ -34,6 +34,7 @@ const sendEmailNotification = async (formData) => {
 export async function POST(request) {
   try {
     const formData = await request.json();
+    console.log("Données reçues:", formData); 
     const { nom, prenom, email, telephone, message, accept } = formData;
 
     // Validation des champs
