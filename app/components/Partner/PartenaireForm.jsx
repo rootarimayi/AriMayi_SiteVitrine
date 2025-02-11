@@ -145,13 +145,12 @@ export default function PartenaireForm() {
                 className="h-5 w-5 align-center text-blue-500 border-gray-300 rounded focus:ring-blue-500"
                 required
               />
-              <label htmlFor="policy" className="ml-3 text-sm text-gray-700">
-                Je respecte <Link href="/politique" legacyBehavior>
-                    <a className="text-blue-500" onClick={() => {}}>
-                       les politiques de confidentialité 
-                    </a>
-                  </Link> d&apos;Arimayi
-              </label>
+              <label htmlFor="accept" className="ml-2 text-sm text-left font-medium text-gray-900 dark:text-gray-300">
+                En soumettant ce formulaire, j&apos;accepte la collecte des informations saisies et l&apos;enregistrement de mes données afin d&apos;être recontacté.e par AriMayi. Pour en savoir plus,&nbsp;
+                <Link href="/politique" legacyBehavior>
+                    <a className="text-blue-500">je consulte la politique de confidentialité</a>
+                </Link>
+                </label>
             </div>
             <button
               type="submit"
