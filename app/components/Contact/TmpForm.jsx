@@ -121,101 +121,101 @@
 import { useState } from "react";
 // import Alert from "@reach/alert";
 
-export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
-  const [messageSent, setMessageSent] = useState(false);
-  const [messageCallout, setMessageCallout] = useState(
-    "📧 Message Sent! I'll get back to you soon."
-  );
-  const [sendInProgress, setSendInProgress] = useState(false);
-  const [hsla, setHsla] = useState("hsla(120, 96%, 88%, .85)");
+// export default function Contact() {
+//   const [name, setName] = useState("");
+//   const [email, setEmail] = useState("");
+//   const [message, setMessage] = useState("");
+//   const [messageSent, setMessageSent] = useState(false);
+//   const [messageCallout, setMessageCallout] = useState(
+//     "📧 Message Sent! I'll get back to you soon."
+//   );
+//   const [sendInProgress, setSendInProgress] = useState(false);
+//   const [hsla, setHsla] = useState("hsla(120, 96%, 88%, .85)");
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
+//   const handleSubmit = (e) => {
+//     e.preventDefault();
 
-    setSendInProgress(true);
-    fetch("/api/email", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email: email,
-        name: name,
-        message: message,
-      }),
-    })
-      .then((res) => {
-        if (res.status !== 200) {
-          setMessageCallout("📧 Message Failed to Send! 😵");
-          setHsla("hsla(10, 50%, 50%, .10)");
-        }
+//     setSendInProgress(true);
+//     fetch("/api/email", {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/json",
+//       },
+//       body: JSON.stringify({
+//         email: email,
+//         name: name,
+//         message: message,
+//       }),
+//     })
+//       .then((res) => {
+//         if (res.status !== 200) {
+//           setMessageCallout("📧 Message Failed to Send! 😵");
+//           setHsla("hsla(10, 50%, 50%, .10)");
+//         }
 
-        setSendInProgress(false);
-        setMessageSent(true);
-      })
-      .catch((err) => {
-        console.log(err);
-        setMessageCallout("📧 Message Failed to Send! 😵");
-        setHsla("hsla(10, 50%, 50%, .10)");
-        setSendInProgress(false);
-        setMessageSent(true);
-      });
-  };
+//         setSendInProgress(false);
+//         setMessageSent(true);
+//       })
+//       .catch((err) => {
+//         console.log(err);
+//         setMessageCallout("📧 Message Failed to Send! 😵");
+//         setHsla("hsla(10, 50%, 50%, .10)");
+//         setSendInProgress(false);
+//         setMessageSent(true);
+//       });
+//   };
 
-  return (
-    <>
-        <h1>Talk To Me</h1>
-        <form onSubmit={handleSubmit}>
-          <label>
-            Name: (required)
-            <input
-              type="text"
-              required
-              placeholder="bram"
-              onChange={() => setName(event.target.value)}
-            />
-          </label>
-          <br />
-          <br />
-          <label>
-            Email: (required)
-            <input
-              type="text"
-              required
-              placeholder="bram@bram.com"
-              onChange={() => setEmail(event.target.value)}
-            />
-          </label>
-          <br />
-          <br />
-          <label>
-            Message: (required)
-            <textarea
-              type="text"
-              required
-              placeholder="What's on your mind?"
-              onChange={() => setMessage(event.target.value)}
-            />
-          </label>
-          <br />
-          <br />
-          <input type="submit" value="Submit" />
-        </form>
-        <br />
-        {sendInProgress && <p>sending...</p>}
-        {messageSent && (
-          <Alert
-            style={{
-              background: hsla,
-              padding: "10px",
-            }}
-          >
-            <span>{messageCallout}</span>
-          </Alert>
-        )}
-    </>
-  );
-}
+//   return (
+//     <>
+//         <h1>Talk To Me</h1>
+//         <form onSubmit={handleSubmit}>
+//           <label>
+//             Name: (required)
+//             <input
+//               type="text"
+//               required
+//               placeholder="bram"
+//               onChange={() => setName(event.target.value)}
+//             />
+//           </label>
+//           <br />
+//           <br />
+//           <label>
+//             Email: (required)
+//             <input
+//               type="text"
+//               required
+//               placeholder="bram@bram.com"
+//               onChange={() => setEmail(event.target.value)}
+//             />
+//           </label>
+//           <br />
+//           <br />
+//           <label>
+//             Message: (required)
+//             <textarea
+//               type="text"
+//               required
+//               placeholder="What's on your mind?"
+//               onChange={() => setMessage(event.target.value)}
+//             />
+//           </label>
+//           <br />
+//           <br />
+//           <input type="submit" value="Submit" />
+//         </form>
+//         <br />
+//         {sendInProgress && <p>sending...</p>}
+//         {messageSent && (
+//           <Alert
+//             style={{
+//               background: hsla,
+//               padding: "10px",
+//             }}
+//           >
+//             <span>{messageCallout}</span>
+//           </Alert>
+//         )}
+//     </>
+//   );
+// }

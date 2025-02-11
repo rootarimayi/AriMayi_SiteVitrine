@@ -25,7 +25,7 @@ export default function FormationContainer() {
             }}
         >
             <p className="text-center md:text-left font-Opensans text-2xl leading-10 text-[#353535] max-w-[600px] mx-auto md:mx-0">
-                L'expérience est une lanterne attachée dans notre dos, qui n'éclaire que le chemin parcouru.
+                L&apos;expérience est une lanterne attachée dans notre dos, qui n&apos;éclaire que le chemin parcouru.
                 <span className="block mt-4 text-lg text-gray-600">– Confucius</span>
             </p>
         </blockquote>
