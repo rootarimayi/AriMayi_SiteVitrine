@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import { Resend } from 'resend';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
+const resend = new Resend(process.env.RESEND_API_KEY || "123");
 
 const createEmailContent = (formData) => {
   const { nom, prenom, email, telephone, message } = formData;
