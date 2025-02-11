@@ -14,9 +14,7 @@ export default function HomeContainer() {
             Trouvez <span className="gradient-title">votre futur</span> opportunité <span className="gradient-title">dans l&apos;IT</span>
         </h3>
         <p className="text-left font-monserrat text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
-          Vous êtes étudiant ou en reconversion professionnelle, AriMayi vous
-          accompagne depuis votre formation jusqu&apos;à votre intégration en
-          entreprise pour une transition réussie vers l&apos;emploi.
+          Formez-vous en situation réelle sur des <strong>projets digitaux concrets confiés par nos partenaires</strong> et devenez <strong>opérationnel.le en entreprise</strong>. Avec un accompagnement de la sélection à l&apos;intégration, donnez un nouvel élan à votre carrière !
         </p>
         <div className="buttons flex gap-4">
           <CostumButton

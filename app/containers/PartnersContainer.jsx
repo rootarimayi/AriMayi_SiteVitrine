@@ -24,9 +24,9 @@ export default function PartenairesContainer() {
                     Nos services pour les partenaires
                 </h3>
                 <p className="text-center md:text-left font-Opensans text-[24px] leading-[40px] text-[#353535] max-w-[600px] mx-auto md:mx-0">
-                    Chez AriMayi, nous nous engageons à soutenir les entreprises partenaires dans le développement de leurs projets digitaux tout en favorisant l&apos;apprentissage concret de nos apprenants.
+                    De <strong>l&apos;identité visuelle à l&apos;accompagnement commercial</strong>, nous prenons en charge l&apos;intégralité de votre projet digital. En collaborant avec nos apprenants, vous avancez efficacement tout en contribuant à leur <strong>opérationnalité en entreprise</strong>.
                 </p>
-                <p><strong className="text-center md:text-left font-Opensans text-[24px] leading-[40px] text-[#353535] max-w-[600px] mx-auto md:mx-0 gradient-title" style={{ marginTop: '60px' }}>Ensemble, construisons l&apos;avenir !</strong></p>
+                <p><strong className="text-center md:text-left font-Opensans text-[24px] leading-[40px] text-[#353535] max-w-[600px] mx-auto md:mx-0 gradient-title" style={{ marginTop: '60px' }}>Ensemble, développons les talents de demain !</strong></p>
             </PartnerBanner>
             
             <PartnerContent />

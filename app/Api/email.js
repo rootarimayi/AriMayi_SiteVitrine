@@ -1,47 +1,70 @@
 import nodemailer from "nodemailer";
 
 export default async function handler(req, res) {
-    if (req.method !== "POST") {
-        return res.status(405).json({ error: "Méthode non autorisée" });
-    }
+  console.log("-- sendEmail --");
 
-    console.log("-- sendEmail --");
+  if (req.method === "POST") {
+    // Process a POST request
 
-    const { email, name, message } = req.body;
-
-    if (!email || !name || !message) {
-        return res.status(400).json({ error: "Tous les champs sont obligatoires" });
-    }
-
-    // Configuration du transport Nodemailer
-    const transporter = nodemailer.createTransport({
-        service: "gmail",
-        auth: {
-            user: process.env.EMAIL_USERNAME,
-            pass: process.env.EMAIL_PASSWORD, // Utiliser un "mot de passe d'application"
-        },
+    const contactEmail = nodemailer.createTransport({
+      service: "gmail",
+      auth: {
+        user: process.env.SMTP_SERVER_USERNAME,
+        pass: process.env.SMTP_SERVER_PASSWORD,
+      },
     });
 
-    try {
-        // Vérification du transport
-        await transporter.verify();
-        console.log("Connexion SMTP réussie");
+    await new Promise((resolve, reject) => {
+      // verify connection configuration
+      contactEmail.verify((error) => {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          console.log("Ready to Send");
+          resolve();
+        }
+      });
+    });
 
-        // Envoi de l'email
-        const info = await transporter.sendMail({
-            from: `${name} <${email}>`,
-            to: process.env.EMAIL_USERNAME,
-            subject: "Contact Form Submission",
-            html: `<p><b>Name:</b> ${name}</p>
-                   <p><b>Email:</b> ${email}</p>
-                   <p><b>Message:</b> ${message}</p>`,
-        });
+    const email = req.body.email;
+    const name = req.body.name;
+    const message = req.body.message;
 
-        console.log("Email envoyé: " + info.response);
+    const mailOptions = {
+      from: `${name} <${email}>`,
+      to: process.env.SMTP_SERVER_USERNAME,
+      subject: "Contact Form Submission",
+      html: `<p><b>Name:</b> ${name}</p>
+           <p><b>Email:</b> ${email}</p>
+           <p><b>Message:</b> ${message}</p>`,
+    };
 
-        return res.status(200).json({ status: "success" });
-    } catch (error) {
-        console.error("Erreur lors de l'envoi de l'email:", error);
-        return res.status(500).json({ error: "Erreur lors de l'envoi de l'email" });
-    }
+    console.log(mailOptions);
+
+    await new Promise((resolve, reject) => {
+      // send mail
+      contactEmail.sendMail(mailOptions, function (error, info) {
+        if (error) {
+          console.log(error);
+          reject(error);
+        } else {
+          console.log("Email sent: " + info.response);
+          resolve(info);
+        }
+      });
+    });
+
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "application/json");
+    res.end(
+      JSON.stringify({
+        status: "success",
+      })
+    );
+  } else {
+    // Handle any other HTTP method
+    res.statusCode = 404;
+    res.end("Not Found");
+  }
 }

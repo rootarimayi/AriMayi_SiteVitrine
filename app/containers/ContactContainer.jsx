@@ -3,14 +3,18 @@ import ContactBanner from "../components/Contact/ContactBanner";
 import Coordonnees from "../components/Contact/Coordonnees";
 import Collapse from "../components/Contact/Collapse";
 import Contact from "../components/Contact/TmpForm";
+import ContactForm from "../components/Contact/TmpForm";
 
 export default function ContactContainer() {
     return (
       <main>
         <ContactBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out py-[50px] min-h-[calc(100vh-250px)]">
-          <h3 className="text-center text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase gradient-title whitespace-nowrap">
+        <h3 className="text-[48px] text-start font-monserrat font-extrabold uppercase gradient-title bg-clip-text w-[100%] md:w-[60%]">
               Contactez Nous
           </h3>
+          <p className="text-left font-Opensans text-[24px] leading-[40px] text-[#353535] w-[100%] md:w-[60%] lg:w-[50%]">
+          Besoin d&apos;informations sur nos formations ou nos collaborations ? <strong>Contactez-nous</strong> et découvrons ensemble comment <strong>AriMayi</strong> peut vous accompagner dans votre parcours ou votre projet digital.
+            </p>
           </ContactBanner>
         <div className="flex flex-col items-center text-center mt-20 bg-[#F4F2FF]">
           <h3 className="text-[48px] text-center font-montserrat font-bold gradient-title w-full md:w-[60%]">
@@ -21,8 +25,8 @@ export default function ContactContainer() {
               Votre point de départ vers de nouvelles opportunités professionnelles et la réussite de votre projet
           </p>
 
-        <Coordonnees />
-        {/* <Contact /> */}
+        {/* <Coordonnees /> */}
+        <ContactForm />
         </div>
         <div className="flex flex-col items-center text-left mt-20">
           <h2 className="text-[48px] text-center font-montserrat font-bold  gradient-title w-full md:w-[60%]">Foire Aux Questions...</h2>
@@ -61,7 +65,7 @@ export default function ContactContainer() {
             content="L’AFEST chez AriMayi, c’est un apprentissage en situation de travail structuré autour de la méthode E.T.I.C. : Engagement, Travail, Inclusion, Compétences. Une approche pragmatique qui fait de chaque expérience un levier de montée en compétences et d’insertion durable !"
           />
           <Collapse
-            title="Qu'est-ce que E.T.I.C (Engagement, Travail, Inclusion, Compétences?)"
+            title="Qu'est-ce que E.T.I.C (Engagement, Travail, Inclusion, Compétences)"
             content="Chez AriMayi, la méthode E.T.I.C. repose sur quatre piliers essentiels qui guident notre approche pédagogique et notre engagement envers l’employabilité durable :
             - Engagement  : Un accompagnement actif et personnalisé pour aider chacun à atteindre ses objectifs professionnels.
             - Travail : Une formation axée sur la pratique et l’expérimentation pour acquérir des compétences solides et opérationnelles.
