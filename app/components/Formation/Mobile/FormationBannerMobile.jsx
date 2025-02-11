@@ -9,12 +9,12 @@ export default function FormationBannerMobile({ children }) {
   
       if (child.type === 'h3') {
         return React.cloneElement(child, {
-          className: "text-[32px] text-start font-monserrat font-extrabold uppercase text-white bg-clip-text w-full mb-4", // Ajout de margin-bottom
+          className: "text-[32px] text-start font-monserrat font-extrabold uppercase text-white bg-clip-text w-full mb-4",
         });
       }
       if (child.type === 'p') {
         return React.cloneElement(child, {
-          className: "text-left font-monserrat text-[18px] leading-[32px] text-white w-full mt-4 mb-4", // Ajout de margin-top et margin-bottom
+          className: "text-left font-monserrat text-[18px] leading-[32px] text-white w-full mt-4 mb-4",
         });
       }
       if (child.type === 'div' && child.props.className?.includes('buttons')) {
@@ -29,8 +29,8 @@ export default function FormationBannerMobile({ children }) {
     });
   
     return (
-        <section className="relative bg-[#F4F2FF] py-16 flex flex-col items-center justify-start min-h-[50vh] md:min-h-[calc(100vh-200px)] w-full overflow-x-hidden z-10">
-            <div className="relative z-10 text-center gradient-title max-w-[90%] mb-8">
+        <section className="relative bg-[#F4F2FF] py-16 flex flex-col items-center justify-start min-h-[50vh] md:min-h-[calc(100vh-200px)] w-full overflow-x-hidden overflow-y-hidden z-10">
+            <div className="relative z-10 text-center text-[#353535] max-w-[90%] mb-8">
             {styledChildren}
             </div>
             <div className="relative">
