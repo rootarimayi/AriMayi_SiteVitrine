@@ -25,8 +25,8 @@ export default function ContactContainer() {
               Votre point de départ vers de nouvelles opportunités professionnelles et la réussite de votre projet
           </p>
 
-        {/* <Coordonnees /> */}
-        <ContactForm />
+        <Coordonnees />
+        {/* <ContactForm /> */}
         </div>
         <div className="flex flex-col items-center text-left mt-20">
           <h2 className="text-[48px] text-center font-montserrat font-bold  gradient-title w-full md:w-[60%]">Foire Aux Questions...</h2>
