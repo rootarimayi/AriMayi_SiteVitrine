@@ -8,7 +8,7 @@ export default function TestimonialSection() {
     {
       name: "Elliot",
       titre: "Apprenant en immersion",
-      avatar: "/assets/elliot.jpg",
+      avatar: "/images/elliot.jpg",
       message:
         "Pourquoi Arimayi? Par ce que c'était une entreprise qui a un projet..",
       videoUrl: "Elliot.mp4",
@@ -16,14 +16,14 @@ export default function TestimonialSection() {
     {
       name: "Kevin",
       titre: "Apprenant en stage de validation de formation",
-      avatar: "/assets/kevin.jpg",
+      avatar: "/images/kevin.jpg",
       message: "Arimayi donne la chance aux gens!",
       videoUrl: "Kevin.mp4",
     },
     {
       name: "Simon",
       titre: "apprenant",
-      avatar: "/assets/simon.jpg",
+      avatar: "/images/simon.jpg",
       message:
         "J'ai développé plein de nouvelles compétences tout ça dans un context stimulant de travail en équipe.",
       videoUrl: "Simon.mp4",
