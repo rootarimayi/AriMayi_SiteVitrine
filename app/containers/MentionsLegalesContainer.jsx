@@ -374,7 +374,7 @@ export default function MentionsLegalesContainer() {
         <main>
             <section className=" py-[150px] min-h-[calc(100vh-200px)] bg-gray-50">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <h1 className="text-3xl md:text-4xl font-bold text-center mb-12">
+                    <h1 className="text-3xl md:text-4xl font-bold text-center gradient-title mb-12">
                     Mentions Légales
                     </h1>
 

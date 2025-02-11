@@ -5,7 +5,7 @@ import React from "react";
 export default function PolitiqueContainer() {
   return (
     <main>
-      <div className="py-[50px]"></div>
+      <div className="py-[50px] flex justify-center items-center"></div>
       <section className="w-full py-8 md:py-16 bg-gradient-to-br from-gray-50 to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-8 md:mb-16">
@@ -63,11 +63,10 @@ export default function PolitiqueContainer() {
                     d&rsquo;accès, droit d&rsquo;effacement, droit
                     d&rsquo;opposition, droit de rectification, etc. Pour faire
                     une demande d&rsquo;exercice de ces droits, écrivez à cette
-                    adresse mail : 
-                    <a href="mailto:droit@rgpd.fr" className="text-indigo-600">
+                    adresse mail&nbsp; 
+                    <a href="mailto:rgpd@arimayi.fr" className="text-indigo-600">
                       rgpd@arimayi.fr
                     </a>
-                    .
                   </p>
                 </div>
                 <div className="border-t border-dashed border-gray-400 mt-6"></div>{" "}
