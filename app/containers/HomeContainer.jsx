@@ -34,7 +34,7 @@ export default function HomeContainer() {
 
       <HomeMissionsSection />
 
-      <TestimonialSection />
+      {/* <TestimonialSection /> */}
       <div className="flex flex-col justify-center  bg-[#FFF]">
         <HomeForm />
       </div>
