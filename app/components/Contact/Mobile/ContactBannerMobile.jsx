@@ -6,7 +6,7 @@ export default function ContactBannerMobile({ className, children }) {
     return (
         <section
             id="banner"
-            className={`py-[100px] flex items-center justify-center ${className} overflow-hidden`}
+            className={`py-[100px] flex items-center justify-center ${className} overflow-x-hidden overflow-y-hidden`}
         >
             <div className="container mx-auto px-4 lg:px-16 flex flex-col items-center">
                 <div className="text-left flex flex-col gap-6 z-20 mb-6">

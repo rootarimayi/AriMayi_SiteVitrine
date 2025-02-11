@@ -6,29 +6,30 @@ import FormationBanner from "../components/Formation/FormationBanner";
 import FormationForm from "../components/Formation/FormationForm";
 
 export default function FormationContainer() {
+    const bannerContent = (
+        <><h3 className="text-left gradient-title text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap">
+            Nos formations
+        </h3><p className="text-left font-monserrat text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
+                Nous proposons <strong>6 formations immersives</strong>, couvrant <strong>l&apos;identité visuelle, le développement, l&apos;IA, la cybersécurité et le commerce IT</strong>. Nos apprenants travaillent sur des <strong>projets réels</strong> pour acquérir une expérience terrain et devenir <strong>opérationnels en entreprise</strong>.
+            </p><blockquote
+                className="relative pl-6 py-4 my-8"
+                style={{
+                    borderLeft: '6px solid',
+                    borderImage: 'linear-gradient(to top, #54E0E9, #816CFF, #B163FF) 1'
+                }}
+            >
+                <p className="text-center md:text-left font-Opensans text-2xl leading-10 text-[#353535] max-w-[600px] mx-auto md:mx-0">
+                    <em>L&apos;expérience est une lanterne attachée dans notre dos, qui n&apos;éclaire que le chemin parcouru.</em>
+                    <em><span className="block mt-4 text-lg text-gray-600">– Confucius</span></em>
+                </p>
+            </blockquote></>
+      );
   return (
     <main>
       <FormationBanner
         className="bg-[#F4F2FF] transition-all duration-300 ease-in-out py-[200px] min-h-[calc(100vh-250px)] -z-10"
       >
-        <h3 className="text-left gradient-title text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535] whitespace-nowrap">
-            Nos formations
-        </h3>
-        <p className="text-left font-monserrat text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
-        Nous proposons <strong>6 formations immersives</strong>, couvrant <strong>l&apos;identité visuelle, le développement, l&apos;IA, la cybersécurité et le commerce IT</strong>. Nos apprenants travaillent sur des <strong>projets réels</strong> pour acquérir une expérience terrain et devenir <strong>opérationnels en entreprise</strong>.
-        </p>
-        <blockquote 
-            className="relative pl-6 py-4 my-8"
-            style={{
-            borderLeft: '6px solid',
-            borderImage: 'linear-gradient(to top, #54E0E9, #816CFF, #B163FF) 1'
-            }}
-        >
-            <p className="text-center md:text-left font-Opensans text-2xl leading-10 text-[#353535] max-w-[600px] mx-auto md:mx-0">
-                <em>L&apos;expérience est une lanterne attachée dans notre dos, qui n&apos;éclaire que le chemin parcouru.</em>
-                <em><span className="block mt-4 text-lg text-gray-600">– Confucius</span></em>
-            </p>
-        </blockquote>
+        {bannerContent}
       </FormationBanner>
       <section className="bg-gray-100 py-20 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">

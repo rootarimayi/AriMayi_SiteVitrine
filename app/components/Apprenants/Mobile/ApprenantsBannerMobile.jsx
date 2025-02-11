@@ -20,7 +20,7 @@ export default function ApprenantsBannerMobile({ children }) {
       });
     
       return (
-          <section className="relative py-16 flex flex-col items-center justify-start min-h-[calc(100vh-200px)] w-full overflow-hidden">
+          <section className="relative py-16 flex flex-col items-center justify-start min-h-[calc(100vh-200px)] w-full overflow-x-hidden overflow-y-hidden">
               <div className="relative z-10 text-center max-w-[90%] mb-8">
                   {styledChildren}
               </div>

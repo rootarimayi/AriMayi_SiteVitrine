@@ -7,25 +7,25 @@ export default function TestimonialSection() {
   const testimonials = [
     {
       name: "Elliot",
-      titre: "Apprenant en immersion",
+      titre: "Apprenant en immersion facilitée",
       avatar: "/images/elliot.jpg",
       message:
-        "Pourquoi Arimayi? Par ce que c'était une entreprise qui a un projet..",
+        "Pourquoi AriMayi ? Parce que c’est bien plus qu’une entreprise, c’est un projet porteur de sens, qui forme en situation réelle et accompagne vers l’opérationnalité.",
       videoUrl: "Elliot.mp4",
     },
     {
       name: "Kevin",
-      titre: "Apprenant en stage de validation de formation",
+      titre: "Apprenant en validation de formation",
       avatar: "/images/kevin.jpg",
-      message: "Arimayi donne la chance aux gens!",
+      message: "AriMayi donne sa chance à chacun !  Une vraie opportunité pour apprendre, évoluer et devenir opérationnel sur des projets concrets.",
       videoUrl: "Kevin.mp4",
     },
     {
       name: "Simon",
-      titre: "apprenant",
+      titre: "Apprenant en reconversion",
       avatar: "/images/simon.jpg",
       message:
-        "J'ai développé plein de nouvelles compétences tout ça dans un context stimulant de travail en équipe.",
+        "Grâce à AriMayi, j’ai développé de nouvelles compétences dans un contexte stimulant, avec une vraie dynamique de travail en équipe !",
       videoUrl: "Simon.mp4",
     },
   ];

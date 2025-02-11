@@ -46,8 +46,8 @@ export default function ApprenantsContent() {
             {/* Section 1 */}
             <section className="max-w-7xl px-8 mx-auto flex flex-col md:flex-row items-center bg-[#353535] text-white p-12 rounded-[32px] mt-12">
                 <div className="w-full">
-                    <h2 className="text-[38px] text-[#FFF] font-extrabold leading-[48.76px] text-left mb-4">L&#39;AFEST</h2>
-                    <p className="text-[20px] text-[#FFF] leading-relaxed flex-1 mb-6">À chaque étape, le cadre de l&#39;AFEST &#40;Action de Formation En Situation de Travail&#41; allie formation, autonomie et suivi personnalisé, permettant ainsi un apprentissage progressif, pertinent et immédiatement applicable.</p>
+                    <h2 className="text-[38px] text-[#FFF] font-extrabold leading-[48.76px] text-left mb-4">L&#39;AFEST &#40;Action de Formation En Situation de Travail&#41;</h2>
+                    <p className="text-[20px] text-[#FFF] leading-relaxed flex-1 mb-6">À chaque étape, le cadre de l&#39;AFEST allie formation, autonomie et suivi personnalisé, permettant ainsi un apprentissage progressif, pertinent et immédiatement applicable.</p>
                     <p className="text-[20px] text-[#FFF] leading-relaxed flex-1 mb-6">Notre approche à la fois humaine et performante assure à chaque apprenant, quel que soit son parcours, une montée en compétences concrète, et lui donne les clés pour s&apos;insérer durablement dans le monde du travail.</p>
                 </div>
             </section>

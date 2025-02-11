@@ -30,9 +30,9 @@ export default function ApprenantsContentMobile() {
             <section className="max-w-full px-4 mx-auto mb-6 mt-0">
                 <div className="w-full md:w-[300px] mx-auto rounded-3xl bg-[#353535] overflow-hidden transition-all duration-300 hover:scale-105 hover:shadow-lg">
                     <div className="flex flex-col gap-4 p-4">
-                        <h2 className="text-lg font-extrabold text-white">L&#39;AFEST</h2>
+                        <h2 className="text-lg font-extrabold text-white">L&#39;AFEST &#40;Action de Formation En Situation de Travail&#41;</h2>
                         <p className="text-sm text-white">
-                            À chaque étape, le cadre de l&#39;<span className="text-blue-600">AFEST</span> allie formation, autonomie et suivi personnalisé, permettant ainsi un apprentissage progressif, pertinent et immédiatement applicable.
+                            À chaque étape, le cadre de l&#39;AFEST allie formation, autonomie et suivi personnalisé, permettant ainsi un apprentissage progressif, pertinent et immédiatement applicable.
                         </p>
                         <p className="text-sm text-white">
                             Notre approche à la fois humaine et performante assure à chaque apprenant, quel que soit son parcours, une montée en compétences concrète, et lui donne les clés pour s&apos;insérer durablement dans le monde du travail.
