@@ -1,4 +1,4 @@
-// 'use client';
+"use client";
 // import { useForm } from 'react-hook-form';
 // import { zodResolver } from '@hookform/resolvers/zod';
 // import { z } from 'zod';
@@ -119,103 +119,98 @@
 // }
 
 import { useState } from "react";
-// import Alert from "@reach/alert";
+import { toast } from 'react-hot-toast';
 
-// export default function Contact() {
-//   const [name, setName] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [message, setMessage] = useState("");
-//   const [messageSent, setMessageSent] = useState(false);
-//   const [messageCallout, setMessageCallout] = useState(
-//     "📧 Message Sent! I'll get back to you soon."
-//   );
-//   const [sendInProgress, setSendInProgress] = useState(false);
-//   const [hsla, setHsla] = useState("hsla(120, 96%, 88%, .85)");
+export default function Contact() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [message, setMessage] = useState("");
+  const [sendInProgress, setSendInProgress] = useState(false);
 
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSendInProgress(true);
 
-//     setSendInProgress(true);
-//     fetch("/api/email", {
-//       method: "POST",
-//       headers: {
-//         "Content-Type": "application/json",
-//       },
-//       body: JSON.stringify({
-//         email: email,
-//         name: name,
-//         message: message,
-//       }),
-//     })
-//       .then((res) => {
-//         if (res.status !== 200) {
-//           setMessageCallout("📧 Message Failed to Send! 😵");
-//           setHsla("hsla(10, 50%, 50%, .10)");
-//         }
+    fetch("/api/email", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        email: email,
+        name: name,
+        message: message,
+      }),
+    })
+      .then((res) => {
+        if (res.status === 200) {
+          toast.success('📧 Message envoyé ! Je vous répondrai bientôt.', {
+            duration: 4000,
+            position: 'top-center',
+          });
+        } else {
+          toast.error('📧 Le message n\'a pas pu être envoyé !', {
+            duration: 4000,
+            position: 'top-center',
+          });
+        }
+      })
+      .catch((err) => {
+        console.log(err);
+        toast.error('📧 Le message n\'a pas pu être envoyé !', {
+          duration: 4000,
+          position: 'top-center',
+        });
+      })
+      .finally(() => {
+        setSendInProgress(false);
+      });
+  };
 
-//         setSendInProgress(false);
-//         setMessageSent(true);
-//       })
-//       .catch((err) => {
-//         console.log(err);
-//         setMessageCallout("📧 Message Failed to Send! 😵");
-//         setHsla("hsla(10, 50%, 50%, .10)");
-//         setSendInProgress(false);
-//         setMessageSent(true);
-//       });
-//   };
+  return (
+    <>
+      <h1>Talk To Me</h1>
+      <form onSubmit={handleSubmit} className="space-y-4">
+        <label className="block">
+          Name: (required)
+          <input
+            type="text"
+            required
+            placeholder="bram"
+            onChange={(e) => setName(e.target.value)}
+            className="mt-1 block w-full"
+          />
+        </label>
 
-//   return (
-//     <>
-//         <h1>Talk To Me</h1>
-//         <form onSubmit={handleSubmit}>
-//           <label>
-//             Name: (required)
-//             <input
-//               type="text"
-//               required
-//               placeholder="bram"
-//               onChange={() => setName(event.target.value)}
-//             />
-//           </label>
-//           <br />
-//           <br />
-//           <label>
-//             Email: (required)
-//             <input
-//               type="text"
-//               required
-//               placeholder="bram@bram.com"
-//               onChange={() => setEmail(event.target.value)}
-//             />
-//           </label>
-//           <br />
-//           <br />
-//           <label>
-//             Message: (required)
-//             <textarea
-//               type="text"
-//               required
-//               placeholder="What's on your mind?"
-//               onChange={() => setMessage(event.target.value)}
-//             />
-//           </label>
-//           <br />
-//           <br />
-//           <input type="submit" value="Submit" />
-//         </form>
-//         <br />
-//         {sendInProgress && <p>sending...</p>}
-//         {messageSent && (
-//           <Alert
-//             style={{
-//               background: hsla,
-//               padding: "10px",
-//             }}
-//           >
-//             <span>{messageCallout}</span>
-//           </Alert>
-//         )}
-//     </>
-//   );
-// }
+        <label className="block">
+          Email: (required)
+          <input
+            type="email"
+            required
+            placeholder="bram@bram.com"
+            onChange={(e) => setEmail(e.target.value)}
+            className="mt-1 block w-full"
+          />
+        </label>
+
+        <label className="block">
+          Message: (required)
+          <textarea
+            required
+            placeholder="What's on your mind?"
+            onChange={(e) => setMessage(e.target.value)}
+            className="mt-1 block w-full"
+          />
+        </label>
+
+        <button
+          type="submit"
+          disabled={sendInProgress}
+          className="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 disabled:opacity-50"
+        >
+          {sendInProgress ? "Envoi en cours..." : "Envoyer"}
+        </button>
+      </form>
+    </>
+  );
+}
