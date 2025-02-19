@@ -2,8 +2,6 @@
 import ContactBanner from "../components/Contact/ContactBanner";
 import Coordonnees from "../components/Contact/Coordonnees";
 import Collapse from "../components/Contact/Collapse";
-import Contact from "../components/Contact/TmpForm";
-import ContactForm from "../components/Contact/TmpForm";
 
 export default function ContactContainer() {
     return (
@@ -26,7 +24,6 @@ export default function ContactContainer() {
           </p>
 
         <Coordonnees />
-        {/* <ContactForm /> */}
         </div>
         <div className="flex flex-col items-center text-left mt-20">
           <h2 className="text-[48px] text-center font-montserrat font-bold  gradient-title w-full md:w-[60%]">Foire Aux Questions...</h2>
