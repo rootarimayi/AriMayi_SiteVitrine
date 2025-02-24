@@ -19,12 +19,12 @@ export default function HomeContainer() {
         <div className="buttons flex gap-4">
           <CostumButton
             text="Contactez Nous"
-            classes="font-montserrat text-[20px]  text-white bg-orange hover:scale-110"
+            classes="border-2 border-[#F68A67] text-[#F68A67] rounded-[8px] hover:bg-[#F68A67] hover:text-white transition-all duration-300 ease-in-out"
             src="/contact"
           />
           <CostumButton
             text="Découvrez nos Formations"
-            classes="font-montserrat text-[20px]  bg-orange text-white  hover:scale-110 mx-[10px]"
+            classes="border-2 border-[#F68A67] text-[#F68A67] rounded-[8px] hover:bg-[#F68A67] hover:text-white transition-all duration-300 ease-in-out"
             src="/formation"
           />
         </div>
