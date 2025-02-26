@@ -3,6 +3,9 @@ import SalaryApprenticeshipSimulator from "../components/Apprenants/SalaryAppren
 
 export default function SalaryApprenticeshipSimulatorContainer() {
     return (
-        <SalaryApprenticeshipSimulator />
+        <main style={{ minHeight: "100vh", display: "flex", paddingBlock:"10%" ,  justifyContent: "center", alignItems: "center" }}>
+            <SalaryApprenticeshipSimulator />
+        </main>
+        
     )
 }

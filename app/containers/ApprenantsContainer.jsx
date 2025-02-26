@@ -11,9 +11,18 @@ import ApprenantsBanner from "../components/Apprenants/ApprenantsBanner";
 import ApprenantsContent from "../components/Apprenants/ApprenantsContent";
 import TestimonialSection from "../components/Home/TestimonialSection";
 import TitleLink from "../components/Utils/TitleLink";
+import { useState } from "react";
+import SalaryApprenticeshipSimulatorContainer from "./SalaryApprenticeshipSimulatorContainer";
+import { ArrowDownCircle, ArrowUpCircle, ChevronsDown, ChevronsUp } from "lucide-react";
+import SalaryApprenticeshipSimulator from "../components/Apprenants/SalaryApprenticeshipSimulator";
 
 
 export default function ApprenantsContainer() {
+     const [isVisible, setIsVisible] = useState(false);
+    
+        const toggleVisibility = () => {
+            setIsVisible((prev) => !prev);
+        };
     return(
         <main>
             <ApprenantsBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out py-[100px] min-h-[calc(100vh-200px)] -z-20">
@@ -37,14 +46,46 @@ export default function ApprenantsContainer() {
                 <TitleLink
                     balise="h1"
                     name="Mon salaire en tant qu'alternant ?"
-                    href="/simulator-salary-apprenticeship"
                     data-testid="title"
                     style={{
                         marginBottom: "0px",
                     }}
                 />
             </div>
+            <div style={{ display: "flex", flexDirection: "column", justifyContent: "center" }}>
+                <div
+                    onClick={toggleVisibility}
+                    style={{
+                        display: "flex",
+                        flexDirection: "column",
+                        gap: "8px",
+                        color: "inherit",
+                        textDecoration: "none",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        cursor: "pointer",
+                        margin: "20px 0",
+                    }}
+                >
+                    <span style={{ color: "#F68A67", fontSize: "28px", fontWeight: "600" }}>
+                        {isVisible ? 'Cacher' : 'Afficher le simulateur'}
+                    </span>
+                    {isVisible ? (
+                        <ChevronsUp size={40} color="#F68A67" />
+                    ) : (
+                        <ChevronsDown size={40} color="#F68A67" />
+                    )}
+                </div>
 
+                {/* Conteneur pour le composant avec transition de hauteur */}
+                <div className="overflow-hidden transition-all duration-500">
+                    <div
+                        className={`max-h-0 transition-max-height duration-500 ease-in-out ${isVisible ? 'max-h-screen opacity-100' : 'opacity-0'}`}
+                    >
+                        <SalaryApprenticeshipSimulator/>
+                    </div>
+                </div>
+            </div>
             <ApprenantsForm />
         </main>
     )

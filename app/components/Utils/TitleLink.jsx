@@ -22,14 +22,14 @@ const TitleLink = ({ balise, name, href, style }) => {
       >
         {name}
       </Tag>
-      {href && (
+      {/* {href && (
         <Link href={href} passHref>
         <div style={{ display: "flex", gap: "8px", color: "inherit", textDecoration: "none", textAlign: "center", cursor: "pointer" }}>
             <span style={{ color: "#F68A67", fontSize: "28px", fontWeight: "600" }}>Simuler</span>
             <ArrowRightCircle size={40} color="#F68A67" />
         </div>
       </Link>
-      )}
+      )} */}
     </div>
   );
 };

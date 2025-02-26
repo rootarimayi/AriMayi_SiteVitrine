@@ -106,7 +106,7 @@ export default function PartenaireForm() {
           >
             {/* Heading */}
             <h2 className="text-[32px] sm:text-[40px] md:text-[48px] font-extrabold gradient-title mb-6 text-center">
-              Vous avez un projet&nbsp;? Contactez-nous
+              Vous avez un projet&nbsp; digital ou de recrutement ? Contactez-nous
             </h2>
   
             <div className="flex flex-col md:flex-row gap-6">
