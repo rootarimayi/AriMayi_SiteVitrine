@@ -10,6 +10,7 @@ import ApprenantsForm from "../components/Apprenants/ApprenantsForm";
 import ApprenantsBanner from "../components/Apprenants/ApprenantsBanner";
 import ApprenantsContent from "../components/Apprenants/ApprenantsContent";
 import TestimonialSection from "../components/Home/TestimonialSection";
+import TitleLink from "../components/Utils/TitleLink";
 
 
 export default function ApprenantsContainer() {
@@ -31,6 +32,18 @@ export default function ApprenantsContainer() {
             <Opportunite />
 
             <TestimonialSection />
+
+            <div style={{ display: "flex", justifyContent: "center" }}>
+                <TitleLink
+                    balise="h1"
+                    name="Mon salaire en tant qu'alternant ?"
+                    href="/simulator-salary-apprenticeship"
+                    data-testid="title"
+                    style={{
+                        marginBottom: "0px",
+                    }}
+                />
+            </div>
 
             <ApprenantsForm />
         </main>
