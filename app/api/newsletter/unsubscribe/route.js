@@ -57,7 +57,7 @@ export async function GET(req) {
       `,
     });
 
-    return new Response('Vous avez été désabonné avec succès');
+   return NextResponse.redirect(new URL('/newsletter-result?token=0&isSubscribe=false', req.url));
   } catch (error) {
     console.error('Unsubscribe error:', error);
     return new Response('Une erreur est survenue', { status: 500 });
