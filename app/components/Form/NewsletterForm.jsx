@@ -6,6 +6,7 @@ const NewsletterForm = () => {
   const [email, setEmail] = useState('');
   const [showPopup, setShowPopup] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,14 +14,30 @@ const NewsletterForm = () => {
     if (!email) return;
     
     setIsLoading(true);
-    // Simuler un appel API
-    setTimeout(() => {
-      setIsLoading(false);
+    setErrorMessage('');
+    try {
+      const response = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || 'Une erreur est survenue');
+      }
+
       setShowPopup(true);
       setEmail('');
       // Fermer le popup après 5 secondes
       setTimeout(() => setShowPopup(false), 5000);
-    }, 1000);
+    } catch (error) {
+      setErrorMessage(error.message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
