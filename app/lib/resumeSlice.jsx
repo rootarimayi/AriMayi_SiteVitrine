@@ -1,9 +1,17 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { 
-  getExperiences, postExperience, deleteExperience, 
-  getEducation, postEducation, deleteEducation, 
-  getSkills, postSkills, deleteSkill, 
-  getHobbies, postHobby, deleteHobby 
+import {
+  getExperiences,
+  postExperience,
+  deleteExperience,
+  getEducation,
+  postEducation,
+  deleteEducation,
+  getSkills,
+  postSkills,
+  removeSkill,
+  getHobbies,
+  postHobby,
+  deleteHobby
 } from "./resumeThunks";
 
 const initialState = {
@@ -19,7 +27,7 @@ const resumeSlice = createSlice({
   name: "resume",
   initialState,
   reducers: {
-    addExperience: (state, action) => {
+    addExperienceLocal: (state, action) => {
       state.experiences.push(action.payload);
     },
     updateExperience: (state, action) => {
@@ -28,11 +36,11 @@ const resumeSlice = createSlice({
         state.experiences[index] = { ...state.experiences[index], ...action.payload.data };
       }
     },
-    deleteExperience: (state, action) => {
+    removeExperienceLocal: (state, action) => {
       state.experiences = state.experiences.filter(exp => exp.id !== action.payload);
     },
-    
-    addEducation: (state, action) => {
+
+    addEducationLocal: (state, action) => {
       state.education.push(action.payload);
     },
     updateEducation: (state, action) => {
@@ -41,21 +49,21 @@ const resumeSlice = createSlice({
         state.education[index] = { ...state.education[index], ...action.payload.data };
       }
     },
-    deleteEducation: (state, action) => {
+    removeEducationLocal: (state, action) => {
       state.education = state.education.filter(edu => edu.id !== action.payload);
     },
 
-    addSkill: (state, action) => {
+    addSkillLocal: (state, action) => {
       state.skills.push(action.payload);
     },
-    deleteSkill: (state, action) => {
+    removeSkillLocal: (state, action) => {
       state.skills = state.skills.filter(skill => skill.id !== action.payload);
     },
 
-    addHobby: (state, action) => {
+    addHobbyLocal: (state, action) => {
       state.hobbies.push(action.payload);
     },
-    deleteHobby: (state, action) => {
+    removeHobbyLocal: (state, action) => {
       state.hobbies = state.hobbies.filter(hobby => hobby.id !== action.payload);
     },
 
@@ -101,7 +109,7 @@ const resumeSlice = createSlice({
       .addCase(postSkills.fulfilled, (state, action) => {
         state.skills.push(action.payload);
       })
-      .addCase(deleteSkill.fulfilled, (state, action) => {
+      .addCase(removeSkill.fulfilled, (state, action) => {
         state.skills = state.skills.filter(skill => skill.id !== action.payload);
       })
       .addCase(getHobbies.fulfilled, (state, action) => {
@@ -117,11 +125,35 @@ const resumeSlice = createSlice({
 });
 
 export const {
-  addExperience, updateExperience, deleteExperience,
-  addEducation, updateEducation, deleteEducation,
-  addSkill, deleteSkill,
-  addHobby, deleteHobby,
-  setLocation, saveDraft, loadDraft, clearDraft
+  addExperienceLocal,
+  updateExperience,
+  removeExperienceLocal,
+  addEducationLocal,
+  updateEducation,
+  removeEducationLocal,
+  addSkillLocal,
+  removeSkillLocal,
+  addHobbyLocal,
+  removeHobbyLocal,
+  setLocation,
+  saveDraft,
+  loadDraft,
+  clearDraft,
 } = resumeSlice.actions;
+
+export {
+  getExperiences,
+  postExperience,
+  deleteExperience,
+  getEducation,
+  postEducation, 
+  deleteEducation,
+  getSkills,
+  postSkills,
+  removeSkill,
+  getHobbies,
+  postHobby,
+  deleteHobby
+};
 
 export default resumeSlice.reducer;

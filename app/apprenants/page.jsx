@@ -7,8 +7,6 @@ export default function ApprenantsPage() {
             <ApprenantsContainer />
             <FloatingButton
                 buttonText="Envoyer mon CV"
-                formTitle="J'envoie mon CV 🚀"
-                formTitleClass="gradient-title text-[28px]"
             />
         </>
     )

@@ -133,8 +133,8 @@ export const deleteHobby = createAsyncThunk(
   }
 );
 
-export const deleteSkill = createAsyncThunk(
-  "resume/deleteSkill",
+export const removeSkill = createAsyncThunk(
+  "resume/removeSkill",
   async (id, thunkAPI) => {
     try {
       await axios.delete(`/api/skills/${id}`);

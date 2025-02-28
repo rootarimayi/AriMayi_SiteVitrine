@@ -3,7 +3,8 @@ import { headers } from "next/headers";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import "./globals.css";
-
+import { ReduxProvider } from "./storeProvider";
+import store from "./lib/store";
 import { Open_Sans, Montserrat } from 'next/font/google'
 import DynamicLayout from "./components/Utils/DynamicLayout";
 import { Toaster } from 'react-hot-toast';
@@ -68,10 +69,12 @@ export default function RootLayout({ children }) {
     <html lang="fr">
       <body className="antialiased">
         <GoogleAnalytics gaId="G-FKC9P276KR" />
-        <Toaster position="top-right" reverseOrder={false} />
-        <DynamicLayout>
-          {children}
-        </DynamicLayout>
+        <Toaster position="top-center" reverseOrder={false} />
+        <ReduxProvider>
+          <DynamicLayout>
+            {children}
+          </DynamicLayout>
+        </ReduxProvider>
         {/* <Header />{children}< Footer/> */}
       </body>
     </html>
