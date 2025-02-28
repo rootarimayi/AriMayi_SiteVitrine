@@ -3,6 +3,8 @@ import CostApprenticeshipSimulator from "../components/Partner/CostApprenticeshi
 
 export default function CostApprenticeshipSimulatorContainer() {
     return (
-        <CostApprenticeshipSimulator />
+        <main style={{ minHeight: "100vh", display: "flex", paddingBlock:"10%", justifyContent: "center", alignItems: "center" }}>
+            <CostApprenticeshipSimulator />
+        </main>
     )
 }
