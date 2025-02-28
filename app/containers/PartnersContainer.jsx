@@ -43,8 +43,6 @@ export default function PartenairesContainer() {
                     }}
                 />
             </div>
-<<<<<<< HEAD
-=======
 
             <div style={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
                 <div
@@ -82,7 +80,6 @@ export default function PartenairesContainer() {
                     </div>
                 </div>
             </div>
->>>>>>> bb06010b90626773ed4ba1adaf475339912cb528
 
             <PartenaireForm />
         </main>
