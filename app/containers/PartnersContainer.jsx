@@ -24,19 +24,17 @@ export default function PartenairesContainer() {
 
             <PartnerTestimony />
 
-            <TitleLink
-                balise="h1"
-                name="Combien me coûte mon alternant ?"
-                href="/simulator-cost-apprenticeship"
-                data-testid="title"
-                style={{
-                    fontSize: "1rem",
-                    marginBottom: "0px",
-                    width: "140px",
-                    fontWeight: 1000,
-                    textAlign: "center",
-                }}
-            />
+            <div style={{ display: "flex", justifyContent: "center" }}>
+                <TitleLink
+                    balise="h1"
+                    name="Combien va me coûter mon alternant ?"
+                    href="/simulator-cost-apprenticeship"
+                    data-testid="title"
+                    style={{
+                        marginBottom: "0px",
+                    }}
+                />
+            </div>
 
             <PartenaireForm />
         </main>
