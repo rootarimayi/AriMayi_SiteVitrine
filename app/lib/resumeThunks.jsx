@@ -1,146 +1,104 @@
-import { createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "axios";
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from 'axios';
 
-export const getExperiences = createAsyncThunk(
-  "resume/getExperiences",
-  async (_, thunkAPI) => {
+// URL endpoint in Swagger === https://admin.arimayi.io/arimayi-admin/website/resume-upload/
+
+// URL de base de l'API - à remplacer par votre URL réelle
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://admin.arimayi.io';
+
+// Instance axios
+const api = axios.create({
+  baseURL: API_BASE_URL,
+  headers: {
+    'Content-Type': 'application/json',
+  },
+});
+
+// GET CV with ID
+export const fetchResumeById = createAsyncThunk(
+  'resume/fetchById',
+  async (resumeId, { rejectWithValue }) => {
     try {
-      const response = await axios.get("/api/experiences");
+      const response = await api.get(`/arimayi-admin/website/resume-upload/${resumeId}/`);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to fetch experiences");
+      return rejectWithValue(error.response?.data || 'Erreur lors de la récupération du CV');
     }
   }
 );
 
-export const getEducation = createAsyncThunk(
-  "resume/getEducation",
-  async (_, thunkAPI) => {
+// GET
+export const fetchAllResumes = createAsyncThunk(
+  'resume/fetchAll',
+  async (_, { rejectWithValue }) => {
     try {
-      const response = await axios.get("/api/education");
+      const response = await api.get('/arimayi-admin/website/resume-upload/');
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to fetch education");
+      return rejectWithValue(error.response?.data || 'Erreur lors de la récupération des CVs');
     }
   }
 );
 
-export const getSkills = createAsyncThunk(
-  "resume/getSkills",
-  async (_, thunkAPI) => {
+// CREATE
+export const createResume = createAsyncThunk(
+  'resume/create',
+  async (resumeData, { rejectWithValue }) => {
     try {
-      const response = await axios.get("/api/skills");
+      const formattedData = formatResumeData(resumeData);
+      const response = await api.post('/arimayi-admin/website/resume-upload/', formattedData);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to fetch skills");
+      return rejectWithValue(error.response?.data || 'Erreur lors de la création du CV');
     }
   }
 );
 
-export const getHobbies = createAsyncThunk(
-  "resume/getHobbies",
-  async (_, thunkAPI) => {
+// PATCH
+export const updateResume = createAsyncThunk(
+  'resume/update',
+  async ({ resumeId, resumeData }, { rejectWithValue }) => {
     try {
-      const response = await axios.get("/api/hobbies");
+      const formattedData = formatResumeData(resumeData);
+      const response = await api.put(`/arimayi-admin/website/resume-upload/${resumeId}/`, formattedData);
       return response.data;
     } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to fetch hobbies");
+      return rejectWithValue(error.response?.data || 'Erreur lors de la mise à jour du CV');
     }
   }
 );
 
-export const postExperience = createAsyncThunk(
-  "resume/postExperience",
-  async (experience, thunkAPI) => {
+// DELETE
+export const deleteResume = createAsyncThunk(
+  'resume/delete',
+  async (resumeId, { rejectWithValue }) => {
     try {
-      const response = await axios.post("/api/experiences", experience);
-      return response.data;
+      await api.delete(`/arimayi-admin/website/resume-upload/${resumeId}/`);
+      return resumeId;
     } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to add experience");
+      return rejectWithValue(error.response?.data || 'Erreur lors de la suppression du CV');
     }
   }
 );
 
-export const postEducation = createAsyncThunk(
-  "resume/postEducation",
-  async (education, thunkAPI) => {
-    try {
-      const response = await axios.post("/api/education", { education });
-      return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to add education");
-    }
-  }
-);
+const formatResumeData = (data) => {
+  return {
+    last_name: data.last_name,
+    first_name: data.first_name,
+    email: data.email,
+    description: data.description || null,
+    experiences: data.experiences || null,
+    school_career: data.school_career || null,
+    hobbies: data.hobbies || null,
+    locations: data.locations || null,
+    skills: data.skills || null,
+  };
+};
 
-export const postHobby = createAsyncThunk(
-  "resume/postHobby",
-  async (hobby, thunkAPI) => {
-    try {
-      const response = await axios.post("/api/hobbies", { hobby });
-      return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to add hobby");
-    }
-  }
-);
-
-export const postSkills = createAsyncThunk(
-  "resume/postSkills",
-  async (skill, thunkAPI) => {
-    try {
-      const response = await axios.post("/api/skills", { skill });
-      return response.data;
-    } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to add skill");
-    }
-  }
-);
-
-export const deleteExperience = createAsyncThunk(
-  "resume/deleteExperience",
-  async (id, thunkAPI) => {
-    try {
-      await axios.delete(`/api/experiences/${id}`);
-      return id;
-    } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to delete experience");
-    }
-  }
-);
-
-export const deleteEducation = createAsyncThunk(
-  "resume/deleteEducation",
-  async (id, thunkAPI) => {
-    try {
-      await axios.delete(`/api/education/${id}`);
-      return id;
-    } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to delete education");
-    }
-  }
-);
-
-export const deleteHobby = createAsyncThunk(
-  "resume/deleteHobby",
-  async (id, thunkAPI) => {
-    try {
-      await axios.delete(`/api/hobbies/${id}`);
-      return id;
-    } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to delete hobby");
-    }
-  }
-);
-
-export const removeSkill = createAsyncThunk(
-  "resume/removeSkill",
-  async (id, thunkAPI) => {
-    try {
-      await axios.delete(`/api/skills/${id}`);
-      return id;
-    } catch (error) {
-      return thunkAPI.rejectWithValue("Failed to delete skill");
-    }
-  }
-);
+export default {
+  fetchResumeById,
+  fetchAllResumes,
+  createResume,
+  updateResume,
+  deleteResume,
+};

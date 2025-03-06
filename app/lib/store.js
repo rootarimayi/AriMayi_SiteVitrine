@@ -1,11 +1,11 @@
 "use client";
 import { configureStore } from "@reduxjs/toolkit";
-import resumeSlice from "./resumeSlice";
+import resumeReducer from "./resumeSlice";
 
 // Création du store
 const store = configureStore({
   reducer: {
-    resume: resumeSlice,
+    resume: resumeReducer,
   },
 });
 
