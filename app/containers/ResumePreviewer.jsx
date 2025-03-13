@@ -1,10 +1,82 @@
 import React, { useEffect } from 'react';
+import { jsPDF } from "jspdf";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchResumeById } from './resumeThunks';
+import { fetchResumeById } from '../lib/resumeThunks';
 
 export default function ResumeViewer({ resumeId }) {
     const dispatch = useDispatch();
     const { currentResume, status, error } = useSelector(state => state.resume);
+
+    const downloadPDF = () => {
+        const { trigram } = currentResume;
+        const doc = new jsPDF();
+        
+        // Titre
+        doc.setFontSize(20);
+        doc.text(`CV - ${trigram}`, 10, 10);
+        
+        // Ligne de séparation
+        doc.setLineWidth(0.5);
+        doc.line(10, 15, 200, 15); // Ligne horizontale
+    
+        // Informations personnelles
+        doc.setFontSize(14);
+        doc.text(`Email: ${currentResume.email}`, 10, 20);
+        doc.text(`Trigram: ${trigram}`, 10, 25);
+    
+        // Description
+        if (currentResume.description) {
+            doc.setFontSize(12);
+            doc.text("Description:", 10, 30);
+            doc.setFontSize(12);
+            doc.text(currentResume.description, 10, 35);
+        }
+    
+        // Expériences professionnelles
+        if (currentResume.experiences && currentResume.experiences.length > 0) {
+            doc.setFontSize(14);
+            doc.text("Expériences Professionnelles:", 10, 50);
+            currentResume.experiences.forEach((exp, index) => {
+                doc.setFontSize(12);
+                doc.text(`${exp.title} - ${exp.company}`, 10, 55 + index * 10);
+                doc.text(`(${exp.startDate} - ${exp.endDate})`, 10, 60 + index * 10);
+            });
+        }
+    
+        // Formation
+        if (currentResume.school_career && currentResume.school_career.length > 0) {
+            doc.setFontSize(14);
+            doc.text("Formation:", 10, 70 + currentResume.experiences.length * 10);
+            currentResume.school_career.forEach((edu, index) => {
+                doc.setFontSize(12);
+                doc.text(`${edu.degree} - ${edu.school}`, 10, 75 + (currentResume.experiences.length * 10) + index * 10);
+                doc.text(`(${edu.startDate} - ${edu.endDate})`, 10, 80 + (currentResume.experiences.length * 10) + index * 10);
+            });
+        }
+    
+        // Compétences
+        if (currentResume.skills && currentResume.skills.length > 0) {
+            doc.setFontSize(14);
+            doc.text("Compétences:", 10, 90 + (currentResume.experiences.length * 10) + (currentResume.school_career.length * 10));
+            currentResume.skills.forEach((skill, index) => {
+                doc.setFontSize(12);
+                doc.text(skill.name, 10, 95 + (currentResume.experiences.length * 10) + (currentResume.school_career.length * 10) + index * 10);
+            });
+        }
+    
+        // Hobbies
+        if (currentResume.hobbies && currentResume.hobbies.length > 0) {
+            doc.setFontSize(14);
+            doc.text("Centres d'intérêt:", 10, 100 + (currentResume.experiences.length * 10) + (currentResume.school_career.length * 10) + (currentResume.skills.length * 10));
+            currentResume.hobbies.forEach((hobby, index) => {
+                doc.setFontSize(12);
+                doc.text(hobby.name, 10, 105 + (currentResume.experiences.length * 10) + (currentResume.school_career.length * 10) + (currentResume.skills.length * 10) + index * 10);
+            });
+        }
+
+        const fileName = `${trigram}-resume.pdf`;
+        doc.save(fileName);
+    };    
 
     useEffect(() => {
         if (resumeId) {
@@ -127,6 +199,10 @@ export default function ResumeViewer({ resumeId }) {
                 <p>Dernière mise à jour: {new Date(currentResume.uploaded_at).toLocaleDateString()}</p>
                 <p>Trigram: {currentResume.trigram}</p>
             </div>
+
+            <button onClick={downloadPDF} className="mb-4 bg-blue-500 text-white rounded p-2">
+                Télécharger en PDF
+            </button>
         </div>
     );
 }

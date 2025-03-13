@@ -92,6 +92,7 @@ const formatResumeData = (data) => {
     hobbies: data.hobbies || null,
     locations: data.locations || null,
     skills: data.skills || null,
+    contract_type: data.contract_type || null,
   };
 };
 

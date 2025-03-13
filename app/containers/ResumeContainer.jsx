@@ -22,6 +22,7 @@ export default function ResumeContainer({ resumeId }) {
         first_name: '',
         email: '',
         description: '',
+        contract_type: '',
         experiences: [],
         school_career: [],
         hobbies: [],
@@ -52,7 +53,8 @@ export default function ResumeContainer({ resumeId }) {
                 last_name: currentResume.last_name || '',
                 first_name: currentResume.first_name || '',
                 email: currentResume.email || '',
-                description: currentResume.description || ''
+                description: currentResume.description || '',
+                contract_type: currentResume.contract_type || ''
             });
         }
     }, [currentResume, resumeId]);
@@ -100,7 +102,8 @@ export default function ResumeContainer({ resumeId }) {
             last_name: personalInfo.last_name,
             first_name: personalInfo.first_name,
             email: personalInfo.email,
-            description: personalInfo.description
+            description: personalInfo.description,
+            contract_type: personalInfo.contract_type,
         };
         setResumeData({ ...resumeData, ...newInfo });
 
@@ -169,6 +172,9 @@ export default function ResumeContainer({ resumeId }) {
                                 <p className="text-lg font-semibold">{savedInfo.first_name} {savedInfo.last_name}</p>
                                 <p className="text-gray-600">{savedInfo.email}</p>
                                 <p className="italic text-gray-500">"{savedInfo.description}"</p>
+                                <p className="text-gray-700 mt-2 font-medium">
+                                    Type de contrat recherché : <span className="font-bold">{savedInfo.contract_type === "stage" ? "Stage" : "Contrat d’apprentissage"}</span>
+                                </p>
 
                                 <div className="flex justify-center">
                                     <button
@@ -213,6 +219,37 @@ export default function ResumeContainer({ resumeId }) {
                                     maxLength={255}
                                     rows={3}
                                 />
+
+                                {/* Sélection du contrat */}
+                                <div>
+                                    <label className="block text-gray-700 font-semibold font-monserrat text-left mb-2">Je recherche un :</label>
+                                    <div className="flex justify-center gap-3">
+                                        <button
+                                            type="button"
+                                            onClick={() => setPersonalInfo({ ...personalInfo, contract_type: "stage" })}
+                                            className={`w-40 p-2 rounded-full border transition ${
+                                                personalInfo.contract_type === "stage" 
+                                                ? "bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-white" 
+                                                : "bg-gray-200 text-black"
+                                            }`}
+                                        >
+                                            Stage
+                                        </button>
+
+                                        <button
+                                            type="button"
+                                            onClick={() => setPersonalInfo({ ...personalInfo, contract_type: "contrat-apprentissage" })}
+                                            className={`w-80 p-2 rounded-full border transition ${
+                                                personalInfo.contract_type === "contrat-apprentissage" 
+                                                    ? "bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-white" 
+                                                    : "bg-gray-200 text-black"
+                                            }`}
+                                        >
+                                            Contrat d’apprentissage
+                                        </button>
+                                    </div>
+                                </div>
+
                                 <div className="flex justify-center mb-3 mt-4">
                                     <button 
                                         type="submit" 
@@ -224,7 +261,6 @@ export default function ResumeContainer({ resumeId }) {
                             </form>
                         )}
                     </div>
-
                     {/* Formulaire d'Expérience */}
                     <div className="p-4 bg-gray-100 shadow-xl rounded-[32px]">
                         <h3 className="text-xl font-semibold mb-4 text-center font-monserrat">Ajouter une Expérience</h3>
@@ -367,7 +403,7 @@ export default function ResumeContainer({ resumeId }) {
                         <form onSubmit={handleAddSkill}>
                             <input
                                 type="text"
-                                placeholder="Nom de la Compétence"
+                                placeholder="Java, Gestion de projet..."
                                 value={skill.name}
                                 onChange={(e) => setSkill({ ...skill, name: e.target.value })}
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
@@ -410,7 +446,7 @@ export default function ResumeContainer({ resumeId }) {
                         <form onSubmit={handleAddHobby}>
                             <input
                                 type="text"
-                                placeholder="Nom du Loisir"
+                                placeholder="Lecture, sport, musique..."
                                 value={hobby.name}
                                 onChange={(e) => setHobby({ ...hobby, name: e.target.value })}
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
