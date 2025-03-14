@@ -48,8 +48,9 @@ export default function FloatingButton({ buttonText }) {
           zIndex: 50,
           transition: 'bottom 0.3s ease',
           background: 'linear-gradient(130.45deg, #54E0E9 5.48%, #816CFF 60.63%, #B163FF 104.96%)',
+          fontSize: '1.1rem',
         }}
-        className="text-white font-semibold py-3 px-6 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
+        className="text-white font-semibold py-4 px-7 rounded-full shadow-lg transform transition-transform duration-300 hover:scale-110 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-opacity-50"
       >
         <span role="img" aria-label="rocket">🚀</span> {buttonText}
       </button>

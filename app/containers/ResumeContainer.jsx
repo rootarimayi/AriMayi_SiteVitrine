@@ -158,12 +158,12 @@ export default function ResumeContainer({ resumeId }) {
     return (
         <div className="p-4 max-w-6xl mx-auto">
             <h2 className="text-[38px] font-semibold mb-12 gradient-title font-monserrat text-center">Je remplis ce formulaire pour envoyer mon CV</h2>
-            {/* Grille principale - 2 colonnes sur écrans moyens et grands, 1 colonne sur petit écran */}
+            {/* Grille principale */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 {/* Colonne de gauche - 3 cards */}
                 <div className="grid grid-cols-1 gap-4">
                     {/* Informations personnelles */}
-                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px]">
+                    <div className="p-4 bg-gray-100 rounded-[32px]" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
                         <h3 className="text-xl font-semibold mb-2 text-center font-monserrat">
                             Informations Personnelles
                         </h3>
@@ -173,9 +173,10 @@ export default function ResumeContainer({ resumeId }) {
                                 <p className="text-gray-600">{savedInfo.email}</p>
                                 <p className="italic text-gray-500">"{savedInfo.description}"</p>
                                 <p className="text-gray-700 mt-2 font-medium">
-                                    Type de contrat recherché : <span className="font-bold">{savedInfo.contract_type === "stage" ? "Stage" : "Contrat d’apprentissage"}</span>
+                                    Type de contrat recherché : <span className="font-bold">
+                                        {savedInfo.contract_type === "stage" ? "Stage" : savedInfo.contract_type === "contrat-apprentissage" ? "Contrat d’apprentissage" : "Contrat à durée indéterminée ou déterminée"}
+                                    </span>
                                 </p>
-
                                 <div className="flex justify-center">
                                     <button
                                         onClick={() => setIsSubmitted(false)}
@@ -212,7 +213,7 @@ export default function ResumeContainer({ resumeId }) {
                                     required
                                 />
                                 <textarea
-                                    placeholder="Expliquez votre projet ici..."
+                                    placeholder="Qu'attendez vous d'AriMayi ?"
                                     value={personalInfo.description}
                                     onChange={(e) => setPersonalInfo({ ...personalInfo, description: e.target.value })}
                                     className="p-2 border border-gray-300 rounded-[15px] resize-none"
@@ -245,7 +246,18 @@ export default function ResumeContainer({ resumeId }) {
                                                     : "bg-gray-200 text-black"
                                             }`}
                                         >
-                                            Contrat d’apprentissage
+                                            Alternance
+                                        </button>
+                                        <button
+                                            type="button"
+                                            onClick={() => setPersonalInfo({ ...personalInfo, contract_type: "cdi/cdd" })}
+                                            className={`w-80 p-2 rounded-full border transition ${
+                                                personalInfo.contract_type === "cdi/cdd" 
+                                                    ? "bg-gradient-to-r from-[#54E0E9] via-[#816CFF] to-[#B163FF] text-white" 
+                                                    : "bg-gray-200 text-black"
+                                            }`}
+                                        >
+                                            CDI / CDD
                                         </button>
                                     </div>
                                 </div>
@@ -262,7 +274,7 @@ export default function ResumeContainer({ resumeId }) {
                         )}
                     </div>
                     {/* Formulaire d'Expérience */}
-                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px]">
+                    <div className="p-4 bg-gray-100 rounded-[32px]" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
                         <h3 className="text-xl font-semibold mb-4 text-center font-monserrat">Ajouter une Expérience</h3>
                         <form onSubmit={handleAddExperience}>
                             <input
@@ -329,7 +341,7 @@ export default function ResumeContainer({ resumeId }) {
                     </div>
 
                     {/* Formulaire d'Éducation */}
-                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px]">
+                    <div className="p-4 bg-gray-100 rounded-[32px]" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
                         <h3 className="text-xl font-semibold mb-4 text-center font-monserrat">Ajouter une Formation</h3>
                         <form onSubmit={handleAddEducation}>
                             <input
@@ -398,7 +410,7 @@ export default function ResumeContainer({ resumeId }) {
 
                 <div className="grid grid-cols-1 gap-4">
                     {/* Formulaire de Compétence */}
-                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px] flex flex-col justify-center min-h-[250px]">
+                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px] flex flex-col justify-center min-h-[250px]" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
                         <h3 className="text-xl font-semibold mb-2 text-center font-monserrat">Ajouter une Compétence</h3>
                         <form onSubmit={handleAddSkill}>
                             <input
@@ -441,7 +453,7 @@ export default function ResumeContainer({ resumeId }) {
                     </div>
 
                     {/* Formulaire de Loisirs */}
-                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px] flex flex-col justify-center min-h-[250px]">
+                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px] flex flex-col justify-center min-h-[250px]" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
                         <h3 className="text-xl font-semibold mb-2 text-center font-monserrat">Ajouter un Loisir</h3>
                         <form onSubmit={handleAddHobby}>
                             <input
@@ -484,7 +496,7 @@ export default function ResumeContainer({ resumeId }) {
                     </div>
 
                     {/* Formulaire de Localisation */}
-                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px] flex flex-col justify-center min-h-[250px]">
+                    <div className="p-4 bg-gray-100 shadow-xl rounded-[32px] flex flex-col justify-center min-h-[250px]" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
                         <h3 className="text-xl font-semibold mb-2 text-center font-monserrat">Ajouter ma zone géographique</h3>
                         <form onSubmit={handleAddLocation}>
                             <input
@@ -533,7 +545,6 @@ export default function ResumeContainer({ resumeId }) {
                 <button 
                     onClick={handleSubmitResume} 
                     className="bg-[#F48C72] text-white py-3 px-6 rounded-[8px] font-semibold font-monserrat shadow-md transform hover:scale-110 transition-all duration-300 ease-in-out"
-                    disabled={resumeStatus === 'loading'}
                 >
                     {resumeId ? 'Mettre à jour mon CV' : 'Envoyer mon CV'}
                 </button>

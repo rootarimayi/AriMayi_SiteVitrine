@@ -11,15 +11,24 @@ const articles = [
         <div className="space-y-4">
           <div>
             <h3 className="font-semibold mb-2">1.1 Site</h3>
-            <p>AriMayi</p>
+            <p>www.arimayi.fr</p>
           </div>
           
           <div>
-            <h3 className="font-semibold mb-2">1.2 Éditeur</h3>
-            <p>AriMayi SAS au capital de 5 000 €</p>
+            <h3 className="font-semibold mb-2">1.2 Éditeurs</h3>
+            <h6 className="font-semibold mb-1">AriMayi Business SAS</h6>
+            <p>AriMayi Business SAS au capital de 1 000 €</p>
             <p>Siège social : 24 rue du gouverneur général Éboué, 92130 Issy-les-Moulineaux</p>
             <p>Représentée par Samir Bedouhene, en sa qualité de Fondateur</p>
-            <p>Immatriculée au RCS de Nanterre xxxxxxxx</p>
+            <p>Immatriculée au RCS de Nanterre 941 724 056</p>
+            <p>Téléphone : 0612570719</p>
+            <p>Email : contact@arimayi.fr</p>
+            <br></br>
+            <h6 className="font-semibold mb-1">AriMayi Academy Pro SAS</h6>
+            <p>AriMayi Academy Pro SAS au capital de 10 000 €</p>
+            <p>Siège social : 24 rue du gouverneur général Éboué, 92130 Issy-les-Moulineaux</p>
+            <p>Représentée par Samir Bedouhene, en sa qualité de Fondateur</p>
+            <p>Immatriculée au RCS de Nanterre 941 735 193</p>
             <p>Téléphone : 0612570719</p>
             <p>Email : contact@arimayi.fr</p>
           </div>
@@ -394,34 +403,7 @@ export default function MentionsLegalesContainer() {
                         </p>
                     </div>
 
-                    {/* Article 1 */}
-                    <div>
-                        <h2 className="text-2xl font-semibold text-[#F68A67] mb-4">Article 1 - Mentions légales</h2>
-                        <div className="space-y-4">
-                        <div>
-                            <h3 className="font-semibold mb-2">1.1 Site</h3>
-                            <p>AriMayi</p>
-                        </div>
-                        
-                        <div>
-                            <h3 className="font-semibold mb-2">1.2 Éditeur</h3>
-                            <p>AriMayi SAS au capital de 5 000 €</p>
-                            <p>Siège social : 24 rue du gouverneur général Éboué, 92130 Issy-les-Moulineaux</p>
-                            <p>Représentée par Samir Bedouhene, en sa qualité de Fondateur</p>
-                            <p>Immatriculée au RCS de Nanterre xxxxxxxx</p>
-                            <p>Téléphone : 0612570719</p>
-                            <p>Email : contact@arimayi.fr</p>
-                        </div>
-
-                        <div>
-                            <h3 className="font-semibold mb-2">1.3 Hébergeur</h3>
-                            <p>AriMayi est hébergé par OVH</p>
-                            <p>Siège social : 2, rue Kellermann, 59100 Roubaix</p>
-                        </div>
-                        </div>
-                    </div>
-
-                    {/* Articles 2-16 */}
+                    {/* Articles 1-16 */}
                     {articles.map((article) => (
                         <div key={article.id}>
                         <h2 className="text-2xl font-semibold text-[#F68A67] mb-4">

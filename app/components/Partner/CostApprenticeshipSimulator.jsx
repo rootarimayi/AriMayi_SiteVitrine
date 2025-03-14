@@ -100,7 +100,7 @@ export default function CostApprenticeshipSimulator() {
   const coutEmployeur = calculerCoutEmployeur();
 
   return (
-    <div className="p-6 max-w-4xl mx-auto bg-white rounded-xl shadow-md">
+    <div className="p-6 max-w-4xl mx-auto bg-white rounded-xl shadow-md" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
       <h1 className="text-2xl font-bold mb-6 gradient-title text-center">Simulateur du coût d'un apprenti</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">

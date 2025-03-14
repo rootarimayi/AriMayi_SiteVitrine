@@ -1,9 +1,8 @@
 "use client";
 import HomeBanner from "../components/Home/HomeBanner";
-import CostumButton from "../components/Buttons/CostumButton";
-import TestimonialSection from "../components/Partner/PartnerTestimony";
 import HomeForm from "../components/Home/HomeForm";
 import { HomeMissionsSection } from "../components/Home/HomeMissionSection";
+import HomeButton from "../components/Buttons/HomeButtons";
 
 export default function HomeContainer() {
   return (
@@ -17,12 +16,12 @@ export default function HomeContainer() {
           Formez-vous en situation réelle sur des <strong>projets digitaux concrets confiés par nos partenaires</strong> et devenez <strong>opérationnel.le en entreprise</strong>. Avec un accompagnement de la sélection à l&apos;intégration, donnez un nouvel élan à votre carrière !
         </p>
         <div className="buttons flex gap-4">
-          <CostumButton
+          <HomeButton 
             text="Contactez Nous"
             classes="border-2 border-[#F68A67] text-[#F68A67] rounded-[8px] hover:bg-[#F68A67] hover:text-white transition-all duration-300 ease-in-out"
             src="/contact"
-          />
-          <CostumButton
+            />
+          <HomeButton
             text="Découvrez nos Formations"
             classes="border-2 border-[#F68A67] text-[#F68A67] rounded-[8px] hover:bg-[#F68A67] hover:text-white transition-all duration-300 ease-in-out"
             src="/formation"

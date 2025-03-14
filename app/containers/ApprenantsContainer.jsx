@@ -26,11 +26,11 @@ export default function ApprenantsContainer() {
     return(
         <main>
             <ApprenantsBanner className="bg-HomeHeaderMask sm:bg-HomeHeaderMask bg-cover bg-center transition-all duration-300 ease-in-out py-[100px] min-h-[calc(100vh-200px)] -z-20">
-                <h3 className="text-[48px] text-start font-monserrat font-extrabold uppercase gradient-title bg-clip-text w-[100%] md:w-[60%]">
+                <h3 className="text-[48px] text-start font-monserrat font-extrabold uppercase text-[#353535] bg-clip-text w-[100%] md:w-[60%]">
                     L&apos;expérience concrète par la formation
                 </h3>
-                <p className="text-left font-monserrat text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
-                    Grâce à des <strong>formations immersives</strong>, nos apprenants se forment sur des <strong>projets digitaux réels : identité visuelle, développement, IA, cybersécurité et accompagnement commercial</strong>. <br/><strong>De la sélection à la validation de votre période d’essai, vous bénéficiez d&apos;un accompagnement individualisé</strong> pour devenir <strong>opérationnel.le en entreprise</strong>. Vous êtes étudiant ou en reconversion professionnel, AriMayi vous accompagne depuis votre formation jusqu&apos;à votre intégration.
+                <p className="text-justify font-monserrat text-[18px] leading-[32px] text-[#353535] w-full mt-4 mb-4 md:text-[24px] md:leading-[40px]">
+                    Grâce à des <strong>formations immersives</strong> en classes virtuelle, nos apprenants se forment sur des <strong>projets digitaux réels : identité visuelle, développement, IA, cybersécurité et commercial</strong>. <br/><strong>De la sélection à la validation de votre période d’essai, vous bénéficiez d&apos;un accompagnement individualisé</strong> pour devenir <strong>opérationnel.le en entreprise</strong>. Vous êtes étudiant ou en reconversion professionnel, AriMayi vous accompagne depuis votre formation jusqu&apos;à votre intégration.
                 </p>
                 <p><strong className="text-center md:text-left font-Opensans text-[24px] leading-[40px] text-[#353535] max-w-[600px] mx-auto md:mx-0 gradient-title" style={{ marginTop: '60px' }}>De l&apos;apprentissage à l&apos;emploi, trace ta route ! </strong></p>
             </ApprenantsBanner>
@@ -77,12 +77,16 @@ export default function ApprenantsContainer() {
                     )}
                 </div>
 
-                {/* Conteneur pour le composant avec transition de hauteur */}
+                {/* Conteneur Simulateur */}
                 <div className="overflow-hidden transition-all duration-500">
                     <div
-                        className={`max-h-0 transition-max-height duration-500 ease-in-out ${isVisible ? 'max-h-screen opacity-100' : 'opacity-0'}`}
+                        className={`transition-all duration-500 ease-in-out ${
+                        isVisible 
+                            ? 'max-h-[2000px] opacity-100 py-8' 
+                            : 'max-h-0 opacity-0 py-0'
+                        }`}
                     >
-                        <SalaryApprenticeshipSimulator/>
+                        <SalaryApprenticeshipSimulator />
                     </div>
                 </div>
             </div>

@@ -19,7 +19,7 @@ export default function PartenairesContainer() {
     return (
         <main>
             <PartnerBanner className="bg-cover bg-center transition-all duration-300 ease-in-out py-[50px] min-h-[calc(100vh-200px)]">
-                <h3 className="text-center md:text-left text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase gradient-title">
+                <h3 className="text-center md:text-left text-[32px] sm:text-[40px] md:text-[48px] font-monserrat font-extrabold uppercase text-[#353535]">
                     Nos services pour les partenaires
                 </h3>
                 <p className="text-center md:text-left font-Opensans text-[24px] leading-[40px] text-[#353535] max-w-[600px] mx-auto md:mx-0">
@@ -71,16 +71,19 @@ export default function PartenairesContainer() {
                     
                 </div>
 
-                {/* Conteneur pour le composant avec transition de hauteur */}
+                {/* Conteneur Simulateur */}
                 <div className="overflow-hidden transition-all duration-500">
                     <div
-                        className={`max-h-0 transition-max-height duration-500 ease-in-out ${isVisible ? 'max-h-screen opacity-100' : 'opacity-0'}`}
+                        className={`transition-all duration-500 ease-in-out ${
+                        isVisible 
+                            ? 'max-h-[2000px] opacity-100 py-8' 
+                            : 'max-h-0 opacity-0 py-0'
+                        }`}
                     >
                         <CostApprenticeshipSimulator />
                     </div>
                 </div>
             </div>
-
             <PartenaireForm />
         </main>
     );

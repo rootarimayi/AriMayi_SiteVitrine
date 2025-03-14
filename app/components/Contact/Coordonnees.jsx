@@ -49,47 +49,32 @@ export default function Coordonnees() {
         
         validateField(name, newValue);
     };
-
-    const handleFileChange = (event) => {
-        const file = event.target.files[0];
-        setFormData({ ...formData, cv: file });
-    };
-      
     
     const handleSubmit = async (e) => {
         e.preventDefault();
-    
-        // Validate input before submit
-        const requiredFields = ['nom', 'prenom', 'email', 'telephone', 'message', 'accept'];
-        let isValid = true;
         
-        requiredFields.forEach(field => {
-            if (!validateField(field, formData[field])) {
+        // Validate input before submit
+        let isValid = true;
+        Object.entries(formData).forEach(([name, value]) => {
+            if (!validateField(name, value)) {
                 isValid = false;
             }
         });
-    
+        
         if (!isValid) {
             toast.error("Veuillez corriger les erreurs du formulaire.");
             return;
         }
-    
+        
         setIsSubmitting(true);
     
         try {
-            const formDataToSend = new FormData();
-
-            Object.entries(formData).forEach(([key, value]) => {
-                // CV handler
-                if (key === 'cv' && value) {
-                    formDataToSend.append('cv', value);
-                } else {
-                    formDataToSend.append(key, value);
-                }
-            });
             const response = await fetch("/api/email", {
                 method: "POST",
-                body: formDataToSend,
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(formData),
             });
     
             if (!response.ok) {
@@ -98,6 +83,7 @@ export default function Coordonnees() {
             }
     
             const data = await response.json();
+            
             setFormData({
                 nom: "",
                 prenom: "",
@@ -105,19 +91,17 @@ export default function Coordonnees() {
                 telephone: "",
                 message: "",
                 accept: false,
-                formType: 'contact',
-                cv: null,
+                formType: 'contact'
             });
-    
-            toast.success(data.message || "📧 🎉 Message envoyé ! Nous vous répondrons sous 24h.");
+            
+            toast.success(data.message || "📧 🎉 Message envoyé ! Nous vous répondrons bientôt.");
         } catch (error) {
             console.error("Error:", error);
             toast.error(error.message || "❌ Une erreur est survenue lors de l'envoi du formulaire.");
         } finally {
             setIsSubmitting(false);
         }
-    };
-     
+    };    
 
   return (
     <div className="bg-gray-600 p-2 mx-4 my-6 overflow-hidden">
@@ -199,40 +183,6 @@ export default function Coordonnees() {
                         {errors.telephone && <p className="text-red-500 text-xs mt-1">{errors.telephone}</p>}
                         </div>
                     </div>
-
-                {/* Joindre CV */}
-                <div className="mb-5">
-                    <label htmlFor="cv" className="block mb-4 text-sm font-medium text-gray-900 dark:text-black text-left">
-                        Joindre mon CV (optionnel) :
-                    </label>
-                    <div className="flex items-center justify-center w-full">
-                        <label htmlFor="cv" className="flex flex-col items-center justify-center w-full h-32 border-2 border-blue-300 border-dashed rounded-lg cursor-pointer bg-blue-50 hover:bg-blue-100 transition-all duration-300">
-                            <div className="flex flex-col items-center justify-center pt-5 pb-6">
-                                <svg className="w-8 h-8 mb-4 text-blue-500" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 16">
-                                    <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2"/>
-                                </svg>
-                                <p className="mb-2 text-sm text-gray-500 dark:text-gray-400">
-                                    <span className="font-semibold">Cliquez pour télécharger</span> ou glissez-déposez
-                                </p>
-                                <p className="text-xs text-gray-500 dark:text-gray-400">PDF, DOC ou DOCX</p>
-                            </div>
-                            <input 
-                                type="file"
-                                id="cv"
-                                name="cv"
-                                accept=".pdf,.doc,.docx"
-                                onChange={handleFileChange}
-                                className="hidden"
-                            />
-                        </label>
-                    </div>
-                    {formData.cv && (
-                        <p className="mt-2 text-sm text-green-600">
-                            Fichier sélectionné : {formData.cv.name}
-                        </p>
-                    )}
-                    {errors.cv && <p className="text-red-500 text-xs mt-1">{errors.cv}</p>}
-                </div>
 
               {/* Message */}
               <div className="mb-5">

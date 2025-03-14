@@ -45,7 +45,7 @@ export default function AdminLogin() {
           Se connecter
         </button>
       </form>
-      {message && <p className="text-red-500">{message}</p>}
+      {message && <p className="text-green-500">{message}</p>}
     </div>
   );
 }
