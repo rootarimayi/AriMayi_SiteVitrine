@@ -5,7 +5,9 @@ import { IoArrowForward, IoCheckmarkCircle, IoClose } from 'react-icons/io5';
 const NewsletterForm = () => {
   const [email, setEmail] = useState('');
   const [showPopup, setShowPopup] = useState(false);
+  const [showAlreadySubscribedPopup, setShowAlreadySubscribedPopup] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -13,14 +15,36 @@ const NewsletterForm = () => {
     if (!email) return;
     
     setIsLoading(true);
-    // Simuler un appel API
-    setTimeout(() => {
-      setIsLoading(false);
+    setErrorMessage('');
+    try {
+      const response = await fetch('/api/newsletter/subscribe', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({ email }),
+      });
+
+      if (!response.ok) {
+        const errorData = await response.json();
+        if (response.status === 400 && errorData.error === 'Cet email est déjà inscrit') {
+          setShowAlreadySubscribedPopup(true);
+          setTimeout(() => setShowAlreadySubscribedPopup(false), 5000);
+        } else {
+          throw new Error(errorData.error || 'Une erreur est survenue');
+        }
+        return;
+      }
+
       setShowPopup(true);
       setEmail('');
       // Fermer le popup après 5 secondes
       setTimeout(() => setShowPopup(false), 5000);
-    }, 1000);
+    } catch (error) {
+      setErrorMessage(error.message);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   return (
@@ -64,6 +88,25 @@ const NewsletterForm = () => {
             
             <button
               onClick={() => setShowPopup(false)}
+              className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
+            >
+              <IoClose size={20} />
+            </button>
+          </div>
+        </div>
+      )}
+
+      {/* Popup pour déjà inscrit */}
+      {showAlreadySubscribedPopup && (
+        <div className="fixed inset-0 flex items-center justify-center z-50 bg-black/50">
+          <div className="bg-white rounded-lg shadow-xl p-6 max-w-md mx-4 relative animate-in slide-in-from-bottom duration-300">
+            <h4 className="text-lg font-semibold text-black">🚫 Déjà inscrit !</h4>
+            <p className="mt-2 text-gray-600 text-black">
+              Vous êtes déjà inscrit à notre newsletter. 🎉
+            </p>
+            
+            <button
+              onClick={() => setShowAlreadySubscribedPopup(false)}
               className="absolute top-4 right-4 text-gray-500 hover:text-gray-700"
             >
               <IoClose size={20} />

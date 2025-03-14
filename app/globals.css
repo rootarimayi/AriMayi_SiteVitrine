@@ -7,6 +7,7 @@ body {
   margin: 0;
   padding: 0;
 }
+
 .readMoreClicked {
   display: block;
   overflow: hidden;
@@ -20,15 +21,18 @@ body {
   text-overflow: ellipsis;
   overflow: hidden;
 }
+
 @media (max-width: 768px) {
   .container {
     padding: 0;
     margin: 0;
   }
 }
+
 .slides-container {
   height: 400px;
 }
+
 .container {
   max-width: 1850px;
   margin: auto;
@@ -36,27 +40,48 @@ body {
 }
 
 .gradient-title {
-    background: linear-gradient(to right, #54E0E9, #816CFF, #B163FF);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    color: transparent;
+  background: linear-gradient(to right, #54E0E9, #816CFF, #B163FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
 }
 
 .bg-pattern {
-    background-image: url("../public/assets/fourmiliere.svg");
-    background-size: cover;
-    background-position: center;
+  background-image: url("../public/assets/fourmiliere.svg");
+  background-size: cover;
+  background-position: center;
 }
 
 .image-container {
   width: 400px;
   height: auto;
-  clip-path: path(
-    "M-338.16 587.883C-533.753 691.61 -565.909 1018.24 -381.94 1102.25C-250.918 1142.98 -206.451 1076.26 -88.5253 1187.05C527.307 1765.64 844.77 1180.9 824.376 1088.81C773.422 858.713 634.654 1045.98 532.386 472.768C430.117 -100.44 17.9875 232.109 16.1233 305.764C14.2591 379.419 -93.6693 458.224 -338.16 587.883Z"
-  );
+  clip-path: path("M-338.16 587.883C-533.753 691.61 -565.909 1018.24 -381.94 1102.25C-250.918 1142.98 -206.451 1076.26 -88.5253 1187.05C527.307 1765.64 844.77 1180.9 824.376 1088.81C773.422 858.713 634.654 1045.98 532.386 472.768C430.117 -100.44 17.9875 232.109 16.1233 305.764C14.2591 379.419 -93.6693 458.224 -338.16 587.883Z"
+    );
 }
 
 .svg-color {
-  fill: #F68A67; /* couleur que tu veux appliquer */
+  fill: #F68A67;
+}
+
+.modal-enter {
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+.modal-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.modal-exit {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.modal-exit-active {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
