@@ -12,7 +12,7 @@ export default function page() {
     <>
     {isSubscribed ? ( <div className="font-monserrat" style={{ minHeight: "100vh", display: "flex", paddingBlock: "10%", justifyContent: "center", alignItems: "center", fontSize: "1.5rem" }}>
         <div style={{ textAlign: "center", background: "#fff", borderRadius: "12px", padding: "20px", boxShadow: "0 4px 8px rgba(0,0,0,0.2)" }}>
-            <h1 style={{ color: "#000", fontSize: "36px" }}>Oups 🙊 ! C'était une erreur ?</h1>
+            <h1 style={{ color: "#000", fontSize: "36px" }}>Oups 🙊 ! C&apos;était une erreur ?</h1>
             <div style={{ marginTop: "20px" }}>
                 <a href="/" style={{ display: "block", color: '#007BFF', textDecoration: 'underline', fontWeight: 'bold', marginBottom: "10px", fontSize: "28px" }}>
                     Se ré-abonner 😉
@@ -30,14 +30,11 @@ export default function page() {
             <h1 style={{ color: "#4CAF50" }}>✅ Désabonnement réussi</h1>
             <p style={{ marginBottom: "20px" }}>Vous avez été désabonné avec succès de notre newsletter.</p>
             <a href="/" style={{ color: '#007BFF', textDecoration: 'underline', fontWeight: 'bold' }}>
-                Retour à l'accueil
+                Retour à l&apos;accueil
             </a>
         </div>
     </div>
     </div>)}
-  
-    
-
     </>
   )
 }

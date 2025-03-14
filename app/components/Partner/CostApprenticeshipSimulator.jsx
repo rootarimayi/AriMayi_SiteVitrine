@@ -101,13 +101,13 @@ export default function CostApprenticeshipSimulator() {
 
   return (
     <div className="p-6 max-w-4xl mx-auto bg-white rounded-xl shadow-md" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
-      <h1 className="text-2xl font-bold mb-6 gradient-title text-center">Simulateur du coût d'un apprenti</h1>
+      <h1 className="text-2xl font-bold mb-6 gradient-title text-center">Simulateur du coût d&apos;un apprenti</h1>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="space-y-4">
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Âge de l'apprenti
+              Âge de l&apos;apprenti
             </label>
             <input
               type="number"
@@ -121,7 +121,7 @@ export default function CostApprenticeshipSimulator() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Année d'apprentissage
+              Année d&apos;apprentissage
             </label>
             <select
               value={annee}
@@ -181,7 +181,7 @@ export default function CostApprenticeshipSimulator() {
 
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-1">
-              Taille de l'entreprise
+              Taille de l&apos;entreprise
             </label>
             <select
               value={tailleEntreprise}
@@ -202,7 +202,7 @@ export default function CostApprenticeshipSimulator() {
               className="h-4 w-4 text-indigo-600 focus:ring-indigo-500 border-gray-300 rounded"
             />
             <label htmlFor="aideHandicap" className="ml-2 block text-sm text-gray-700">
-              Appliquer l'aide à l'embauche pour les personnes handicapées
+              Appliquer l&apos;aide à l&apos;embauche pour les personnes handicapées
             </label>
           </div>
         </div>
@@ -218,7 +218,7 @@ export default function CostApprenticeshipSimulator() {
                 <span className="font-medium">Pourcentage du SMIC applicable :</span> {resultat.pourcentage}%
               </p>
               <p className="mb-2">
-                <span className="font-medium">Tranche d'âge :</span> {
+                <span className="font-medium">Tranche d&apos;âge :</span> {
                   age <= 17 ? "16 à 17 ans" :
                     age <= 20 ? "18 à 20 ans" :
                       age <= 25 ? "21 à 25 ans" : "26 ans et plus"
@@ -250,7 +250,7 @@ export default function CostApprenticeshipSimulator() {
               )}
 
               <p className="mt-4 text-lg font-bold text-green-800">
-                Coût annuel pour l'employeur après aides : {coutEmployeur.coutEmployeurAnnuel} €
+                Coût annuel pour l&apos;employeur après aides : {coutEmployeur.coutEmployeurAnnuel} €
               </p>
               <p className="text-sm text-gray-600">
                 (Aides totales : {coutEmployeur.totalAides} €)
@@ -263,10 +263,10 @@ export default function CostApprenticeshipSimulator() {
       <div className="mt-6 text-sm text-gray-600">
         <p className="mb-2">Notes importantes :</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li>L'apprenti préparant une licence professionnelle en 1 an bénéficie d'une rémunération correspondant à une 2ème année de contrat.</li>
-          <li>Ces montants peuvent être majorés si un accord collectif applicable dans l'entreprise fixe une rémunération minimale plus élevée.</li>
-          <li>Des retenues pour avantages en nature (nourriture ou logement) prévus au contrat d'apprentissage peuvent être effectuées dans la limite de 75% du salaire.</li>
-          <li>L'apprenti a droit à la prise en charge de ses frais de transport pour se rendre de son domicile à son travail.</li>
+          <li>L&apos;apprenti préparant une licence professionnelle en 1 an bénéficie d'une rémunération correspondant à une 2ème année de contrat.</li>
+          <li>Ces montants peuvent être majorés si un accord collectif applicable dans l&apos;entreprise fixe une rémunération minimale plus élevée.</li>
+          <li>Des retenues pour avantages en nature (nourriture ou logement) prévus au contrat d&apos;apprentissage peuvent être effectuées dans la limite de 75% du salaire.</li>
+          <li>L&apos;apprenti a droit à la prise en charge de ses frais de transport pour se rendre de son domicile à son travail.</li>
         </ul>
       </div>
     </div>

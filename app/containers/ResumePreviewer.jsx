@@ -7,239 +7,6 @@ export default function ResumeViewer({ resumeId }) {
     const dispatch = useDispatch();
     const { currentResume, status, error } = useSelector(state => state.resume);
 
-    // const drawGradientHeader = (doc, trigram) => {
-    //     const colors = [
-    //         [84, 224, 233],  // #54E0E9
-    //         [129, 108, 255], // #816CFF
-    //         [177, 99, 255]   // #B163FF
-    //     ];
-        
-    //     const height = 30; // Hauteur de l'en-tête
-    //     const steps = 100; // Nombre de segments pour créer le dégradé
-    //     const stepHeight = height / steps; // Hauteur de chaque segment
-
-    //     for (let i = 0; i < steps; i++) {
-    //         const r = Math.round(colors[0][0] + (colors[2][0] - colors[0][0]) * (i / steps));
-    //         const g = Math.round(colors[0][1] + (colors[2][1] - colors[0][1]) * (i / steps));
-    //         const b = Math.round(colors[0][2] + (colors[2][2] - colors[0][2]) * (i / steps));
-    
-    //         doc.setFillColor(r, g, b);
-    //         doc.rect(0, i * stepHeight, 210, stepHeight, 'F');
-    //     }
-    
-    //     // Header
-    //     doc.setTextColor(255, 255, 255);
-    //     doc.setFontSize(26);
-    //     doc.setFont('helvetica', 'bold');
-    //     doc.text(`CV - ${trigram}`, 15, 20);
-    // };    
-    
-    // const downloadPDF = () => {
-    //     const { trigram } = currentResume;
-    
-    //     const doc = new jsPDF({
-    //         orientation: 'portrait',
-    //         unit: 'mm',
-    //         format: 'a4'
-    //     });
-
-    //     const img = new Image();
-    //     img.src = "/images/Logo-Arimayi-simple-gradient.png";
-
-    //     const secondaryColor = [129, 108, 255]; // #816CFF en RGB
-
-    //     drawGradientHeader(doc, trigram);
-    
-    //     doc.setTextColor(0, 0, 0);
-
-    //     let yPosition = 40;
-
-    //     // Ajouter une image sous le header (logo ou autre)
-    //     const imagePath = path.join(process.cwd(), 'public/images', 'Logo-Arimayi-simple-gradient.png');
-    //     if (fs.existsSync(imagePath)) {
-    //         doc.image(imagePath, 50, 80, { width: 100 });
-    //     }
-
-    //     // Coordonnées sous l'image
-    //     doc.fontSize(10).text(
-    //         '18 promenade du Verger\n92130 Issy les Moulineaux\n06 12 57 07 19\nwww.arimayi.fr',
-    //         50,
-    //         190
-    //     );
-
-    //     // Section informations personnelles
-    //     doc.setFontSize(14);
-    //     doc.setFont('helvetica', 'bold');
-    //     doc.text('Informations personnelles', 15, yPosition);
-        
-    //     doc.setLineWidth(0.5);
-    //     doc.setDrawColor(129, 108, 255);
-    //     doc.line(15, yPosition + 2, 195, yPosition + 2);
-        
-    //     doc.setFontSize(12);
-    //     doc.setFont('helvetica', 'normal');
-    //     doc.text(`Email: ${currentResume.email}`, 15, yPosition + 10);
-    //     doc.text(`Trigram: ${trigram}`, 15, yPosition + 17);
-    
-    //     yPosition += 25;
-    
-    //     // Description
-    //     if (currentResume.description) {
-    //         doc.setFontSize(14);
-    //         doc.setFont('helvetica', 'bold');
-    //         doc.text("Description", 15, yPosition);
-            
-    //         doc.setLineWidth(0.5);
-    //         doc.setDrawColor(129, 108, 255);
-    //         doc.line(15, yPosition + 2, 195, yPosition + 2);
-            
-    //         doc.setFontSize(12);
-    //         doc.setFont('helvetica', 'normal');
-            
-    //         const splitDescription = doc.splitTextToSize(currentResume.description, 180);
-    //         doc.text(splitDescription, 15, yPosition + 10);
-            
-    //         yPosition += 10 + (splitDescription.length * 7);
-    //     }
-    
-    //      // Expériences professionnelles
-    //     if (currentResume.experiences && currentResume.experiences.length > 0) {
-    //       doc.setFontSize(14);
-    //       doc.setFont('helvetica', 'bold');
-    //       doc.text("Expériences Professionnelles", 15, yPosition);
-          
-    //       doc.setLineWidth(0.5);
-    //       doc.setDrawColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-    //       doc.line(15, yPosition + 2, 195, yPosition + 2);
-          
-    //       yPosition += 10;
-          
-    //       currentResume.experiences.forEach((exp, index) => {
-    //         doc.setFontSize(12);
-    //         doc.setFont('helvetica', 'bold');
-    //         doc.text(`${exp.title}`, 15, yPosition);
-            
-    //         doc.setFontSize(10);
-    //         doc.setFont('helvetica', 'normal');
-    //         doc.text(`${exp.company} (${exp.startDate} - ${exp.endDate})`, 15, yPosition + 5);
-            
-    //         // Si description d'expérience disponible
-    //         if (exp.description) {
-    //           const splitExpDesc = doc.splitTextToSize(exp.description, 180);
-    //           doc.text(splitExpDesc, 15, yPosition + 10);
-    //           yPosition += 10 + (splitExpDesc.length * 5);
-    //         } else {
-    //           yPosition += 15;
-    //         }
-    //       });
-    //     }
-        
-    //     // Formation
-    //     if (currentResume.school_career && currentResume.school_career.length > 0) {
-    //       doc.setFontSize(14);
-    //       doc.setFont('helvetica', 'bold');
-    //       doc.text("Formation", 15, yPosition);
-          
-    //       doc.setLineWidth(0.5);
-    //       doc.setDrawColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-    //       doc.line(15, yPosition + 2, 195, yPosition + 2);
-          
-    //       yPosition += 10;
-          
-    //       currentResume.school_career.forEach((edu) => {
-    //         doc.setFontSize(12);
-    //         doc.setFont('helvetica', 'bold');
-    //         doc.text(`${edu.degree}`, 15, yPosition);
-            
-    //         doc.setFontSize(10);
-    //         doc.setFont('helvetica', 'normal');
-    //         doc.text(`${edu.school} (${edu.startDate} - ${edu.endDate})`, 15, yPosition + 5);
-            
-    //         yPosition += 15;
-    //       });
-    //     }
-        
-    //     // Check multiple page
-    //     if (yPosition > 250) {
-    //       doc.addPage();
-    //       yPosition = 20;
-    //     }
-        
-    //     // Compétences
-    //     if (currentResume.skills && currentResume.skills.length > 0) {
-    //       doc.setFontSize(14);
-    //       doc.setFont('helvetica', 'bold');
-    //       doc.text("Compétences", 15, yPosition);
-          
-    //       doc.setLineWidth(0.5);
-    //       doc.setDrawColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-    //       doc.line(15, yPosition + 2, 195, yPosition + 2);
-          
-    //       yPosition += 10;
-          
-    //       let skillsText = '';
-    //       currentResume.skills.forEach((skill, index) => {
-    //         if (index > 0) skillsText += ', ';
-    //         skillsText += skill.name;
-    //       });
-          
-    //       const splitSkills = doc.splitTextToSize(skillsText, 180);
-    //       doc.setFontSize(12);
-    //       doc.setFont('helvetica', 'normal');
-    //       doc.text(splitSkills, 15, yPosition);
-          
-    //       yPosition += splitSkills.length * 7;
-    //     }
-        
-    //     // Check another page
-    //     if (yPosition > 250) {
-    //       doc.addPage();
-    //       yPosition = 20;
-    //     }
-        
-    //     // Centres d'intérêt
-    //     if (currentResume.hobbies && currentResume.hobbies.length > 0) {
-    //       doc.setFontSize(14);
-    //       doc.setFont('helvetica', 'bold');
-    //       doc.text("Centres d'intérêt", 15, yPosition);
-          
-    //       doc.setLineWidth(0.5);
-    //       doc.setDrawColor(secondaryColor[0], secondaryColor[1], secondaryColor[2]);
-    //       doc.line(15, yPosition + 2, 195, yPosition + 2);
-          
-    //       yPosition += 10;
-          
-    //       let hobbiesText = '';
-    //       currentResume.hobbies.forEach((hobby, index) => {
-    //         if (index > 0) hobbiesText += ', ';
-    //         hobbiesText += hobby.name;
-    //       });
-          
-    //       const splitHobbies = doc.splitTextToSize(hobbiesText, 180);
-    //       doc.setFontSize(12);
-    //       doc.setFont('helvetica', 'normal');
-    //       doc.text(splitHobbies, 15, yPosition);
-    //     }
-
-    //     // Pied de page avec informations légales
-    //     doc.fontSize(8).text(
-    //         'Société par Actions Simplifiée Unipersonnelle au capital social de 1 000 €\nImmatriculée au RCS de Nanterre Siret 941 724 056',
-    //         { align: 'center' }
-    //     );
-    
-    //     // Pied de page
-    //     const pageCount = doc.internal.getNumberOfPages();
-    //     for (let i = 1; i <= pageCount; i++) {
-    //         doc.setPage(i);
-    //         doc.setFontSize(10);
-    //         doc.setTextColor(150, 150, 150);
-    //         doc.text(`Page ${i} sur ${pageCount}`, 195, 287, null, null, 'right');
-    //     }
-        
-    //     const fileName = `${trigram}-CV.pdf`;
-    //     doc.save(fileName);
-    // };
-
     const drawGradientHeader = (doc, trigram) => {
         const colors = [
             [84, 224, 233],  // #54E0E9
@@ -260,7 +27,7 @@ export default function ResumeViewer({ resumeId }) {
             doc.rect(0, i * stepHeight, 210, stepHeight, "F");
         }
     
-        // En-tête
+        // Header
         doc.setTextColor(255, 255, 255);
         doc.setFontSize(26);
         doc.setFont("helvetica", "bold");
@@ -268,7 +35,7 @@ export default function ResumeViewer({ resumeId }) {
     };
     
     const downloadPDF = () => {
-        const { trigram, contract_type, locations } = currentResume; // Récupérer le type de contrat
+        const { trigram, contract_type, locations } = currentResume;
         const city = locations && locations.length > 0 ? locations[0].city : 'Non spécifié';
 
         const doc = new jsPDF({
@@ -513,7 +280,7 @@ export default function ResumeViewer({ resumeId }) {
             {currentResume.hobbies && currentResume.hobbies.length > 0 && (
                 <div className="mb-8">
                     <h2 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-gray-200">
-                        Centres d'intérêt
+                        Centres d&apos;intérêt
                     </h2>
                     <div className="flex flex-wrap gap-2 pl-4">
                         {currentResume.hobbies.map((hobby, index) => (
@@ -529,7 +296,7 @@ export default function ResumeViewer({ resumeId }) {
             )}
 
             <div className="text-sm text-gray-500 text-center mt-8">
-                <p>Date d'inscription: {new Date(currentResume.uploaded_at).toLocaleDateString()}</p>
+                <p>Date d&apos;inscription: {new Date(currentResume.uploaded_at).toLocaleDateString()}</p>
                 <p>Trigram: {currentResume.trigram}</p>
             </div>
 

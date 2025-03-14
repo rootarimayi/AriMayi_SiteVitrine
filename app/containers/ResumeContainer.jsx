@@ -171,7 +171,7 @@ export default function ResumeContainer({ resumeId }) {
                             <div className="text-center">
                                 <p className="text-lg font-semibold">{savedInfo.first_name} {savedInfo.last_name}</p>
                                 <p className="text-gray-600">{savedInfo.email}</p>
-                                <p className="italic text-gray-500">"{savedInfo.description}"</p>
+                                <p className="italic text-gray-500">&quot;{savedInfo.description}&quot;</p>
                                 <p className="text-gray-700 mt-2 font-medium">
                                     Type de contrat recherché : <span className="font-bold">
                                         {savedInfo.contract_type === "stage" ? "Stage" : savedInfo.contract_type === "contrat-apprentissage" ? "Contrat d’apprentissage" : "Contrat à durée indéterminée ou déterminée"}

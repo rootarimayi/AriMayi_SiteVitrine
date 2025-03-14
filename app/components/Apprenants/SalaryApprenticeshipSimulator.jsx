@@ -65,13 +65,13 @@ export default function SalaryApprenticeshipSimulator() {
 
     return (
         <div className="p-6 max-w-4xl mx-auto bg-white rounded-xl shadow-md" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
-            <h1 className="text-2xl font-bold mb-6 gradient-title text-center">Simulateur de mon salaire en tant qu'apprenti</h1>
+            <h1 className="text-2xl font-bold mb-6 gradient-title text-center">Simulateur de mon salaire en tant qu&apos;apprenti</h1>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
                 <div className="space-y-4">
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
-                            Âge de l'apprenti
+                            Âge de l&apos;apprenti
                         </label>
                         <input
                             type="number"
@@ -85,7 +85,7 @@ export default function SalaryApprenticeshipSimulator() {
 
                     <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">
-                            Année d'apprentissage
+                            Année d&apos;apprentissage
                         </label>
                         <select
                             value={annee}
@@ -155,14 +155,14 @@ export default function SalaryApprenticeshipSimulator() {
                                 <span className="font-medium">Pourcentage du SMIC applicable :</span> {resultat.pourcentage}%
                             </p>
                             <p className="mb-2">
-                                <span className="font-medium">Tranche d'âge :</span> {
+                                <span className="font-medium">Tranche d&apos;âge :</span> {
                                     age <= 17 ? "16 à 17 ans" :
                                         age <= 20 ? "18 à 20 ans" :
                                             age <= 25 ? "21 à 25 ans" : "26 ans et plus"
                                 }
                             </p>
                             <p className="mb-2">
-                                <span className="font-medium">Année d'apprentissage :</span> {annee === 1 ? "1ère année" : annee === 2 ? "2ème année" : "3ème année"}
+                                <span className="font-medium">Année d&apos;apprentissage :</span> {annee === 1 ? "1ère année" : annee === 2 ? "2ème année" : "3ème année"}
                             </p>
                         </div>
 
@@ -193,10 +193,10 @@ export default function SalaryApprenticeshipSimulator() {
             <div className="mt-6 text-sm text-gray-600">
                 <p className="mb-2">Notes importantes :</p>
                 <ul className="list-disc pl-5 space-y-1">
-                    <li>L'apprenti préparant une licence professionnelle en 1 an bénéficie d'une rémunération correspondant à une 2ème année de contrat.</li>
-                    <li>Ces montants peuvent être majorés si un accord collectif applicable dans l'entreprise fixe une rémunération minimale plus élevée.</li>
-                    <li>Des retenues pour avantages en nature (nourriture ou logement) prévus au contrat d'apprentissage peuvent être effectuées dans la limite de 75% du salaire.</li>
-                    <li>L'apprenti a droit à la prise en charge de ses frais de transport pour se rendre de son domicile à son travail.</li>
+                    <li>L&apos;apprenti préparant une licence professionnelle en 1 an bénéficie d&apos;une rémunération correspondant à une 2ème année de contrat.</li>
+                    <li>Ces montants peuvent être majorés si un accord collectif applicable dans l&apos;entreprise fixe une rémunération minimale plus élevée.</li>
+                    <li>Des retenues pour avantages en nature (nourriture ou logement) prévus au contrat d&apos;apprentissage peuvent être effectuées dans la limite de 75% du salaire.</li>
+                    <li>L&apos;apprenti a droit à la prise en charge de ses frais de transport pour se rendre de son domicile à son travail.</li>
                 </ul>
             </div>
         </div>
