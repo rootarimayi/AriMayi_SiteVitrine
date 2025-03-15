@@ -99,7 +99,7 @@ const AdminDashboard = () => {
                       <th className="p-2 text-center">Prénom</th>
                       <th className="p-2 text-center">E-mail</th>
                       <th className="p-2 text-center">Type de contrat</th>
-                      <th className="p-2 text-center">Date d'inscription</th>
+                      <th className="p-2 text-center">Date d&apos;inscription</th>
                       <th className="p-2 text-center">Action</th>
                     </tr>
                 </thead>

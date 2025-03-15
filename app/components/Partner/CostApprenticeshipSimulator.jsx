@@ -225,7 +225,7 @@ export default function CostApprenticeshipSimulator() {
                 }
               </p>
               <p className="mb-2">
-                <span className="font-medium">Année d'apprentissage :</span> {annee === 1 ? "1ère année" : annee === 2 ? "2ème année" : "3ème année"}
+                <span className="font-medium">Année d&apos;apprentissage :</span> {annee === 1 ? "1ère année" : annee === 2 ? "2ème année" : "3ème année"}
               </p>
             </div>
 
@@ -263,7 +263,7 @@ export default function CostApprenticeshipSimulator() {
       <div className="mt-6 text-sm text-gray-600">
         <p className="mb-2">Notes importantes :</p>
         <ul className="list-disc pl-5 space-y-1">
-          <li>L&apos;apprenti préparant une licence professionnelle en 1 an bénéficie d'une rémunération correspondant à une 2ème année de contrat.</li>
+          <li>L&apos;apprenti préparant une licence professionnelle en 1 an bénéficie d&apos;une rémunération correspondant à une 2ème année de contrat.</li>
           <li>Ces montants peuvent être majorés si un accord collectif applicable dans l&apos;entreprise fixe une rémunération minimale plus élevée.</li>
           <li>Des retenues pour avantages en nature (nourriture ou logement) prévus au contrat d&apos;apprentissage peuvent être effectuées dans la limite de 75% du salaire.</li>
           <li>L&apos;apprenti a droit à la prise en charge de ses frais de transport pour se rendre de son domicile à son travail.</li>
