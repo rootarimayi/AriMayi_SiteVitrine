@@ -16,6 +16,7 @@ COPY --from=deps /app/node_modules ./node_modules
 
 COPY . .
 
+RUN npx prisma generate
 RUN npm run build 
 
 # STAGE 3: Create a clean production image - only take pruned assets
