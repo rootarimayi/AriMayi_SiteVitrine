@@ -5,19 +5,21 @@ import { PrismaClient } from '@prisma/client';
 
 const prisma = new PrismaClient();
 
-const transporter = nodemailer.createTransport({
-    host: 'ssl0.ovh.net',
-    port: 465,
-    secure: true,
-    auth: {
-        user: process.env.SMTP_SERVER_USERNAME,
-        pass: process.env.SMTP_SERVER_PASSWORD,
-    },
-});
 
-await transporter.verify();
-  
 export async function POST(req) {
+
+    const transporter = nodemailer.createTransport({
+        host: 'ssl0.ovh.net',
+        port: 465,
+        secure: true,
+        auth: {
+            user: process.env.SMTP_SERVER_USERNAME,
+            pass: process.env.SMTP_SERVER_PASSWORD,
+        },
+    });
+
+    await transporter.verify();
+    
     try {
         const { email } = await req.json();
 
@@ -99,7 +101,7 @@ export async function POST(req) {
                 </p>
               </div>
             `,
-          });
+        });
 
         return Response.json({ success: true });
     } catch (error) {
