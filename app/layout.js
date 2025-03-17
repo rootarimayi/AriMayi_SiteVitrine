@@ -9,6 +9,7 @@ import { Open_Sans, Montserrat } from 'next/font/google'
 import DynamicLayout from "./components/Utils/DynamicLayout";
 import { Toaster } from 'react-hot-toast';
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { Suspense } from 'react';
 
 const openSans = Open_Sans({
   subsets: ['latin'],
@@ -72,7 +73,9 @@ export default function RootLayout({ children }) {
         <Toaster position="top-center" reverseOrder={false} />
         <ReduxProvider>
           <DynamicLayout>
+            <Suspense>
             {children}
+            </Suspense>
           </DynamicLayout>
         </ReduxProvider>
         {/* <Header />{children}< Footer/> */}
