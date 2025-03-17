@@ -164,7 +164,7 @@ export default function ResumeContainer({ resumeId }) {
                 <div className="grid grid-cols-1 gap-4">
                     {/* Informations personnelles */}
                     <div className="p-4 bg-gray-100 rounded-[32px]" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
-                        <h3 className="text-xl font-semibold mb-2 text-center font-monserrat">
+                        <h3 className="text-[25px] font-semibold mb-2 text-center font-monserrat">
                             Informations Personnelles
                         </h3>
                         {isSubmitted && savedInfo ? (
@@ -187,7 +187,8 @@ export default function ResumeContainer({ resumeId }) {
                                 </div>
                             </div>
                         ) : (
-                            <form onSubmit={handleUpdatePersonalInfo} className="grid grid-cols-1 gap-4">
+                            <form onSubmit={handleUpdatePersonalInfo} className="grid grid-cols-1 gap-4 ml-2">
+                                <span className="asterisk_input"></span>  
                                 <input
                                     type="text"
                                     placeholder="Nom"
@@ -196,14 +197,16 @@ export default function ResumeContainer({ resumeId }) {
                                     className="p-2 border border-gray-300 rounded-[15px]"
                                     required
                                 />
+                                <span className="asterisk_input"></span>  
                                 <input
                                     type="text"
                                     placeholder="Prénom"
                                     value={personalInfo.first_name}
                                     onChange={(e) => setPersonalInfo({ ...personalInfo, first_name: e.target.value })}
-                                    className="p-2 border border-gray-300 rounded-[15px]"
+                                    className="required-field p-2 border border-gray-300 rounded-[15px]"
                                     required
                                 />
+                                <span className="asterisk_input"></span>  
                                 <input
                                     type="email"
                                     placeholder="Email"
@@ -212,15 +215,16 @@ export default function ResumeContainer({ resumeId }) {
                                     className="p-2 border border-gray-300 rounded-[15px]"
                                     required
                                 />
+                                <span className="asterisk_input"></span>  
                                 <textarea
-                                    placeholder="Qu'attendez vous d'AriMayi ?"
+                                    placeholder="Expliquez votre projet professionnel... &#10;(⚠️ Attention ce message sera lu par votre recruteur)"
                                     value={personalInfo.description}
                                     onChange={(e) => setPersonalInfo({ ...personalInfo, description: e.target.value })}
                                     className="p-2 border border-gray-300 rounded-[15px] resize-none"
                                     maxLength={255}
                                     rows={3}
                                 />
-
+                                <span className="asterisk_input"></span>  
                                 {/* Sélection du contrat */}
                                 <div>
                                     <label className="block text-gray-700 font-semibold font-monserrat text-left mb-2">Je recherche un :</label>
@@ -277,6 +281,7 @@ export default function ResumeContainer({ resumeId }) {
                     <div className="p-4 bg-gray-100 rounded-[32px]" style={{ boxShadow: '3px 4px 9.9px 0px #A25C4526' }}>
                         <h3 className="text-xl font-semibold mb-4 text-center font-monserrat">Ajouter une Expérience</h3>
                         <form onSubmit={handleAddExperience}>
+                            {/* <span className="asterisk_input"></span>  */}
                             <input
                                 type="text"
                                 placeholder="Titre"
@@ -285,6 +290,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <input
                                 type="text"
                                 placeholder="Entreprise"
@@ -293,6 +299,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <input
                                 type="text"
                                 placeholder="Date de début - MM/AAAA"
@@ -301,6 +308,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <input
                                 type="text"
                                 placeholder="Date de fin - MM/AAAA"
@@ -309,6 +317,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <div className="flex justify-center mb-3 mt-4">
                                 <button
                                     type="submit"
@@ -352,6 +361,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <input
                                 type="text"
                                 placeholder="École"
@@ -360,6 +370,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <input
                                 type="text"
                                 placeholder="Date de début - MM/AAAA"
@@ -368,6 +379,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <input
                                 type="text"
                                 placeholder="Date de fin - MM/AAAA"
@@ -376,6 +388,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <div className="flex justify-center mb-3 mt-4">
                                 <button
                                     type="submit"
@@ -421,6 +434,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <div className="flex justify-center mb-2 mt-3">
                                 <button
                                     type="submit"
@@ -464,6 +478,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <div className="flex justify-center mb-3 mt-4">
                                 <button
                                     type="submit"
@@ -507,6 +522,7 @@ export default function ResumeContainer({ resumeId }) {
                                 className="w-full p-2 border border-gray-300 rounded-[15px] mb-2"
                                 required
                             />
+                            <span className="asterisk_input"></span> 
                             <div className="flex justify-center mb-3 mt-4">
                                 <button
                                     type="submit"
