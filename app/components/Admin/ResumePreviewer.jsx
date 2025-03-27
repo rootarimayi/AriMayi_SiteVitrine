@@ -1,11 +1,20 @@
 import React, { useEffect } from 'react';
 import { jsPDF } from "jspdf";
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchResumeById } from '../lib/resumeThunks';
+import { fetchResumeById } from '@/app/lib/resumeThunks';
+import PropTypes from 'prop-types';
 
-export default function ResumeViewer({ resumeId }) {
+export default function ResumeViewer({ resumeId, resumeData }) {
     const dispatch = useDispatch();
     const { currentResume, status, error } = useSelector(state => state.resume);
+
+    ResumeViewer.propTypes = {
+        resumeId: PropTypes.string,
+        resumeData: PropTypes.object
+    };
+
+    // Use resumeData if provided, otherwise use currentResume from Redux
+    const resume = resumeData || currentResume;
 
     const drawGradientHeader = (doc, trigram) => {
         const colors = [
@@ -35,7 +44,17 @@ export default function ResumeViewer({ resumeId }) {
     };
     
     const downloadPDF = () => {
-        const { trigram, contract_type, locations } = currentResume;
+        if (!resume) {
+            alert("Impossible de télécharger le CV : données non disponibles");
+            return;
+        }
+
+        const { trigram, contract_type, locations } = resume;
+        if (!trigram) {
+            alert("Impossible de télécharger le CV : trigram manquant");
+            return;
+        }
+
         const city = locations && locations.length > 0 ? locations[0].city : 'Non spécifié';
 
         const doc = new jsPDF({
@@ -71,7 +90,7 @@ export default function ResumeViewer({ resumeId }) {
             addSectionTitle(doc, "Informations personnelles", yPosition, [129, 108, 255]);
             yPosition += 10;
             doc.setFontSize(12);
-            doc.text(`Email: ${currentResume.email}`, 15, yPosition);
+            doc.text(`Email: ${resume.email}`, 15, yPosition);
             const contractTypeDisplay = getContractTypeDisplay(contract_type);
             doc.text(`Type de contrat recherché: ${contractTypeDisplay}`, 15, yPosition + 7);
             doc.text(`Ville: ${city}`, 15, yPosition + 14);
@@ -84,19 +103,19 @@ export default function ResumeViewer({ resumeId }) {
             }
     
             // Description
-            if (currentResume.description) {
+            if (resume.description) {
                 addSectionTitle(doc, "Description", yPosition, [129, 108, 255]);
                 yPosition += 10;
-                const splitDescription = doc.splitTextToSize(currentResume.description, 180);
+                const splitDescription = doc.splitTextToSize(resume.description, 180);
                 doc.text(splitDescription, 15, yPosition);
                 yPosition += splitDescription.length * 7 + 20;
             }
     
             // Expériences professionnelles
-            if (currentResume.experiences?.length > 0) {
+            if (resume.experiences?.length > 0) {
                 addSectionTitle(doc, "Expériences Professionnelles", yPosition, [129, 108, 255]);
                 yPosition += 10;
-                currentResume.experiences.forEach((exp) => {
+                resume.experiences.forEach((exp) => {
                     doc.setFontSize(12);
                     doc.setFont("helvetica", "bold");
                     doc.text(`${exp.title}`, 15, yPosition);
@@ -115,20 +134,20 @@ export default function ResumeViewer({ resumeId }) {
             }
     
             // Compétences
-            if (currentResume.skills?.length > 0) {
+            if (resume.skills?.length > 0) {
                 addSectionTitle(doc, "Compétences", yPosition, [129, 108, 255]);
                 yPosition += 10;
-                const skillsText = currentResume.skills.map((skill) => skill.name).join(", ");
+                const skillsText = resume.skills.map((skill) => skill.name).join(", ");
                 const splitSkills = doc.splitTextToSize(skillsText, 180);
                 doc.text(splitSkills, 15, yPosition);
                 yPosition += splitSkills.length * 7 + 20;
             }
     
             // Centres d'intérêt
-            if (currentResume.hobbies?.length > 0) {
+            if (resume.hobbies?.length > 0) {
                 addSectionTitle(doc, "Centres d'intérêt", yPosition, [129, 108, 255]);
                 yPosition += 10;
-                const hobbiesText = currentResume.hobbies.map((hobby) => hobby.name).join(", ");
+                const hobbiesText = resume.hobbies.map((hobby) => hobby.name).join(", ");
                 const splitHobbies = doc.splitTextToSize(hobbiesText, 180);
                 doc.text(splitHobbies, 15, yPosition);
             }
@@ -179,52 +198,78 @@ export default function ResumeViewer({ resumeId }) {
     };
 
     useEffect(() => {
-        if (resumeId) {
+        if (resumeId && !resumeData) {
             dispatch(fetchResumeById(resumeId));
         }
-    }, [resumeId, dispatch]);
+    }, [resumeId, dispatch, resumeData]);
 
-    if (status === 'loading') {
-        return <div className="p-4">Chargement du CV...</div>;
+    if (status === 'loading' && !resumeData) {
+        return (
+            <div className="p-4 text-center">
+                <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto"></div>
+                <p className="mt-2">Chargement du CV...</p>
+            </div>
+        );
     }
 
-    if (status === 'failed') {
-        return <div className="p-4 text-red-500">Erreur: {error}</div>;
+    if (status === 'failed' && !resumeData) {
+        return (
+            <div className="p-4 text-center">
+                <div className="text-red-500 mb-2">⚠️</div>
+                <p className="text-red-500">Erreur lors du chargement du CV : {error}</p>
+                <p className="text-sm text-gray-600 mt-2">Veuillez réessayer ou contacter le support si le problème persiste.</p>
+            </div>
+        );
     }
 
-    if (!currentResume) {
-        return <div className="p-4">Aucun CV trouvé.</div>;
+    if (!resume) {
+        return (
+            <div className="p-4 text-center">
+                <div className="text-yellow-500 mb-2">⚠️</div>
+                <p className="text-yellow-500">Aucun CV trouvé</p>
+                <p className="text-sm text-gray-600 mt-2">Le CV que vous recherchez n'existe pas ou n'est plus disponible.</p>
+            </div>
+        );
     }
+
+    console.log("Types des propriétés :", {
+        last_name: typeof resume.last_name,
+        first_name: typeof resume.first_name,
+        email: typeof resume.email,
+        experiences: typeof resume.experiences,
+    });
+    console.log("Contenu des expériences :", resume.experiences);
+
 
     return (
         <div className="p-4 max-w-4xl mx-auto bg-white shadow-lg rounded-lg">
             <h1 className="text-3xl font-bold mb-6 text-center">
-                {currentResume.first_name} {currentResume.last_name}
+                {resume.first_name} {resume.last_name}
             </h1>
             
             <div className="mb-6 text-center text-gray-600">
-                <p>{currentResume.email}</p>
-                {currentResume.locations && currentResume.locations.length > 0 && (
+                <p>{resume.email}</p>
+                {resume.locations && resume.locations.length > 0 && (
                     <p className="mt-2">
-                        {currentResume.locations.map(loc => loc.city).join(' • ')}
+                        {resume.locations.map(loc => loc.city).join(' • ')}
                     </p>
                 )}
             </div>
 
-            {currentResume.description && (
+            {resume.description && (
                 <div className="mb-8 px-4">
-                    <p className="text-gray-700 italic">{currentResume.description}</p>
+                    <p className="text-gray-700 italic">{resume.description}</p>
                 </div>
             )}
 
             {/* Expériences professionnelles */}
-            {currentResume.experiences && currentResume.experiences.length > 0 && (
+            {Array.isArray(resume.experiences) && resume.experiences.length > 0 && (
                 <div className="mb-8">
                     <h2 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-gray-200">
                         Expériences Professionnelles
                     </h2>
                     <div className="space-y-4">
-                        {currentResume.experiences.map((exp, index) => (
+                        {resume.experiences.map((exp, index) => (
                             <div key={index} className="pl-4">
                                 <h3 className="font-semibold">{exp.title}</h3>
                                 <p className="text-gray-700">{exp.company}</p>
@@ -238,13 +283,13 @@ export default function ResumeViewer({ resumeId }) {
             )}
 
             {/* Formation */}
-            {currentResume.school_career && currentResume.school_career.length > 0 && (
+            {Array.isArray(resume.school_career) && resume.school_career.length > 0 && (
                 <div className="mb-8">
                     <h2 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-gray-200">
                         Formation
                     </h2>
                     <div className="space-y-4">
-                        {currentResume.school_career.map((edu, index) => (
+                        {resume.school_career.map((edu, index) => (
                             <div key={index} className="pl-4">
                                 <h3 className="font-semibold">{edu.degree}</h3>
                                 <p className="text-gray-700">{edu.school}</p>
@@ -258,37 +303,32 @@ export default function ResumeViewer({ resumeId }) {
             )}
 
             {/* Compétences */}
-            {currentResume.skills && currentResume.skills.length > 0 && (
-                <div className="mb-8">
-                    <h2 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-gray-200">
-                        Compétences
-                    </h2>
-                    <div className="flex flex-wrap gap-2 pl-4">
-                        {currentResume.skills.map((skill, index) => (
-                            <span 
-                                key={index} 
-                                className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-                            >
-                                {skill.name}
-                            </span>
-                        ))}
-                    </div>
+            {Array.isArray(resume.skills) && resume.skills.length > 0 && (
+                <div className="flex flex-wrap gap-2 pl-4">
+                    {resume.skills.map((skill, index) => (
+                        <span 
+                            key={index} 
+                            className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                        >
+                            {typeof skill.name === 'string' ? skill.name : 'Non spécifié'}
+                        </span>
+                    ))}
                 </div>
             )}
 
             {/* Hobbies */}
-            {currentResume.hobbies && currentResume.hobbies.length > 0 && (
+            {Array.isArray(resume.hobbies) && resume.hobbies.length > 0 && (
                 <div className="mb-8">
                     <h2 className="text-xl font-semibold mb-4 pb-2 border-b-2 border-gray-200">
                         Centres d&apos;intérêt
                     </h2>
                     <div className="flex flex-wrap gap-2 pl-4">
-                        {currentResume.hobbies.map((hobby, index) => (
+                        {resume.hobbies.map((hobby, index) => (
                             <span 
                                 key={index} 
                                 className="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm"
                             >
-                                {hobby.name}
+                                {typeof hobby.name === 'string' ? hobby.name : 'Non spécifié'}
                             </span>
                         ))}
                     </div>
@@ -296,8 +336,8 @@ export default function ResumeViewer({ resumeId }) {
             )}
 
             <div className="text-sm text-gray-500 text-center mt-8">
-                <p>Date d&apos;inscription: {new Date(currentResume.uploaded_at).toLocaleDateString()}</p>
-                <p>Trigram: {currentResume.trigram}</p>
+                <p>Date d&apos;inscription: {new Date(resume.uploaded_at).toLocaleDateString()}</p>
+                <p>Trigram: {resume.trigram}</p>
             </div>
 
             <button onClick={downloadPDF} className="mb-4 bg-blue-500 text-white rounded p-2">

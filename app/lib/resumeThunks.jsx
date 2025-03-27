@@ -1,10 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-// URL endpoint in Swagger === https://admin.arimayi.io/arimayi-admin/website/resume-upload/
+// URL endpoint in Swagger === http://admin.arimayi.io/api/v1/arimayi-admin/website/resume-upload/
 
 // URL de base de l'API - à remplacer par votre URL réelle
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://admin.arimayi.io';
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || 'https://admin.arimayi.io/api/v1';
 
 // Instance axios
 const api = axios.create({

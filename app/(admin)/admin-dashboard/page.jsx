@@ -2,9 +2,10 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from "next/navigation";
-import ResumeViewer from "@/app/containers/ResumePreviewer";
+import ResumeViewer from "@/app/components/Admin/ResumePreviewer";
 import { fetchAllResumes } from "@/app/lib/resumeThunks";
 import Modal from "@/app/components/Utils/Modal";
+import ResumeTable from "@/app/components/Admin/ResumeTable";
 
 const AdminDashboard = () => {
     const router = useRouter();
@@ -14,28 +15,47 @@ const AdminDashboard = () => {
     const [filter, setFilter] = useState('');
     const [isAuthorized, setIsAuthorized] = useState(false);
     const [isModalOpen, setIsModalOpen] = useState(false);
+    const [currentResume, setCurrentResume] = useState(null);
+    const [showPreview, setShowPreview] = useState(false);
 
     useEffect(() => {
       const checkAuth = async () => {
-        const res = await fetch("/api/check-auth");
-        if (res.ok) {
-          setIsAuthorized(true);
-          dispatch(fetchAllResumes());
-        } else {
+        try {
+          const res = await fetch("/api/check-auth");
+          if (res.ok) {
+            setIsAuthorized(true);
+            console.log("Fetching resumes...");
+            const result = await dispatch(fetchAllResumes());
+            console.log("Resumes fetch result:", result);
+          } else {
+            router.push("/");
+          }
+        } catch (error) {
+          console.error("Erreur lors de la vérification de l'authentification:", error);
           router.push("/");
         }
       };
       checkAuth();
     }, [dispatch, router]);
     
+    useEffect(() => {
+      console.log("Current resumes state:", resumes);
+    }, [resumes]);
+    
     // Fonction pour voir les détails du CV
-    const handleViewResume = (id, e) => {
-      // Empêcher la propagation pour éviter que le clic sur le bouton déclenche également le clic sur la ligne
-      if (e) {
-        e.stopPropagation();
+    const handleViewResume = (resumeKey, event) => {
+      event.preventDefault();
+      // Extract the index from the resumeKey
+      const index = parseInt(resumeKey.split('-')[1]);
+      // Use filteredResumes instead of resumes to get the correct resume
+      const resume = filteredResumes[index];
+      
+      if (resume) {
+        setCurrentResume(resume);
+        setShowPreview(true);
+      } else {
+        console.error('Resume not found:', resumeKey);
       }
-      setSelectedResumeId(id);
-      setIsModalOpen(true);
     };
 
     const handleCloseModal = () => {
@@ -46,92 +66,93 @@ const AdminDashboard = () => {
     // Fonction pour formater la date
     const formatDate = (dateString) => {
       if (!dateString) return "Non disponible";
-      const date = new Date(dateString);
-      return date.toLocaleDateString('fr-FR', {
-        day: 'numeric',
-        month: 'numeric',
-        year: 'numeric',
-        hour: '2-digit',
-        minute: '2-digit'
-      });
+      try {
+        const date = new Date(dateString);
+        return date.toLocaleDateString('fr-FR', {
+          day: 'numeric',
+          month: 'numeric',
+          year: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit'
+        });
+      } catch (error) {
+        console.error("Erreur lors du formatage de la date:", error);
+        return "Date invalide";
+      }
     };
     
-    if (!isAuthorized) return null;
+    if (!isAuthorized) {
+      return (
+        <div className="h-screen flex items-center justify-center">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
+            <p className="mt-4 text-gray-600">Vérification de l'authentification...</p>
+          </div>
+        </div>
+      );
+    }
     
     const filteredResumes = filter
-      ? resumes.filter(resume => resume.contract_type === filter)
-      : resumes;
+      ? (resumes || []).filter(resume => resume.contract_type === filter)
+      : resumes || [];
       
     return (
-      <div className="h-screen flex flex-col bg-gray-100 relative">
-        {/* Contenu principal */}
-        <div className="flex flex-col justify-center items-center flex-grow">
-          <button
-            onClick={async () => {
-              await fetch("/api/logout", { method: "POST" });
-              router.push("/");
-            }}
-            className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 mt-5 rounded"
-          >
-            Se déconnecter de cette page
-          </button>
-          <h1 className="text-3xl font-bold mb-4 text-center mt-10">Dashboard Admin</h1>
-          <p className="text-lg mb-4 text-center">Liste des CV récupérés :</p>
-          <div className="mb-4">
-            <label className="mr-2">Filtrer par type de contrat :</label>
-            <select
-              value={filter}
-              onChange={(e) => setFilter(e.target.value)}
-              className="border p-2 rounded"
+        <div className="h-screen flex flex-col bg-gray-100 relative pt-20 mb-20">
+            {/* Contenu principal */}
+            <div className="flex flex-col items-center flex-grow min-h-0 overflow-auto px-4">
+            <button
+                onClick={async () => {
+                try {
+                    await fetch("/api/logout", { method: "POST" });
+                    router.push("/");
+                } catch (error) {
+                    console.error("Erreur lors de la déconnexion:", error);
+                    alert("Erreur lors de la déconnexion. Veuillez réessayer.");
+                }
+                }}
+                className="bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 mt-5 rounded"
             >
-              <option key="all" value="">Tous</option>
-              <option key="stage" value="stage">Stage</option>
-              <option key="contrat-apprentissage" value="contrat-apprentissage">Alternance</option>
-              <option key="cdi/cdd" value="cdi/cdd">CDI/CDD</option>
-            </select>
-          </div>
-          {status === 'loading' && <p>Chargement des CV...</p>}
-          {status === 'failed' && <p className="text-red-500">Erreur : {error}</p>}
-            <table className="w-full bg-white shadow-md rounded-lg overflow-hidden">
-                <thead>
-                    <tr className="bg-gray-200">
-                      <th className="p-2 text-center">Nom</th>
-                      <th className="p-2 text-center">Prénom</th>
-                      <th className="p-2 text-center">E-mail</th>
-                      <th className="p-2 text-center">Type de contrat</th>
-                      <th className="p-2 text-center">Date d&apos;inscription</th>
-                      <th className="p-2 text-center">Action</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    {filteredResumes.map((resume, index) => (
-                    <tr
-                        key={resume.id || `resume-${index}`}
-                        className="border-t hover:bg-gray-100"
-                    >
-                        <td className="p-2 text-center">{resume.last_name}</td>
-                        <td className="p-2 text-center">{resume.first_name}</td>
-                        <td className="p-2 text-center">{resume.email}</td>
-                        <td className="p-2 text-center">{resume.contract_type}</td>
-                        <td className="p-2 text-center">{formatDate(resume.uploaded_at)}</td>
-                        <td className="p-2 text-center">
-                          <button 
-                            onClick={(e) => handleViewResume(resume.id || index, e)}
-                            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-3 rounded text-sm"
-                          >
-                            Voir le CV
-                          </button>
-                        </td>
-                    </tr>
-                    ))}
-                </tbody>
-            </table>
+                Se déconnecter de cette page
+            </button>
+            <h1 className="text-3xl font-bold mb-4 text-center mt-10">Dashboard Admin</h1>
+            <p className="text-lg mb-4 text-center">Liste des CV récupérés :</p>
+            <div className="mb-4">
+                <label className="mr-2">Filtrer par type de contrat :</label>
+                <select
+                value={filter}
+                onChange={(e) => setFilter(e.target.value)}
+                className="border p-2 rounded"
+                >
+                <option key="all" value="">Tous</option>
+                <option key="stage" value="stage">Stage</option>
+                <option key="contrat-apprentissage" value="contrat-apprentissage">Alternance</option>
+                <option key="cdi/cdd" value="cdi/cdd">CDI/CDD</option>
+                </select>
+            </div>
+            {status === 'loading' && (
+                <div className="w-full text-center py-8">
+                    <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto"></div>
+                    <p className="mt-4 text-gray-600">Chargement des CV...</p>
+                </div>
+            )}
+            {status === 'failed' && (
+                <div className="w-full text-center py-8">
+                    <div className="text-red-500 text-4xl mb-2">⚠️</div>
+                    <p className="text-red-500">Erreur lors du chargement des CV : {error}</p>
+                    <p className="text-sm text-gray-600 mt-2">Veuillez rafraîchir la page ou contacter le support si le problème persiste.</p>
+                </div>
+            )}
+            {(status === 'succeeded' || status === 'idle') && (
+                <ResumeTable resumes={filteredResumes} handleViewResume={handleViewResume} formatDate={formatDate} />
+            )}
+            </div>
+            {/* Modal pour afficher le CV */}
+            <Modal isOpen={showPreview} onClose={() => setShowPreview(false)}>
+                {currentResume && (
+                    <ResumeViewer resumeData={currentResume} />
+                )}
+            </Modal>
         </div>
-        {/* Modal pour afficher le CV */}
-        <Modal isOpen={isModalOpen} onClose={handleCloseModal}>
-            <ResumeViewer resumeId={selectedResumeId} />
-        </Modal>
-      </div>
     );
 };
 
