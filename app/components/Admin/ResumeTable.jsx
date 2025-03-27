@@ -35,7 +35,7 @@ const ResumeTable = ({ resumes, handleViewResume, formatDate }) => {
       <div className="w-full bg-white shadow-md rounded-lg p-8 text-center">
         <div className="text-gray-500 mb-2">📄</div>
         <p className="text-gray-600">Aucun CV disponible</p>
-        <p className="text-sm text-gray-500 mt-2">Les CV apparaîtront ici une fois qu'ils seront ajoutés.</p>
+        <p className="text-sm text-gray-500 mt-2">Les CV apparaîtront ici une fois qu&apos;ils seront ajoutés.</p>
       </div>
     );
   }

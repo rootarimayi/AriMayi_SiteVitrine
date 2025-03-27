@@ -227,7 +227,7 @@ export default function ResumeViewer({ resumeId, resumeData }) {
             <div className="p-4 text-center">
                 <div className="text-yellow-500 mb-2">⚠️</div>
                 <p className="text-yellow-500">Aucun CV trouvé</p>
-                <p className="text-sm text-gray-600 mt-2">Le CV que vous recherchez n'existe pas ou n'est plus disponible.</p>
+                <p className="text-sm text-gray-600 mt-2">Le CV que vous recherchez n&apos;existe pas ou n&apos;est plus disponible.</p>
             </div>
         );
     }
